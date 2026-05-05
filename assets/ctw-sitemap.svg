@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet" width="100%" height="auto" role="img" aria-label="CTW recommended site architecture sitemap">
+  <title>CTW Recommended Site Architecture</title>
+  <desc>A hierarchical sitemap showing seven primary navigation nodes (About, Team, Services, Industries, Insights, Tools, Contact) under a Home page, plus footer utility sections for Client Tools and Legal. Total estimated 27 to 36 pages at launch.</desc>
+
+  <defs>
+    <style>
+      .node-rect { fill: #FFFFFF; stroke: #1A2535; stroke-width: 1.5; }
+      .leadgen-rect { fill: #FFFFFF; stroke: #D444A0; stroke-width: 1.75; }
+      .footer-rect { fill: #FFFFFF; stroke: #6B7280; stroke-width: 1; stroke-dasharray: 4 3; }
+      .home-rect { fill: #FFFFFF; stroke: #121A25; stroke-width: 2; }
+      .total-rect { fill: #121A25; }
+
+      .node-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; fill: #121A25; letter-spacing: 0.05em; }
+      .home-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 18px; fill: #121A25; letter-spacing: 0.08em; }
+      .child-label { font-family: 'Poppins', system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 11px; fill: #1A2535; }
+      .pillar-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 10.5px; fill: #D444A0; letter-spacing: 0.04em; }
+      .count-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 10px; fill: #1A9D8E; letter-spacing: 0.06em; }
+      .total-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 15px; fill: #FFFFFF; letter-spacing: 0.05em; }
+      .legend-label { font-family: 'Poppins', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 11.5px; fill: #1A2535; }
+      .footer-text { font-family: 'Poppins', system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 10.5px; fill: #6B7280; font-style: italic; }
+      .footer-section-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 12px; fill: #6B7280; letter-spacing: 0.05em; }
+      .footer-child { font-family: 'Poppins', system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 10.5px; fill: #6B7280; }
+
+      .connector { stroke: #1A2535; stroke-width: 1.25; fill: none; }
+    </style>
+  </defs>
+
+  <!-- HOME node -->
+  <rect class="home-rect" x="530" y="30" width="140" height="44" rx="2"/>
+  <text class="home-label" x="600" y="58" text-anchor="middle">HOME</text>
+
+  <!-- HOME-to-trunk vertical -->
+  <line class="connector" x1="600" y1="74" x2="600" y2="120"/>
+
+  <!-- Horizontal trunk -->
+  <line class="connector" x1="80" y1="120" x2="1120" y2="120"/>
+
+  <!-- Vertical drops from trunk to each primary node -->
+  <line class="connector" x1="80" y1="120" x2="80" y2="140"/>
+  <line class="connector" x1="253" y1="120" x2="253" y2="140"/>
+  <line class="connector" x1="427" y1="120" x2="427" y2="140"/>
+  <line class="connector" x1="600" y1="120" x2="600" y2="140"/>
+  <line class="connector" x1="773" y1="120" x2="773" y2="140"/>
+  <line class="connector" x1="947" y1="120" x2="947" y2="140"/>
+  <line class="connector" x1="1120" y1="120" x2="1120" y2="140"/>
+
+  <!-- ABOUT primary -->
+  <rect class="node-rect" x="25" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="80" y="163" text-anchor="middle">ABOUT</text>
+
+  <!-- TEAM primary -->
+  <rect class="node-rect" x="198" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="253" y="163" text-anchor="middle">TEAM</text>
+
+  <!-- SERVICES primary (lead-gen) -->
+  <rect class="leadgen-rect" x="372" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="427" y="163" text-anchor="middle">SERVICES</text>
+
+  <!-- INDUSTRIES primary -->
+  <rect class="node-rect" x="545" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="600" y="163" text-anchor="middle">INDUSTRIES</text>
+
+  <!-- INSIGHTS primary -->
+  <rect class="node-rect" x="718" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="773" y="163" text-anchor="middle">INSIGHTS</text>
+
+  <!-- TOOLS primary (lead-gen) -->
+  <rect class="leadgen-rect" x="892" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="947" y="163" text-anchor="middle">TOOLS</text>
+
+  <!-- CONTACT primary -->
+  <rect class="node-rect" x="1065" y="140" width="110" height="36" rx="2"/>
+  <text class="node-label" x="1120" y="163" text-anchor="middle">CONTACT</text>
+
+  <!-- ABOUT children -->
+  <text class="child-label" x="80" y="200" text-anchor="middle">About Hub</text>
+  <text class="child-label" x="80" y="218" text-anchor="middle">Our Approach</text>
+  <text class="child-label" x="80" y="236" text-anchor="middle">Our History</text>
+  <text class="child-label" x="80" y="254" text-anchor="middle">Community Involvement</text>
+  <text class="child-label" x="80" y="272" text-anchor="middle">Careers</text>
+  <text class="count-label" x="80" y="306" text-anchor="middle">5 PAGES</text>
+
+  <!-- TEAM children -->
+  <text class="child-label" x="253" y="200" text-anchor="middle">Team Hub</text>
+  <text class="child-label" x="253" y="218" text-anchor="middle">Partner Pages (5)</text>
+  <text class="child-label" x="253" y="236" text-anchor="middle">Senior Staff (3-6)</text>
+  <text class="count-label" x="253" y="306" text-anchor="middle">8-11 PAGES</text>
+
+  <!-- SERVICES children: pillars in pink, then descriptor, then count -->
+  <text class="pillar-label" x="427" y="200" text-anchor="middle">AUDIT &amp; ASSURANCE</text>
+  <text class="pillar-label" x="427" y="218" text-anchor="middle">TAX SERVICES</text>
+  <text class="pillar-label" x="427" y="236" text-anchor="middle">TRANSACTION SERVICES</text>
+  <text class="pillar-label" x="427" y="254" text-anchor="middle">CONSULTING</text>
+  <text class="child-label" x="427" y="276" text-anchor="middle">4-6 service pages per pillar</text>
+  <text class="count-label" x="427" y="306" text-anchor="middle">23-27 PAGES TOTAL</text>
+
+  <!-- INDUSTRIES children -->
+  <text class="child-label" x="600" y="200" text-anchor="middle">Industries Hub</text>
+  <text class="child-label" x="600" y="218" text-anchor="middle">Construction &amp; Infra.</text>
+  <text class="child-label" x="600" y="236" text-anchor="middle">Manufacturing &amp; Dist.</text>
+  <text class="child-label" x="600" y="254" text-anchor="middle">Real Estate</text>
+  <text class="child-label" x="600" y="272" text-anchor="middle">Govt. Contractors</text>
+  <text class="count-label" x="600" y="306" text-anchor="middle">4-6 PAGES (FINAL AT SPRINT)</text>
+
+  <!-- INSIGHTS children -->
+  <text class="child-label" x="773" y="200" text-anchor="middle">Insights Hub</text>
+  <text class="child-label" x="773" y="218" text-anchor="middle">Articles (expanding)</text>
+  <text class="child-label" x="773" y="236" text-anchor="middle">Podcast</text>
+  <text class="child-label" x="773" y="254" text-anchor="middle">Original Research</text>
+  <text class="child-label" x="773" y="272" text-anchor="middle">Press Releases</text>
+  <text class="count-label" x="773" y="306" text-anchor="middle">5+ PAGES</text>
+
+  <!-- TOOLS children -->
+  <text class="child-label" x="947" y="200" text-anchor="middle">Tools Hub</text>
+  <text class="child-label" x="947" y="218" text-anchor="middle">Capital Event Assess.</text>
+  <text class="child-label" x="947" y="236" text-anchor="middle">R&amp;D Tax Credit Calc.</text>
+  <text class="child-label" x="947" y="254" text-anchor="middle">Cost Seg. Estimator</text>
+  <text class="count-label" x="947" y="306" text-anchor="middle">4 PAGES</text>
+
+  <!-- CONTACT children -->
+  <text class="child-label" x="1120" y="200" text-anchor="middle">Contact</text>
+  <text class="child-label" x="1120" y="218" text-anchor="middle">Book a Call</text>
+  <text class="count-label" x="1120" y="306" text-anchor="middle">1 PAGE</text>
+
+  <!-- Footer utility row: CLIENT TOOLS and LEGAL -->
+  <rect class="footer-rect" x="280" y="395" width="240" height="80" rx="2"/>
+  <text class="footer-section-label" x="400" y="421" text-anchor="middle">CLIENT TOOLS</text>
+  <text class="footer-child" x="400" y="442" text-anchor="middle">Pay Invoice</text>
+  <text class="footer-child" x="400" y="460" text-anchor="middle">Client Portal (ShareFile)</text>
+
+  <rect class="footer-rect" x="680" y="395" width="240" height="80" rx="2"/>
+  <text class="footer-section-label" x="800" y="421" text-anchor="middle">LEGAL</text>
+  <text class="footer-child" x="800" y="442" text-anchor="middle">Privacy Policy • Terms of Use</text>
+  <text class="footer-child" x="800" y="460" text-anchor="middle">Cookie Policy • Accessibility</text>
+
+  <!-- Footer note -->
+  <text class="footer-text" x="600" y="500" text-anchor="middle">Footer utilities: existing clients know where to find them, kept out of primary navigation</text>
+
+  <!-- Total estimate banner -->
+  <rect class="total-rect" x="350" y="540" width="500" height="44" rx="2"/>
+  <text class="total-label" x="600" y="568" text-anchor="middle">Estimated total: 27 to 36 indexed pages at launch</text>
+
+  <!-- Legend -->
+  <g transform="translate(180, 630)">
+    <rect class="leadgen-rect" x="0" y="0" width="20" height="20" rx="2"/>
+    <text class="legend-label" x="30" y="15">Lead-gen priority surface</text>
+
+    <rect class="node-rect" x="280" y="0" width="20" height="20" rx="2"/>
+    <text class="legend-label" x="310" y="15">Standard navigation node</text>
+
+    <rect class="footer-rect" x="560" y="0" width="20" height="20" rx="2"/>
+    <text class="legend-label" x="590" y="15">Footer / utility pages</text>
+  </g>
+</svg>
