@@ -37,8 +37,8 @@ h1, h2, h3, h4, .display-type {
    PAGE LAYOUT
    ============================================================ */
 @page {
-  size: letter portrait;
-  margin: 0.75in 0.85in;
+    size: letter portrait;
+    margin: 1in 1in;
   @top-left {
     content: "CTW Website Proposal";
     font-family: 'Poppins', sans-serif;
@@ -1142,6 +1142,85 @@ tr:last-child td { border-bottom: none; }
   }
   @page sitemap-landscape { size: letter landscape; margin: 0.55in 0.6in; }
 
+  
+  /* ── UPDATE #4 ADDITIONS ───────────────────────────────── */
+
+  /* Bullet list with proper rendering (no entity bleed) */
+  .bullet-list { list-style:none; padding-left:0; margin:8pt 0 8pt 0; }
+  .bullet-list li { padding-left:14pt; position:relative; margin-bottom:5pt; line-height:1.5; font-size:9.5pt; color:#1A2535; }
+  .bullet-list li::before { content:"\2022"; color:#D444A0; position:absolute; left:0; font-size:11pt; line-height:1; top:1pt; font-weight:700; }
+
+  /* Cover Letter */
+  .cover-letter-page { padding:40pt 0 30pt 0; min-height:9in; display:flex; flex-direction:column; }
+  .cover-letter-body { font-size:10.5pt; line-height:1.7; color:#1A2535; flex:1; }
+  .cover-letter-body p { margin-bottom:11pt; }
+  .cover-letter-salutation { font-family:'Poppins',sans-serif; font-weight:500; font-size:11pt; color:#121A25; margin-bottom:18pt; }
+  .cover-letter-signature { margin-top:32pt; }
+  .cover-letter-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:11pt; color:#121A25; }
+  .cover-letter-title { font-family:'Poppins',sans-serif; font-weight:400; font-size:10pt; color:#1A2535; }
+
+  /* Investment / Pricing blocks */
+  .pricing-tier-block { margin-bottom:24pt; padding-bottom:20pt; border-bottom:0.75pt solid #1A2535; page-break-inside:avoid; }
+  .pricing-tier-block:last-of-type { border-bottom:none; }
+  .pricing-tier-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:13pt; color:#121A25; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10pt; }
+  .pricing-line { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:4pt; padding-bottom:6pt; }
+  .pricing-line-label { font-family:'Poppins',sans-serif; font-weight:500; font-size:10pt; color:#1A2535; flex:1; padding-right:14pt; }
+  .pricing-line-value { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:12pt; color:#121A25; white-space:nowrap; }
+  .pricing-detail { font-size:9pt; color:#1A2535; margin-left:0; margin-bottom:8pt; line-height:1.5; padding-right:18pt; }
+  .pricing-total-row { display:flex; justify-content:space-between; align-items:baseline; margin-top:10pt; padding-top:10pt; border-top:0.5pt solid #D444A0; }
+  .pricing-total-row .pricing-line-label { font-weight:700; color:#121A25; }
+  .pricing-total-row .pricing-line-value { color:#D444A0; }
+
+  /* Optional Add-Ons sub-section */
+  .pricing-addons { background:#EEF4F6; border-top:2pt solid #D444A0; padding:14pt 16pt; margin-top:16pt; page-break-inside:avoid; }
+  .pricing-addons-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:11pt; color:#121A25; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10pt; }
+  .pricing-addons .pricing-line { padding-bottom:4pt; }
+
+  /* Year One Commitment Summary */
+  .year-one-summary { background:#1A2535; color:white; padding:14pt 16pt; margin:18pt 0 12pt 0; page-break-inside:avoid; }
+  .year-one-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:11pt; color:white; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10pt; }
+  .year-one-row { display:flex; justify-content:space-between; align-items:baseline; padding:4pt 0; border-bottom:0.5pt solid #2c3a4f; }
+  .year-one-row:last-child { border-bottom:none; }
+  .year-one-tier { font-family:'Poppins',sans-serif; font-weight:600; font-size:10pt; color:white; }
+  .year-one-calc { font-family:'Poppins',sans-serif; font-weight:400; font-size:9pt; color:#a8b5c5; flex:1; padding:0 12pt; text-align:right; }
+  .year-one-total { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12pt; color:#D444A0; min-width:80pt; text-align:right; }
+
+  /* Engagement Mode Vertical Block (no pricing) */
+  .em-block { margin:16pt 0 22pt 0; padding-bottom:18pt; border-bottom:1pt solid #D444A0; page-break-inside:avoid; }
+  .em-block:last-of-type { border-bottom:none; }
+  .em-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:13pt; color:#121A25; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4pt; }
+  .em-tagline { font-family:'Plus Jakarta Sans',sans-serif; font-weight:500; font-style:italic; font-size:10.5pt; color:#1A2535; margin-bottom:10pt; }
+  .em-includes-label { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:9pt; color:#121A25; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6pt; margin-top:8pt; }
+  .em-closer { font-family:'Poppins',sans-serif; font-style:italic; font-size:9.5pt; color:#1A2535; margin-top:10pt; }
+  .em-timeline { font-size:9pt; color:#121A25; font-weight:500; margin-top:8pt; padding:6pt 10pt; background:#EEF4F6; border-left:2pt solid #D444A0; }
+
+  /* Table of Contents with dot leaders */
+  .toc-entry { display:flex; align-items:baseline; margin-bottom:4pt; }
+  .toc-entry-num { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:9.5pt; color:#D444A0; min-width:48pt; flex-shrink:0; }
+  .toc-entry-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:10pt; color:#121A25; flex-shrink:0; }
+  .toc-entry-leader { flex:1; border-bottom:0.5pt dotted #888; margin:0 6pt; position:relative; top:-2pt; min-width:20pt; }
+  .toc-entry-page { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:9.5pt; color:#121A25; min-width:24pt; text-align:right; flex-shrink:0; }
+  .toc-abstract-line { font-family:'Poppins',sans-serif; font-weight:400; font-size:8.5pt; color:#1A2535; line-height:1.4; padding-left:48pt; padding-right:30pt; margin-bottom:11pt; }
+
+  /* Page-on-page fix: reset any inherited section-level borders/backgrounds */
+  .page-section { background:transparent; border:none; box-shadow:none; padding:0; }
+  .callout-box { max-width:100%; border:none; background:#EEF4F6; border-left:3pt solid #D444A0; padding:14pt 16pt; }
+
+  /* Sitemap landscape */
+  .sitemap-landscape-wrap { page: sitemap-landscape; page-break-before:always; page-break-after:always; }
+  @page sitemap-landscape { size: letter landscape; margin: 0.75in; }
+
+  /* Print-specific overrides */
+  @media print {
+    body { font-size:11pt; line-height:1.6; }
+    h1 { font-size:24pt; line-height:1.2; }
+    .section-header, h2 { font-size:18pt; line-height:1.3; }
+    .sub-header, h3 { font-size:13.5pt; line-height:1.4; }
+    p { margin-bottom:0.7em; }
+    .cover-letter-page { page: cover-letter-page; }
+  }
+  @page cover-letter-page { @top-left { content: ""; } @top-right { content: ""; } @bottom-right { content: ""; } @bottom-left { content: ""; } margin: 1.1in 1in; }
+
   </style>
 </head>
 <body>
@@ -1164,6 +1243,38 @@ tr:last-child td { border-bottom: none; }
 </div>
 
 <!-- ============================================================
+     COVER LETTER
+     ============================================================ -->
+<div class="page-section section-break cover-letter-page">
+  <div class="cover-letter-body">
+    <p class="cover-letter-salutation">To our friends at CTW,</p>
+
+    <p>We are excited to present our proposal to redesign and rebuild CTW's online presence. The plan closes the gap between the firm CTW has become and the digital surface that still represents it, and positions the firm for the way prospects will find accounting firms over the next decade.</p>
+
+    <p>Three engagement modes give CTW choice over how deep the partnership goes. Path Forward Foundation is the rebuild itself, ready in four weeks. Path Forward Engine adds a content production system that fills the new site with work that compounds. Path Forward Partnership runs the full ongoing program with quarterly business reviews and continuous content production.</p>
+
+    <p>A few elements worth calling out:</p>
+
+    <p><strong>The four-week core delivery commitment.</strong> Most professional services website rebuilds run six to nine months. We deliver in four. The velocity comes from a content extraction and rewriting pipeline we have built and refined on prior projects, paired with a senior team that runs the work directly without handoffs. I built MKTNG's AI infrastructure myself, including GoldenDoodle AI, our trauma-informed communications platform, so the pipeline behind this delivery is something we own and tune, not something we license.</p>
+
+    <p><strong>What comes after launch.</strong> Most agencies sell a website and disappear. We do not. The Engine and Partnership tiers are built around the work that actually moves the needle for a professional services firm over time. A podcast that opens doors with the people CTW wants to know. Original research that gets cited. A press release program that compounds in AI search. Partner LinkedIn programs that build personal authority alongside the firm's brand. We have produced this kind of work for clients across professional services, infrastructure, and energy for more than a decade. Most of our client relationships run two, three, or more years.</p>
+
+    <p><strong>The Capital Event Readiness Assessment.</strong> An AI-powered lead generation tool that delivers a custom-written readiness report to qualified prospects, written in CTW's voice, specific to their actual business. The conversion data on this approach is meaningfully better than the gated PDF most professional services firms still use.</p>
+
+    <p>We also recommend professional photography of CTW's partners, staff, and office space. Stock photography is the most common way professional services websites communicate they were built quickly. CTW deserves better than that. Photography integrates without delaying the four-week core launch, with the public launch landing at eight weeks if photography is elected.</p>
+
+    <p>We are confident this plan will produce a modern, high-performing online presence that reflects the firm CTW already is internally and gives the team a platform that earns its keep across the next decade.</p>
+
+    <p>We look forward to discussing this proposal with you further.</p>
+  </div>
+
+  <div class="cover-letter-signature">
+    <div class="cover-letter-name">Scott Eggert</div>
+    <div class="cover-letter-title">President, MKTNG</div>
+  </div>
+</div>
+
+<!-- ============================================================
      EXECUTIVE SUMMARY
      ============================================================ -->
 <div class="page-section section-break">
@@ -1172,46 +1283,17 @@ tr:last-child td { border-bottom: none; }
 
   <p>CTW is a different firm than the one its current website describes. The firm has moved toward advisory-led work with middle-market owners and CFOs navigating capital events. The website still reads like a generalist compliance shop with twenty-eight industries and sixty service lines. That gap is the opportunity, and we can close it in four weeks for the core build.</p>
 
-  <p>Three engagement modes let CTW choose the depth of the partnership. Foundation rebuilds the site. Engine adds a sustained content production system. Partnership runs the full ongoing program with quarterly business reviews and AEO citation tracking.</p>
-
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Core Deliverables</th>
-        <th>Build</th>
-        <th>Monthly</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="col-label">PATH FORWARD<br>FOUNDATION</td>
-        <td>Full website rebuild on Astro + Cloudflare + Keystatic. Four-week delivery. AEO foundation, calendar booking with partner routing, Capital Event Readiness Assessment, two calculators, WCAG 2.2 AA, CMS training for four stewards.</td>
-        <td><em>from</em> <span class="placeholder">$[FOUNDATION_BUILD_FLOOR]</span></td>
-        <td><span class="placeholder">$[FOUNDATION_RETAINER]</span></td>
-      </tr>
-      <tr>
-        <td class="col-label">PATH FORWARD<br>ENGINE</td>
-        <td>Foundation plus podcast launch, quarterly original research, monthly press releases, partner LinkedIn programs, AI Concierge, twelve-month content production contract.</td>
-        <td><span class="placeholder">$[ENGINE_BUILD]</span></td>
-        <td><span class="placeholder">$[ENGINE_RETAINER]</span></td>
-      </tr>
-      <tr>
-        <td class="col-label col-win">PATH FORWARD<br>PARTNERSHIP</td>
-        <td>Engine plus full weekly content production, quarterly business reviews with AEO citation tracking and competitor benchmarking, AI training for CTW staff.</td>
-        <td><span class="placeholder">$[PARTNERSHIP_BUILD]</span></td>
-        <td><em>from</em> <span class="placeholder">$[PARTNERSHIP_ANNUAL_FLOOR]</span> /yr</td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Three engagement modes let CTW choose the depth of the partnership. Path Forward Foundation rebuilds the site. Path Forward Engine adds a sustained content production system. Path Forward Partnership runs the full ongoing program with quarterly business reviews and AEO citation tracking. Section 2 details what each mode includes. Section 11 details the investment.</p>
 
   <p>Three things separate this proposal from the others CTW will receive.</p>
 
   <p><strong>The foundation is built for the next decade.</strong> Most agencies will recommend another WordPress build. We are recommending against it. CTW's new site loads in under one second on any device, costs a fraction to host, and holds up against the security threats hitting professional services firms. Astro on Cloudflare with Keystatic as the editor. Faster, safer, and easier to keep current than what most bidders will propose.</p>
 
-  <p><strong>The architecture is built for AI discovery, not just Google.</strong> Schema-rich, FAQ-structured content that gets cited by ChatGPT, Perplexity, and Google AI Overviews when prospects ask who the right CPA is for a middle-market transaction in Northern California. We ran a baseline AEO analysis for CTW as part of this proposal. The headline finding: significant gaps on the engines holding the largest share of prospect research. Full results in Section 10.</p>
+  <p><strong>The architecture is built for AI discovery, not just Google.</strong> Schema-rich, FAQ-structured content that gets cited by ChatGPT, Perplexity, and Google AI Overviews when prospects ask who the right CPA is for a middle-market transaction in Northern California. We ran a baseline AEO analysis for CTW as part of this proposal. The headline finding: significant gaps on the engines holding the largest share of prospect research. Full results in Section 7.</p>
 
   <p><strong>The work does not end at launch.</strong> Sustaining a site with content that compounds, in a partner's voice, across years, is what most firms skip and most agencies do not sell. We have spent more than a decade learning how to do it. Writing in a partner's voice. Running press programs that build citation authority. Producing podcasts that turn guest interviews into lasting relationships. We are not the cheapest agency CTW will hear from. We do not intend to be the most expensive. We are the firm CTW will still be working with in 2030.</p>
+
+  <p>The four-week core delivery extends to eight weeks if CTW elects original photography. Photography integrates without delaying the brand work or the technical build. Detail follows in Section 9.</p>
 </div>
 
 <!-- ============================================================
@@ -1220,127 +1302,127 @@ tr:last-child td { border-bottom: none; }
 <div class="page-section section-break">
   <span class="section-label">Contents</span>
   <h2 class="section-header">Table of Contents</h2>
-  <p class="toc-intro">This proposal is organized for senior readers who start at the investment and work backward. Sections 1 through 5 cover engagement, pricing, timeline, and team. Sections 6 through 11 cover methodology, architecture, technology, lead generation, content, and compliance. Sections 12 and 13 cover success metrics and the partnership model. The Quick Reference Summary and RFP Compliance Audit appear as Appendix B and C.</p>
-  <div class="toc-section">
-    <div class="toc-item">
-      <div class="toc-num">1</div>
-      <div class="toc-body">
-        <span class="toc-name">Reading the Moment</span>
-        <span class="toc-abstract">Why the current site undersells CTW and what the category moment demands now.</span>
-      </div>
+  <p class="toc-intro">This proposal is organized so a reader who starts at the strategy can absorb the case before reaching the investment. Sections 1 through 8 cover the strategy and capabilities. Sections 9 through 11 cover timeline, team, and investment. Sections 12 and 13 cover success metrics and the partnership model. The Quick Reference Summary and RFP Compliance Audit appear as Appendix B and C.</p>
+  <div class="toc-section" style="margin-top:18pt;">
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 1</div>
+      <div class="toc-entry-title">Reading the Moment</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">5</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">2</div>
-      <div class="toc-body">
-        <span class="toc-name">Engagement Modes</span>
-        <span class="toc-abstract">Three levels of attention, three ways to engage. Foundation, Engine, and Partnership compared.</span>
-      </div>
+    <div class="toc-abstract-line">Why the current site reflects the firm CTW used to be, and why the moment to update is now.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 2</div>
+      <div class="toc-entry-title">Engagement Modes</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">7</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">3</div>
-      <div class="toc-body">
-        <span class="toc-name">Investment</span>
-        <span class="toc-abstract">Build and monthly retainer pricing at each engagement tier. All line items, no surprises.</span>
-      </div>
+    <div class="toc-abstract-line">Three levels of partnership: Foundation, Engine, Partnership. Each is complete on its own.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 3</div>
+      <div class="toc-entry-title">Approach and Methodology</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">10</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">4</div>
-      <div class="toc-body">
-        <span class="toc-name">Timeline</span>
-        <span class="toc-abstract">Target dates and milestone structure. Four-week core build, twelve weeks with photography.</span>
-      </div>
+    <div class="toc-abstract-line">The five-phase process from brand sprint to ongoing partnership. One senior team throughout.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 4</div>
+      <div class="toc-entry-title">Recommended Site Architecture</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">12</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">5</div>
-      <div class="toc-body">
-        <span class="toc-name">Team and Relevant Experience</span>
-        <span class="toc-abstract">The senior team running the engagement. Work samples, case studies, and three named references.</span>
-      </div>
+    <div class="toc-abstract-line">A twenty-seven to thirty-six page site built for clarity, AEO depth, and rebrand readiness.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 5</div>
+      <div class="toc-entry-title">Technology Recommendations</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">14</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">6</div>
-      <div class="toc-body">
-        <span class="toc-name">Approach and Methodology</span>
-        <span class="toc-abstract">The five-phase process from brand sprint to ongoing partnership. One senior team throughout.</span>
-      </div>
+    <div class="toc-abstract-line">Astro, Cloudflare, and Keystatic compared to WordPress on performance, cost, and maintenance.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 6</div>
+      <div class="toc-entry-title">Lead Generation System</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">16</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">7</div>
-      <div class="toc-body">
-        <span class="toc-name">Recommended Site Architecture</span>
-        <span class="toc-abstract">A twenty-seven to thirty-six page site built for clarity, AEO depth, and rebrand readiness.</span>
-      </div>
+    <div class="toc-abstract-line">Six tools that convert site attention into calendar bookings, qualified leads, and identified visitors.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 7</div>
+      <div class="toc-entry-title">Content Engine and AEO Strategy</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">19</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">8</div>
-      <div class="toc-body">
-        <span class="toc-name">Technology Recommendations</span>
-        <span class="toc-abstract">Astro, Cloudflare, and Keystatic versus the WordPress alternative. Performance, cost, security.</span>
-      </div>
+    <div class="toc-abstract-line">The sustained content program that moves CTW from mentioned to recommended to talked-about.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 8</div>
+      <div class="toc-entry-title">Trust, Compliance, and Accessibility</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">22</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">9</div>
-      <div class="toc-body">
-        <span class="toc-name">Lead Generation System</span>
-        <span class="toc-abstract">Five tools that turn site visitors into calendar bookings and qualified leads.</span>
-      </div>
+    <div class="toc-abstract-line">WCAG 2.2 AA, CCPA-aligned privacy, and Cloudflare-level security. Built in, not bolted on.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 9</div>
+      <div class="toc-entry-title">Timeline</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">23</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">10</div>
-      <div class="toc-body">
-        <span class="toc-name">Content Engine and AEO Strategy</span>
-        <span class="toc-abstract">The sustained content program that moves CTW from mentioned to recommended to talked-about.</span>
-      </div>
+    <div class="toc-abstract-line">Target dates and milestone structure. Four weeks to core launch, eight weeks with photography.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 10</div>
+      <div class="toc-entry-title">Team and Relevant Experience</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">24</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">11</div>
-      <div class="toc-body">
-        <span class="toc-name">Trust, Compliance, and Accessibility</span>
-        <span class="toc-abstract">WCAG 2.2 AA, CCPA-aligned privacy, and Cloudflare-level security. Built in, not bolted on.</span>
-      </div>
+    <div class="toc-abstract-line">The senior team running the engagement. Work samples, case studies, three named references.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 11</div>
+      <div class="toc-entry-title">Investment</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">32</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">12</div>
-      <div class="toc-body">
-        <span class="toc-name">Success Metrics</span>
-        <span class="toc-abstract">What gets tracked, what targets look like, and how reporting works.</span>
-      </div>
+    <div class="toc-abstract-line">Build and monthly retainer pricing at each tier with all line items disclosed.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 12</div>
+      <div class="toc-entry-title">Success Metrics</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">34</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">13</div>
-      <div class="toc-body">
-        <span class="toc-name">Approach to Partnership</span>
-        <span class="toc-abstract">Quarterly business reviews, named contacts, proactive strategic input, and long-run economics.</span>
-      </div>
+    <div class="toc-abstract-line">What gets tracked, what targets look like, and how reporting works.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">Sec. 13</div>
+      <div class="toc-entry-title">Approach to Partnership</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">36</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">FAQ</div>
-      <div class="toc-body">
-        <span class="toc-name">Frequently Asked Questions</span>
-        <span class="toc-abstract">Twelve questions that come up during proposal evaluation, answered directly.</span>
-      </div>
+    <div class="toc-abstract-line">Quarterly business reviews, named contacts, proactive strategic input, long-run economics.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">FAQ</div>
+      <div class="toc-entry-title">Frequently Asked Questions</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">38</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">App. A</div>
-      <div class="toc-body">
-        <span class="toc-name">AEO Baseline Full Data</span>
-        <span class="toc-abstract">Complete April 2026 AEO analysis across eight queries and five engines.</span>
-      </div>
+    <div class="toc-abstract-line">Twelve questions that come up during proposal evaluation, answered directly.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">App. A</div>
+      <div class="toc-entry-title">AEO Baseline Full Data</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">41</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">App. B</div>
-      <div class="toc-body">
-        <span class="toc-name">Quick Reference Summary</span>
-        <span class="toc-abstract">Structured at-a-glance reference of proposal components, optimized for fast review.</span>
-      </div>
+    <div class="toc-abstract-line">Complete April 2026 AEO analysis across eight queries and five engines.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">App. B</div>
+      <div class="toc-entry-title">Quick Reference Summary</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">43</div>
     </div>
-    <div class="toc-item">
-      <div class="toc-num">App. C</div>
-      <div class="toc-body">
-        <span class="toc-name">RFP Compliance Audit</span>
-        <span class="toc-abstract">Map of every RFP requirement to the section of this proposal that addresses it.</span>
-      </div>
+    <div class="toc-abstract-line">Structured at-a-glance reference of proposal components.</div>
+    <div class="toc-entry">
+      <div class="toc-entry-num">App. C</div>
+      <div class="toc-entry-title">RFP Compliance Audit</div>
+      <div class="toc-entry-leader"></div>
+      <div class="toc-entry-page">45</div>
     </div>
+    <div class="toc-abstract-line">Map of every RFP requirement to the section that addresses it.</div>
   </div>
 </div>
 
@@ -1387,7 +1469,7 @@ tr:last-child td { border-bottom: none; }
       <div class="ladder-number">1</div>
       <div class="ladder-content">
         <div class="ladder-label">AI Mentions You</div>
-        <div class="ladder-desc">The technical foundation that gets CTW cited by AI search engines when prospects ask category questions. Schema, structured content, FAQ architecture, plain-language service pages. This is the floor of modern discovery and the goal of the Path Forward Foundation tier.</div>
+        <div class="ladder-desc">The technical foundation that gets CTW cited by AI search engines when prospects ask category questions. Schema, structured content, FAQ architecture, plain-language service pages. The floor of modern discovery and the goal of the Path Forward Foundation tier.</div>
       </div>
       <div class="ladder-tier">FOUNDATION</div>
     </div>
@@ -1395,7 +1477,7 @@ tr:last-child td { border-bottom: none; }
       <div class="ladder-number">2</div>
       <div class="ladder-content">
         <div class="ladder-label">AI Recommends You</div>
-        <div class="ladder-desc">The sustained content production that moves CTW from "mentioned" to "recommended" on the answer engines that drive the largest share of prospect research. Press releases, podcast transcripts, original research, partner-bylined content, repurposed video. The algorithms start naming you first. This is the work of the Path Forward Engine tier.</div>
+        <div class="ladder-desc">The sustained content production that moves CTW from mentioned to recommended on the answer engines that drive the largest share of prospect research. Press releases, podcast transcripts, original research, partner-bylined content, repurposed video. The work of the Path Forward Engine tier.</div>
       </div>
       <div class="ladder-tier">ENGINE</div>
     </div>
@@ -1403,294 +1485,743 @@ tr:last-child td { border-bottom: none; }
       <div class="ladder-number">3</div>
       <div class="ladder-content">
         <div class="ladder-label">People Talk About You</div>
-        <div class="ladder-desc">The human attention that AI has not yet replaced and won't anytime soon. Podcast guests becoming referral sources. Partners building real audiences on LinkedIn. Original research getting cited in trade press. A network effect that compounds for years. This is what the Path Forward Partnership tier exists to produce.</div>
+        <div class="ladder-desc">The human attention that AI has not yet replaced and will not anytime soon. Podcast guests becoming referral sources. Partners building real audiences on LinkedIn. Original research getting cited in trade press. A network effect that compounds for years. What the Path Forward Partnership tier exists to produce.</div>
       </div>
       <div class="ladder-tier">PARTNERSHIP</div>
     </div>
   </div>
 
-  <p>CTW can stop at any of the three levels. Most firms in the category aren't operating past the first.</p>
+  <p>CTW can stop at any of the three levels. Most firms in the category are not yet operating past the first.</p>
 
   <div class="section-divider"></div>
 
-  
-  <h3 class="sub-header">Mode Comparison at a Glance</h3>
-  <table class="engage-compare">
+  <!-- ENGAGEMENT MODE VERTICAL BLOCKS -->
+  <div class="em-block">
+    <div class="em-name">Path Forward Foundation</div>
+    <div class="em-tagline">The website, rebuilt in four weeks.</div>
+    <div class="em-includes-label">What's included</div>
+    <ul class="bullet-list">
+      <li>Two-week brand and messaging sprint to lock voice, value proposition, and audience-specific framings</li>
+      <li>Full website rebuild on Astro, Cloudflare, and Keystatic</li>
+      <li>Content audit of the existing site with documented retain, rewrite, and retire recommendations</li>
+      <li>Rewrite of priority pages in CTW's brand voice (estimated twenty-five to thirty pages)</li>
+      <li>AEO foundation across every service and industry page (schema, FAQ blocks, plain-language structure)</li>
+      <li>Calendar booking with intelligent routing to the right partner or senior manager</li>
+      <li>Capital Event Readiness Assessment, an AI-powered lead generation tool delivering a custom-written report to every qualified prospect</li>
+      <li>Two embedded calculators (R&amp;D Tax Credit and Cost Segregation)</li>
+      <li>RB2B visitor identification (free-tier setup; paid tier available if CTW elects to subscribe directly)</li>
+      <li>Branded payment landing page integrated with CPACharge</li>
+      <li>Modernized privacy, accessibility, and disclaimer pages with WCAG 2.2 AA conformance</li>
+      <li>301 redirect map preserving SEO continuity</li>
+      <li>Training session for four content stewards on the Keystatic CMS</li>
+      <li>Brand voice document delivered as both a printed reference guide and a Claude Voice Skill artifact</li>
+      <li>Ninety days of stabilization support post-launch</li>
+    </ul>
+    <div class="em-timeline"><strong>Timeline:</strong> Four weeks to core launch (without original photography). Eight weeks if CTW elects original photography.</div>
+    <p class="em-closer">Foundation is the rebuild. It is enough on its own. Many firms launch here, run the new site for a year, and add the content engine in year two.</p>
+  </div>
+
+  <div class="em-block">
+    <div class="em-name">Path Forward Engine</div>
+    <div class="em-tagline">Foundation, plus the content production system.</div>
+    <div class="em-includes-label">Everything in Foundation, plus</div>
+    <ul class="bullet-list">
+      <li>Podcast launch via Riverside.fm: production setup, host coaching, twelve episodes including guest booking, recording, post-production, and repurposing into short-form video and written formats</li>
+      <li>Quarterly State of the Middle Market original research piece (we conduct, write, and design)</li>
+      <li>Monthly comparative AEO press release program with national distribution</li>
+      <li>Partner LinkedIn personal brand playbooks for up to four named partners</li>
+      <li>LinkedIn newsletter setup and the first six monthly issues</li>
+      <li>AI Concierge build and deployment (conversational assistant on the site, trained on CTW's content, with calendar booking handoff)</li>
+      <li>Twelve-month content velocity contract aligned to a documented production cadence</li>
+    </ul>
+    <p class="em-closer">Engine is for CTW if the firm wants to be cited, found, and remembered through a sustained content presence, not just rebuilt.</p>
+  </div>
+
+  <div class="em-block">
+    <div class="em-name">Path Forward Partnership</div>
+    <div class="em-tagline">Engine, plus the full ongoing program.</div>
+    <div class="em-includes-label">Everything in Engine, plus</div>
+    <ul class="bullet-list">
+      <li>Full content production aligned to the content engine cadence (weekly long-form articles, weekly short-form video, ongoing supplemental campaign work)</li>
+      <li>Quarterly business reviews including AEO citation tracking, competitor benchmarking, lead funnel analysis, and prioritized recommendations for the following quarter</li>
+      <li>Half-day AI content production training for CTW's content stewards</li>
+      <li>Priority response on new content needs and ad-hoc campaign work</li>
+    </ul>
+    <p class="em-closer">Partnership is for CTW if the firm wants the website and the surrounding communications work to keep getting smarter without leadership having to manage it.</p>
+  </div>
+
+  <p style="font-size:9.5pt;color:#1A2535;margin-top:14pt;font-style:italic;">All three modes assume a target kickoff of May 20, 2026. Final scope is set in the engagement letter. Investment detail appears in Section 11.</p>
+</div>
+
+<!-- ============================================================
+     SECTION 3: APPROACH AND METHODOLOGY
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 3</span>
+  <h2 class="section-header">Approach and Methodology</h2>
+
+  <p>The four-week core commitment is real because the work behind it is staged. Each phase has a defined input, a defined output, and a clean handoff to what follows. The velocity comes from a content extraction and rewriting pipeline we built and refined on prior projects, including GoldenDoodle AI, MKTNG's own trauma-informed communications platform. The pipeline is something we own and tune, not something we license. The longer engagement modes extend this same process into the year after launch, with the same senior team running the work throughout.</p>
+
+  <h3 class="sub-header">Phase 0: Brand and Messaging Sprint (Week 1)</h3>
+  <p>A focused four-hour working session with CTW's leadership locks the firm's position, the value proposition, and the audience-specific framings for the four prospect types: business owners, CFOs, PE sponsors, and capital markets prospects.</p>
+  <p>The output is delivered in two formats. A printed reference document for CTW's internal use. And a Claude Voice Skill: a structured AI prompt artifact that captures CTW's voice attributes, audience-specific framings, vocabulary patterns, and tone variations. The skill loads into any current AI writing tool and produces on-brand content from the moment it is installed. CTW keeps the skill permanently. Anyone at the firm can use it. The skill does not degrade or expire. As AI tools evolve, the skill upgrades with them.</p>
+  <p>Most agencies deliver brand voice as a PDF that gets opened twice and then forgotten. We deliver brand voice as a working tool that anyone at CTW can use to generate on-brand content for the next ten years.</p>
+
+  <h3 class="sub-header">Phase 1: Architecture, Content Audit, and AEO Foundation (Week 2)</h3>
+  <p>The existing site gets audited page by page, with a documented retain, rewrite, or retire recommendation against each one. The AEO baseline expands from the eight queries we ran during proposal preparation to twenty-five priority queries mapped to CTW's actual practice areas and named geographies. Sitemap gets finalized jointly with CTW's leadership. Schema architecture is defined. The technical foundation on Astro, Cloudflare, and Keystatic initializes in parallel with the audit so no time is lost.</p>
+
+  <h3 class="sub-header">Phase 2: Design and Content Production (Week 3)</h3>
+  <p>Joshua presents three design directions to CTW's leadership for selection. The chosen direction becomes the component library and visual system for the full site. Content rewrite begins on the priority pages identified in the audit. Where CTW writes, we edit and structure for AEO. Where we write, the copy runs through the brand voice document so the firm's tone holds throughout. CTW reviews all content before it goes live.</p>
+
+  <h3 class="sub-header">Phase 3: Build, Integration, and QA (Week 4)</h3>
+  <p>Development runs against the approved design and audited content. Calendar booking integrates with Microsoft 365. The Capital Event Readiness Assessment, the two calculators, and the CPACharge payment flow all connect. Accessibility testing runs against WCAG 2.2 AA. The site goes to soft launch for CTW's leadership review at the end of the week. CTW selects one design direction by end of week three to hold the four-week delivery commitment.</p>
+
+  <h3 class="sub-header">Phase 4: Launch, Training, and Stabilization (Week 5 and Beyond)</h3>
+  <p>Public launch with 301 redirects mapped from old URLs, search consoles submitted, and analytics confirmed. The four CTW content stewards complete a single live training session on Keystatic, with a recorded video and a one-page reference card for follow-up. Performance monitoring stays active through ninety days of stabilization support. This is the point at which most agencies end their engagement. Ours doesn't.</p>
+
+  <h3 class="sub-header">Phase 5: Ongoing Partnership (Engine and Partnership Tiers)</h3>
+  <p>For CTW selecting the Engine or Partnership modes, Phase 5 extends the engagement into the full ongoing program: the content production cadence documented in Section 7, the quarterly business reviews and competitive monitoring detailed in Section 13, and the proactive strategic input that keeps the engagement generating value past the first year. The senior team that ran the build runs the ongoing program. No handoffs.</p>
+
+  <div class="berry-rule"></div>
+  <p>The site architecture this process produces is detailed in Section 4.</p>
+</div>
+
+<!-- ============================================================
+     SECTION 4: RECOMMENDED SITE ARCHITECTURE
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 4</span>
+  <h2 class="section-header">Recommended Site Architecture</h2>
+
+  <p>The architecture below represents a full professional services site of twenty-seven to thirty-six indexed pages, built around three principles. Clarity for the visitor, who should reach any service, industry, or tool in one or two clicks from anywhere on the site. AEO depth at every page that matters, with structured FAQ blocks, schema markup, and plain-language content built for direct citation by AI search engines. And forward-rebrand readiness, so a future identity change propagates across the site without page-by-page rework.</p>
+
+  <p>This is a substantively different scope than the current site. It is not a refresh of eight pages. It is a new site built to perform like a category leader: individual pages for each partner, dedicated service-detail pages for each practice area, a developed Insights structure, and lead-generation tools with their own indexed landing pages.</p>
+
+  <p>Final selections within the architecture, particularly the short list of named industries and the exact partner page roster, happen jointly during the brand sprint. The structure here reflects our best recommendation given what we know about the firm's current trajectory.</p>
+
+  <div class="diagram-container sitemap-container sitemap-landscape-wrap" style="margin:20pt 0;">
+    <svg viewBox="0 0 720 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;font-family:'Poppins',sans-serif;">
+      <!-- ═══ HOME ═══ -->
+      <rect x="270" y="10" width="180" height="32" rx="4" fill="#EEF4F6" stroke="#1A2535" stroke-width="1.2"/>
+      <text x="360" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">HOME</text>
+      <text x="360" y="50" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700" letter-spacing="1">HOMEPAGE · 1 PAGE</text>
+
+      <!-- Trunk connector -->
+      <line x1="360" y1="42" x2="360" y2="76" stroke="#1A2535" stroke-width="1"/>
+
+      <!-- Horizontal nav bar -->
+      <line x1="44" y1="76" x2="677" y2="76" stroke="#1A2535" stroke-width="1"/>
+
+      <!-- Drop lines to L2 nodes at x = 63, 155, 268, 377, 466, 554, 635 -->
+      <line x1="63"  y1="76" x2="63"  y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="155" y1="76" x2="155" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="268" y1="76" x2="268" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="377" y1="76" x2="377" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="466" y1="76" x2="466" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="554" y1="76" x2="554" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+      <line x1="635" y1="76" x2="635" y2="90" stroke="#1A2535" stroke-width="0.8"/>
+
+      <!-- ═══ ABOUT ═══ -->
+      <rect x="21" y="90" width="84" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="63" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">ABOUT</text>
+      <line x1="63" y1="116" x2="63" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="63" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">About Hub</text>
+      <text x="63" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Our Approach</text>
+      <text x="63" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Our History</text>
+      <text x="63" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Community Involvement</text>
+      <text x="63" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Careers</text>
+      <text x="63" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">5 PAGES</text>
+
+      <!-- ═══ TEAM ═══ -->
+      <rect x="111" y="90" width="88" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="155" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">TEAM</text>
+      <line x1="155" y1="116" x2="155" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="155" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Team Hub</text>
+      <text x="155" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Partner Pages (5–7 each)</text>
+      <text x="155" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Senior Staff (2–3)</text>
+      <text x="155" y="181" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">8–11 PAGES</text>
+
+      <!-- ═══ SERVICES (Berry border = lead-gen priority) ═══ -->
+      <rect x="212" y="90" width="112" height="26" rx="3" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
+      <text x="268" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">SERVICES</text>
+
+      <!-- Services pillar connector -->
+      <line x1="268" y1="116" x2="268" y2="132" stroke="#D444A0" stroke-width="1"/>
+      <!-- Pillar horizontal bar -->
+      <line x1="198" y1="132" x2="338" y2="132" stroke="#D444A0" stroke-width="0.8"/>
+      <!-- Pillar drops -->
+      <line x1="208" y1="132" x2="208" y2="143" stroke="#D444A0" stroke-width="0.6"/>
+      <line x1="248" y1="132" x2="248" y2="143" stroke="#D444A0" stroke-width="0.6"/>
+      <line x1="288" y1="132" x2="288" y2="143" stroke="#D444A0" stroke-width="0.6"/>
+      <line x1="328" y1="132" x2="328" y2="143" stroke="#D444A0" stroke-width="0.6"/>
+
+      <!-- Pillar boxes -->
+      <rect x="170" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
+      <text x="208" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">AUDIT &amp; ASSUR.</text>
+      <rect x="210" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
+      <text x="248" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">TAX SERVICES</text>
+      <rect x="250" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
+      <text x="288" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">TRANSACTION / CM</text>
+      <rect x="290" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
+      <text x="328" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">CONSULTING</text>
+
+      <!-- Pillar sub-page counts -->
+      <text x="208" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–6 service pages</text>
+      <text x="248" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">5–6 service pages</text>
+      <text x="288" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–5 service pages</text>
+      <text x="328" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–5 service pages</text>
+
+      <text x="268" y="191" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">23–27 PAGES TOTAL</text>
+
+      <!-- ═══ INDUSTRIES ═══ -->
+      <rect x="334" y="90" width="86" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="377" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">INDUSTRIES</text>
+      <line x1="377" y1="116" x2="377" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="377" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Industries Hub</text>
+      <text x="377" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Construction &amp; Infra.</text>
+      <text x="377" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Manufacturing &amp; Dist.</text>
+      <text x="377" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Real Estate</text>
+      <text x="377" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Govt. Contractors</text>
+      <text x="377" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">4–6 PAGES (FINAL AT SPRINT)</text>
+
+      <!-- ═══ INSIGHTS ═══ -->
+      <rect x="425" y="90" width="82" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="466" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">INSIGHTS</text>
+      <line x1="466" y1="116" x2="466" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="466" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Insights Hub</text>
+      <text x="466" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Articles (expanding)</text>
+      <text x="466" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Podcast</text>
+      <text x="466" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Original Research</text>
+      <text x="466" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Press Releases</text>
+      <text x="466" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">5+ PAGES</text>
+
+      <!-- ═══ TOOLS (Berry border = lead-gen priority) ═══ -->
+      <rect x="514" y="90" width="80" height="26" rx="3" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
+      <text x="554" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">TOOLS</text>
+      <line x1="554" y1="116" x2="554" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="554" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Tools Hub</text>
+      <text x="554" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Capital Event Assess.</text>
+      <text x="554" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">R&amp;D Tax Credit Calc.</text>
+      <text x="554" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Cost Seg. Estimator</text>
+      <text x="554" y="194" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">4 PAGES</text>
+
+      <!-- ═══ CONTACT ═══ -->
+      <rect x="601" y="90" width="68" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="635" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">CONTACT</text>
+      <line x1="635" y1="116" x2="635" y2="128" stroke="#1A2535" stroke-width="0.6"/>
+      <text x="635" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Contact</text>
+      <text x="635" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Book a Call</text>
+      <text x="635" y="168" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">1 PAGE</text>
+
+      <!-- ═══ FOOTER UTILITIES ═══ -->
+      <rect x="140" y="238" width="190" height="46" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
+      <text x="235" y="256" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1A2535">CLIENT TOOLS</text>
+      <text x="235" y="269" text-anchor="middle" font-size="7.5" fill="#1A2535">Pay Invoice</text>
+      <text x="235" y="280" text-anchor="middle" font-size="7.5" fill="#1A2535">Client Portal (ShareFile)</text>
+
+      <rect x="350" y="238" width="220" height="46" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
+      <text x="460" y="256" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1A2535">LEGAL</text>
+      <text x="460" y="269" text-anchor="middle" font-size="7.5" fill="#1A2535">Privacy Policy · Terms of Use</text>
+      <text x="460" y="280" text-anchor="middle" font-size="7.5" fill="#1A2535">Cookie Policy · Accessibility</text>
+
+      <!-- Footer label -->
+      <text x="360" y="303" text-anchor="middle" font-size="7" fill="#888">Footer utilities: existing clients know where to find them; kept out of primary navigation</text>
+
+      <!-- ═══ TOTAL PAGE COUNT ═══ -->
+      <rect x="170" y="320" width="380" height="34" rx="4" fill="#121A25"/>
+      <text x="360" y="341" text-anchor="middle" font-size="10" font-weight="700" fill="#EEF4F6">Estimated total: 27–36 indexed pages at launch</text>
+
+      <!-- ═══ LEGEND ═══ -->
+      <rect x="20" y="380" width="11" height="11" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
+      <text x="36" y="390" font-size="7.5" fill="#1A2535">Lead-gen priority surface</text>
+      <rect x="180" y="380" width="11" height="11" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
+      <text x="196" y="390" font-size="7.5" fill="#1A2535">Standard navigation node</text>
+      <rect x="355" y="380" width="11" height="11" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
+      <text x="371" y="390" font-size="7.5" fill="#1A2535">Footer / utility pages</text>
+    </svg>
+  </div>
+
+  <h3 class="sub-header">Notes on the Architecture</h3>
+
+  <p>The previous version of this site treats Team as a subsection of About. That structure works for a two-partner firm with nothing to say. CTW has eight partners and a bench of senior staff, each with decades of focused experience. Visitors who care about capital event readiness, construction audit work, or government contracting want to know who specifically they are going to work with. Burying partner bios under About tells prospects that the people are an afterthought. Giving TEAM its own top-level section, with individual pages for each partner and key senior staff, signals the opposite. It also gives each partner page its own AEO surface, which means CTW's people become individually citable by AI search engines answering questions like "who handles construction company audits in Sacramento."</p>
+
+  <p>SERVICES carries the most structural change. The current site lists Consulting as the top-level catch-all, with Transaction Services and Capital Markets buried underneath it. That's backwards for a firm whose most differentiated and high-value work is in advisory and capital events. Transaction Services and Capital Markets get their own pillar at the same level as Audit, Tax, and Consulting. Each of the four pillars becomes a hub page with four to six dedicated service detail pages below it. A service detail page for "R&amp;D Tax Credits" or "Cost Segregation Studies" isn't just a navigation endpoint. It's a standalone AEO retrieval target that answers the specific question a CFO is asking before they ever think about calling an accountant. The difference between a site with one SERVICES page and a site with twenty-three to twenty-seven service-detail pages is the difference between one shot at a citation and twenty-three.</p>
+
+  <p>INDUSTRIES consolidates from twenty-eight to three to five named verticals. The current breadth signals a generalist practice that will work with anyone, which is exactly not how CTW's best clients find them. Vertical specificity in the navigation matches the way CTW actually wins engagements. The final industry list is selected during the brand sprint, with CTW's leadership making the call based on recent advisory and capital event work. The candidates are construction and infrastructure, manufacturing and distribution, real estate, government contractors, and professional services firms.</p>
+
+  <p>INSIGHTS replaces the existing Newsroom, which contains posts from 2019 and 2020, most of which reference regulations that have since changed. The new structure has four sections: Articles, Podcast, Original Research, and Press Releases. Final retain, rewrite, and retire decisions on existing content happen jointly during the content audit. CTW preserves authority over what stays. Nothing gets archived without sign-off.</p>
+
+  <p>TOOLS is a new top-level section. Each tool, the Capital Event Readiness Assessment, the R&amp;D Tax Credit Estimator, and the Cost Segregation Estimator, gets its own indexed page because each one is a discrete AEO retrieval target. Calculator-style queries carry real search volume. A dedicated page gives each tool a legitimate shot at direct citation. A tool buried in a form field on the Contact page does not.</p>
+
+  <p>CLIENT TOOLS and LEGAL live in the footer. Pay Invoice and the ShareFile portal link belong where existing clients expect to find them, not competing with prospect-facing navigation for attention in the primary menu. The legal pages, Privacy Policy, Terms of Use, Cookie Policy, and Accessibility, are present and discoverable but do not consume navigation real estate.</p>
+</div>
+
+<!-- ============================================================
+     SECTION 5: TECHNOLOGY RECOMMENDATIONS
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 5</span>
+  <h2 class="section-header">Technology Recommendations</h2>
+
+  <h3 class="sub-header">The Stack</h3>
+
+  <p>We recommend Astro for the website framework, Cloudflare for hosting and delivery, and Keystatic for content management. The combined stack gives CTW a site that loads in under one second on every page, costs a fraction of typical WordPress hosting to operate, and gives non-technical content stewards a clean, web-based interface for managing the site's day-to-day content.</p>
+
+  <p>The technology underneath matters less than what it produces. Here's what the benefits look like in practice.</p>
+
+  <div class="tech-logos">
+    <div class="tech-logo-item">
+      <div class="tech-logo-box">ASTRO</div>
+      <span class="tech-logo-label">Framework</span>
+    </div>
+    <div class="tech-logo-item" style="font-size:20pt;color:#ccc;padding-bottom:12pt;">+</div>
+    <div class="tech-logo-item">
+      <div class="tech-logo-box">CLOUDFLARE</div>
+      <span class="tech-logo-label">Hosting &amp; Edge Delivery</span>
+    </div>
+    <div class="tech-logo-item" style="font-size:20pt;color:#ccc;padding-bottom:12pt;">+</div>
+    <div class="tech-logo-item">
+      <div class="tech-logo-box">KEYSTATIC</div>
+      <span class="tech-logo-label">Content Management</span>
+    </div>
+  </div>
+
+
+  <h3 class="sub-header">Stack Comparison</h3>
+  <table class="comparison-table">
     <thead>
       <tr>
-        <th class="col-f"></th>
-        <th class="col-f">FOUNDATION</th>
-        <th class="col-e">ENGINE</th>
-        <th class="col-p">PARTNERSHIP</th>
+        <th>Dimension</th>
+        <th class="col-win">Astro + Cloudflare + Keystatic</th>
+        <th>WordPress (Managed Hosting)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="row-label">Website rebuild</td>
-        <td class="col-f-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Page load (mobile, 4G)</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Under 1 second at launch</td>
+        <td>5 to 10 seconds typical</td>
       </tr>
       <tr>
-        <td class="row-label">AEO foundation</td>
-        <td class="col-f-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Hosting cost (annual)</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> $0 to $300</td>
+        <td>$1,500 to $6,000</td>
       </tr>
       <tr>
-        <td class="row-label">Lead generation tools</td>
-        <td class="col-f-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Security surface area</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Static HTML, no SQL, no PHP</td>
+        <td>Plugin-dependent; ongoing CVEs</td>
       </tr>
       <tr>
-        <td class="row-label">Podcast + content engine</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Maintenance burden</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Content updates only</td>
+        <td>Plugin updates, core updates, PHP version</td>
       </tr>
       <tr>
-        <td class="row-label">Original research program</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">AEO readiness</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Static HTML parses instantly</td>
+        <td>Depends on plugin stack and render speed</td>
       </tr>
       <tr>
-        <td class="row-label">Press release program</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">CMS usability</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Keystatic: web editor, no training debt</td>
+        <td>Gutenberg or ACF: configurable but complex</td>
       </tr>
       <tr>
-        <td class="row-label">Weekly content production</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Rebrand propagation</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> Token-based: site-wide in under 1 hour</td>
+        <td>Page-by-page or theme replacement</td>
       </tr>
       <tr>
-        <td class="row-label">Quarterly business reviews</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
-      </tr>
-      <tr>
-        <td class="row-label">AEO citation tracking</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
-      </tr>
-      <tr>
-        <td class="row-label">AI Concierge</td>
-        <td class="col-f-val"><span class="e-dash">&#8211;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
-      </tr>
-      <tr>
-        <td class="row-label">90-day stabilization</td>
-        <td class="col-f-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-e-val"><span class="e-check">&#10003;</span></td>
-        <td class="col-p-val"><span class="e-check">&#10003;</span></td>
+        <td class="col-label">Uptime SLA</td>
+        <td class="col-win"><span class="check-berry">&#10003;</span> 99.99% (Cloudflare infrastructure)</td>
+        <td>Varies by hosting tier</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="section-divider"></div>
+  <h3 class="sub-header">Performance That Compounds</h3>
 
+  <p>Most professional services websites built on WordPress today load in five to ten seconds on a mobile connection. CTW's current site sits squarely in that range. The cost of that lag isn't theoretical. Google's own research shows mobile visitors abandon a page at fifty-three percent likelihood when load time exceeds three seconds. The slower a site loads, the more prospects leave before they ever see the content the site was built to deliver.</p>
 
-  <!-- ENGAGEMENT MODE CARDS -->
-  <div class="engagement-grid">
+  <p>CTW's new site will load in roughly one tenth of that time. We commit to a Largest Contentful Paint score under one second on every page at launch, measured on a standard 4G mobile connection. That's not a target we hit after months of tuning. That's the launch baseline.</p>
 
-    <!-- FOUNDATION -->
-    <div class="engagement-card card-foundation">
-      <div class="card-title">PATH FORWARD FOUNDATION</div>
-      <div class="card-tagline">THE WEBSITE, REBUILT IN FOUR WEEKS.</div>
-      <ul class="card-list">
-        <li>Two-week brand and messaging sprint to lock voice, value proposition, and audience-specific framings</li>
-        <li>Full website rebuild on Astro / Cloudflare / Keystatic</li>
-        <li>Content audit with retain / rewrite / retire recommendations</li>
-        <li>Rewrite of priority pages in CTW's brand voice (estimated twenty-five to thirty pages)</li>
-        <li>AEO foundation across every service and industry page</li>
-        <li>Calendar booking with intelligent routing</li>
-        <li>Capital Event Readiness Assessment</li>
-        <li>Two embedded calculators (R&amp;D Tax Credit and Cost Segregation)</li>
-        <li>Branded payment landing page integrated with CPACharge</li>
-        <li>Modernized privacy, accessibility, and disclaimer pages (WCAG 2.2 AA)</li>
-        <li>301 redirect map preserving SEO continuity</li>
-        <li>Training session for four content stewards on Keystatic CMS</li>
-        <li>Ninety days of stabilization support post-launch</li>
-      </ul>
-      <p class="card-prose">Foundation is the rebuild. It is enough on its own. Many firms launch here, run the new site for a year, and add the content engine in year two. CTW could absolutely do that.</p>
-      <div class="card-pricing">
-        Build: <span class="placeholder">$[FOUNDATION_BUILD]</span> one-time<br>
-        Retainer: <span class="placeholder">$[FOUNDATION_RETAINER]</span> / month
-      </div>
-    </div>
+  <p>The improvement comes from the architecture. Astro ships static HTML with near-zero JavaScript by default. Cloudflare delivers the static pages from edge servers physically close to every visitor. The entire stack favors performance over flexibility for its own sake.</p>
 
-    
-    <!-- PHOTOGRAPHY CALLOUT -->
-    <div class="photo-callout">
-      <div class="photo-callout-label">Optional Add-On</div>
-      <div class="photo-callout-heading">Original Photography</div>
-      <p>Professional on-site photography of CTW's team, offices, and client settings. Delivered as a curated asset library sized for web, print, and social across all formats. Extends the core build timeline from four weeks to twelve weeks.</p>
-      <p>Investment: <span class="placeholder">[PHOTOGRAPHY]</span> &nbsp;&nbsp; Timeline extension: +8 weeks &nbsp;&nbsp; Deliverable: Full asset library, usage rights in perpetuity</p>
-    </div>
+  <p>Speed isn't only a user experience win. It's an SEO and AEO advantage. Google's ranking algorithms penalize slow pages. AI search engines increasingly favor sources that load and parse quickly. Faster sites get cited more often.</p>
 
-    <!-- ENGINE -->
-    <div class="engagement-card card-engine">
-      <div class="card-title">PATH FORWARD ENGINE</div>
-      <div class="card-tagline">FOUNDATION, PLUS THE CONTENT PRODUCTION SYSTEM.</div>
-      <ul class="card-list">
-        <li>Everything in Foundation</li>
-        <li>Podcast launch: production setup, host coaching, first twelve episodes including guest booking, recording, post-production, and repurposing</li>
-        <li>Quarterly State of the Middle Market original research piece (we conduct, write, and design)</li>
-        <li>Monthly comparative AEO press release program with national distribution</li>
-        <li>Partner LinkedIn personal brand playbooks for up to four named partners</li>
-        <li>LinkedIn newsletter setup and the first six monthly issues</li>
-        <li>AI Concierge build and deployment</li>
-        <li>Twelve-month content velocity contract aligned to a documented production cadence</li>
-      </ul>
-      <p class="card-prose">Engine is for CTW if the firm wants to be cited, found, and remembered through a sustained content presence, not just rebuilt.</p>
-      <div class="card-pricing">
-        Build: <span class="placeholder">$[ENGINE_BUILD]</span> one-time<br>
-        Retainer: <span class="placeholder">$[ENGINE_RETAINER]</span> / month
-      </div>
-    </div>
+  <h3 class="sub-header">A CMS Built for Non-Developers</h3>
 
-    <!-- PARTNERSHIP -->
-    <div class="engagement-card card-partnership">
-      <div class="card-title">PATH FORWARD PARTNERSHIP</div>
-      <div class="card-tagline">ENGINE, PLUS THE FULL ONGOING PROGRAM.</div>
-      <ul class="card-list">
-        <li>Everything in Engine</li>
-        <li>Full content production aligned to the content engine cadence (weekly long-form articles, weekly short-form video, ongoing supplemental campaign work)</li>
-        <li>Quarterly business reviews including AEO citation tracking, competitor benchmarking, lead funnel analysis, and prioritized recommendations</li>
-        <li>Half-day AI content production training for CTW's content stewards</li>
-        <li>Priority response on new content needs and ad-hoc campaign work</li>
-      </ul>
-      <p class="card-prose">Partnership is for CTW if the firm wants the website and the surrounding communications work to keep getting smarter without leadership having to manage it.</p>
-      <div class="card-pricing">
-        Build: <span class="placeholder">$[PARTNERSHIP_BUILD]</span> one-time<br>
-        Retainer: <span class="placeholder">$[PARTNERSHIP_RETAINER]</span> / month
-      </div>
-    </div>
+  <p>CTW's RFP makes ease of content updates a top requirement, with the expectation that four internal stewards will manage routine updates without needing developer involvement. Keystatic is built for exactly this case.</p>
 
-  </div>
+  <p>The interface is web-based and reads like a modern document editor: rich text, image uploads, drag-and-drop reordering, version history, simple preview before publish. Editing a page feels closer to editing a Google Doc than configuring a WordPress dashboard. The four CTW content stewards will be trained in a single live session, with a recorded video and a one-page reference guide for follow-up.</p>
 
-  <p style="font-size:9.5pt;color:#1A2535;margin-top:14pt;font-style:italic;">All three modes assume a target kickoff of May 20, 2026. Final scope is set in the engagement letter.</p>
+  <p>Routine updates (a new team member, a newsroom post, a service description revision, an upcoming event) take minutes. We expect CTW's team will handle the vast majority of content updates internally without calling us. When larger development support is needed (a new section, a major design change, a new lead generation tool), the codebase is structured so any competent developer can ship the change quickly. We are not building a black box. We are building a maintainable system.</p>
+
+  <h3 class="sub-header">Security and Reliability That Don't Require Maintenance</h3>
+
+  <p>Most WordPress security incidents trace back to plugin vulnerabilities. The plugin ecosystem is enormous, the update cadence is constant, and the surface area for attack grows with every plugin a site adds. Professional services firms have been hit hard by this in recent years.</p>
+
+  <p>The stack we're proposing has dramatically less surface area. Static HTML pages can't be SQL-injected. There's no PHP runtime to exploit. Cloudflare provides DDoS protection, a web application firewall, and bot mitigation as part of the infrastructure. The site is protected by default. CTW isn't responsible for maintaining a security posture beyond keeping content current.</p>
+
+  <p>Uptime expectations: 99.99 percent or better, backed by Cloudflare's infrastructure SLA. In practical terms, the site doesn't go down.</p>
+
+  <h3 class="sub-header">Hosting Economics</h3>
+
+  <p>WordPress managed hosting for a site of CTW's expected complexity typically runs fifteen hundred to six thousand dollars per year, depending on the hosting tier and traffic. The stack we're proposing runs between zero and three hundred dollars per year for hosting at expected traffic. The difference compounds across a five-year horizon.</p>
+
+  <p>We mention this not because hosting cost is a deciding factor, but because the savings are real and they free budget for content production and ongoing strategic work, which is where the real value is.</p>
+
+  <h3 class="sub-header">Forward-Rebrand Architecture</h3>
+
+  <p>CTW's leadership flagged in the Q&amp;A that a future full rebrand may happen and the site should be designed to accommodate it. We build for that by default.</p>
+
+  <p>Name references, logo files, color palettes, typography, and brand tokens live as configuration variables, not as values hardcoded into pages or components. When the rebrand happens, a designer updates the token file, the system rebuilds, and the new identity propagates across the entire site in under an hour. No page-by-page edits. No content rewrites required.</p>
+
+  <p>This isn't a feature we'll scope later. It's how the build is structured on day one.</p>
+
+  <h3 class="sub-header">CRM-Ready Data Layer</h3>
+
+  <p>CTW will eventually select a CRM. The website will operate as if one is already in place. Forms, calculators, the Capital Event Readiness Assessment, and calendar bookings all write to a unified event schema designed to map cleanly to HubSpot or Salesforce.</p>
+
+  <p>When CTW signs the CRM engagement letter, the data layer is already structured to receive it. Migration takes days, not weeks. The lead generation work doesn't pause during the CRM rollout.</p>
+
+  <p>For most CPA firms of CTW's stage, we recommend HubSpot as the right entry point. The free CRM tier is genuinely useful, the paid tiers are an order of magnitude less expensive than Salesforce, the marketing automation is serviceable out of the box, and HubSpot's recently launched native AEO tracking tools integrate cleanly with the AEO foundation we'll build. Salesforce becomes the right call when the firm is ready to integrate deeply with audit workflow software or scale beyond fifty staff. Until then, HubSpot is the better tool for the job.</p>
+
+  <h3 class="sub-header">A Note on WordPress</h3>
+
+  <p>WordPress has been the backbone of half the internet for two decades, and for many use cases it remains a solid choice. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), it isn't the right tool. The plugin ecosystem creates ongoing fragility. The hosting overhead is unnecessary. The performance ceiling is lower. Most agencies will recommend WordPress because it's what they know how to build. We're recommending what we believe will serve CTW better.</p>
+
+  <h3 class="sub-header">Why You Will Not Be Stranded</h3>
+
+  <p>We do not just deploy off-the-shelf platforms. We build the infrastructure that delivers what we promise. CTW's Capital Event Readiness Assessment, the AI Concierge, the lead routing system, and the AEO foundation are all things we have built, refined, and shipped before. The codebase CTW receives is a system we own at the architecture level, not a stack of plugins we hope continues to work.</p>
+
 </div>
 
 <!-- ============================================================
-     SECTION 3: INVESTMENT
+     SECTION 6: LEAD GENERATION SYSTEM
      ============================================================ -->
 <div class="page-section section-break">
-  <span class="section-label">Section 3</span>
-  <h2 class="section-header">Investment</h2>
+  <span class="section-label">Section 6</span>
+  <h2 class="section-header">Lead Generation System</h2>
 
-  <p>Investment is structured to give CTW clear options at three commitment levels. Each engagement mode has a one-time build investment and, for Engine and Partnership, an ongoing monthly retainer that covers production and strategic work. We're happy to walk through any line item and discuss adjustments in a follow-up conversation.</p>
+  <p>Most accounting firm websites are passive. Visitors arrive, browse, leave, and someone hopes they remember to follow up. CTW's site is built to work harder than that.</p>
 
-  <div class="pricing-grid">
+  <p>The lead generation architecture has six components. Each one captures a different kind of intent at a different stage of the buyer journey.</p>
 
-    <!-- FOUNDATION -->
-    <div class="pricing-card" style="background:white;border:1pt solid #1A2535;padding:18pt;">
-      <div class="pricing-name">PATH FORWARD FOUNDATION</div>
-      <div class="pricing-tagline">The website rebuild. Four-week core delivery.</div>
-      <div class="pricing-includes">Includes</div>
-      <ul style="list-style:none;padding:0;margin-bottom:12pt;">
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Brand and messaging sprint</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Full site rebuild (Astro / Cloudflare / Keystatic)</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Content audit and priority page rewrites</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> AEO foundation across all service and industry pages</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Calendar booking with intelligent partner routing</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Capital Event Readiness Assessment</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Two embedded calculators</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> WCAG 2.2 AA compliance and modernized legal pages</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> CMS training for four stewards</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Ninety days of stabilization support</li>
-      </ul>
-      <div class="pricing-line">
-        Build investment: <span class="placeholder">$[FOUNDATION_BUILD]</span><br>
-        Monthly retainer: <span class="placeholder">$[FOUNDATION_RETAINER]</span> / month
-      </div>
-    </div>
 
-    <!-- ENGINE -->
-    <div class="pricing-card" style="background:#EEF4F6;border:1pt solid #1A2535;padding:18pt;">
-      <div class="pricing-name">PATH FORWARD ENGINE</div>
-      <div class="pricing-tagline">Foundation plus twelve months of content production.</div>
-      <div class="pricing-includes">Everything in Foundation, plus</div>
-      <ul style="list-style:none;padding:0;margin-bottom:12pt;">
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Podcast launch (twelve episodes, full production)</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Quarterly State of the Middle Market research</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Monthly AEO press release program, national distribution</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Partner LinkedIn playbooks (up to four partners)</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> LinkedIn newsletter (first six monthly issues)</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> AI Concierge build and deployment</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Twelve-month content velocity contract</li>
-      </ul>
-      <div class="pricing-line">
-        Build investment: <span class="placeholder">$[ENGINE_BUILD]</span><br>
-        Monthly retainer: <span class="placeholder">$[ENGINE_RETAINER]</span> / month
-      </div>
+  <div class="leadgen-hero">
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">1</div>
+      <div class="leadgen-hero-title">Calendar Booking with Intelligent Routing</div>
     </div>
-
-    <!-- PARTNERSHIP -->
-    <div class="pricing-card" style="background:white;border:2pt solid #D444A0;padding:18pt;">
-      <div class="pricing-name">PATH FORWARD PARTNERSHIP</div>
-      <div class="pricing-tagline">Engine plus the full ongoing communications program.</div>
-      <div class="pricing-includes">Everything in Engine, plus</div>
-      <ul style="list-style:none;padding:0;margin-bottom:12pt;">
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Full content production (weekly long-form, weekly video)</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Quarterly business reviews with AEO citation tracking and competitor benchmarking</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Half-day AI content production training for CTW staff</li>
-        <li style="font-size:8.5pt;padding-left:10pt;position:relative;margin-bottom:3pt;"><span style="position:absolute;left:0;color:#D444A0;">&#8226;</span> Priority response on all new content needs and campaign work</li>
-      </ul>
-      <div class="pricing-line">
-        Build investment: <span class="placeholder">$[PARTNERSHIP_BUILD]</span><br>
-        Monthly retainer: <span class="placeholder">$[PARTNERSHIP_RETAINER]</span> / month
-      </div>
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">2</div>
+      <div class="leadgen-hero-title">Capital Event Readiness Assessment</div>
     </div>
-
-  </div>
-
-  <h3 class="sub-header">Optional Add-Ons</h3>
-
-  <div style="margin:12pt 0;">
-    <div class="addon-item">
-      <span class="addon-name">Original photography session (half-day in Roseville office)</span>
-      <span class="addon-price">$[PHOTO]</span>
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">3</div>
+      <div class="leadgen-hero-title">Embedded Calculators</div>
     </div>
-    <div class="addon-item">
-      <span class="addon-name">Additional Capital Event Readiness Assessment variants (audit readiness, tax planning health check, succession readiness)</span>
-      <span class="addon-price">$[ASSESSMENT_VARIANT] each</span>
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">4</div>
+      <div class="leadgen-hero-title">AI Concierge</div>
     </div>
-    <div class="addon-item">
-      <span class="addon-name">AI content production training workshop (half-day, four staff)</span>
-      <span class="addon-price">$[WORKSHOP]</span>
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">5</div>
+      <div class="leadgen-hero-title">Newsletter and Content Subscriber System</div>
     </div>
-    <div class="addon-item">
-      <span class="addon-name">Custom calculator build (beyond the two included)</span>
-      <span class="addon-price">$[CALCULATOR]</span>
-    </div>
-    <div class="addon-item">
-      <span class="addon-name">Quarterly press release distribution (BusinessWire or PR Newswire)</span>
-      <span class="addon-price">$[PR_DISTRIBUTION] per release</span>
-    </div>
-    <div class="addon-item">
-      <span class="addon-name">AI Concierge addition to Foundation tier</span>
-      <span class="addon-price">$[CONCIERGE]</span>
+    <div class="leadgen-hero-item">
+      <div class="leadgen-hero-num">6</div>
+      <div class="leadgen-hero-title">RB2B Visitor Identification</div>
     </div>
   </div>
 
-  <div class="callout-box" style="margin-top:20pt;">
-    <p>All pricing assumes a target kickoff of May 20, 2026. Final scope, terms, and the milestone payment schedule will be set in the engagement letter. Pricing is held for sixty days from proposal submission.</p>
-  </div>
+  <h3 class="sub-header">1. Calendar Booking with Intelligent Routing</h3>
+
+  <p>Static contact forms turn high-intent moments into low-conversion experiences. A prospect who's ready to talk shouldn't have to wait for someone to read an email.</p>
+
+  <p>We'll integrate Calendly Teams across the site with intelligent routing. A short qualifying form (three questions: nature of inquiry, timeline, current client status) routes the prospect to the right partner or senior manager. Capital event inquiries reach the Capital Markets practice. Audit inquiries route round-robin among audit partners. Tax inquiries route to the right tax practice lead. Existing clients route to a different path entirely so we're not putting current relationships into the prospect funnel.</p>
+
+  <p>Calendly integrates natively with Microsoft 365 and Outlook, which is what CTW's team is already using. We'll configure availability windows, buffer rules, and fallback logic so a fully booked partner doesn't create a dead end. The setup is real work, not heroic.</p>
+
+  <h3 class="sub-header">2. Capital Event Readiness Assessment</h3>
+
+  <p>This is the highest-leverage lead generation tool in the package. It replaces what most professional services firms still do (gated PDFs that anyone can download) with something materially better: a custom-written report generated for the prospect's actual business.</p>
+
+  <p>Here's how it works. A business owner on the site, somewhere in the two-to-five-year window before a sale or recapitalization, clicks "Get your readiness assessment." They answer eight to ten structured questions about their business: industry, revenue range, ownership structure, anticipated transaction type, timeline, current advisory situation, financial reporting maturity. Two open-ended fields capture context.</p>
+
+  <p>The submission triggers a workflow that calls Claude (or GPT-4) against a structured rubric we'll develop in the brand sprint with CTW's Capital Markets practice. The rubric defines what a good readiness story looks like, what the common gaps are at each business size and stage, and what the recommended next steps are based on the inputs. The AI generates a custom-written assessment in CTW's brand voice. Two to three pages. Specific to that prospect's situation.</p>
+
+  <p>The assessment lands in the prospect's inbox as a branded HTML email within minutes of submission. They get something written for them, not for a category. The submission and output are stored for sales follow-up, a notification fires to the firm's preferred internal channel, and a conversion event is logged for attribution.</p>
+
+  <p>Three things make this work that competitors won't replicate quickly. The output is delivered as a branded HTML email, not a downloadable file, so the perceived value sits with the firm that produced it. The custom-written content is materially more valuable than a generic guide, which raises the brand value of the firm behind it. And the architecture supports rapid expansion: once the first assessment is proven, we can spin up additional versions (audit readiness, tax planning health check, succession readiness) using the same plumbing.</p>
+
+  <h3 class="sub-header">3. Live Calculators</h3>
+
+  <p>Two embedded calculators ship with the Foundation tier. Both are designed for AEO retrieval and lead capture.</p>
+
+  <p>The R&amp;D Tax Credit Estimator takes industry, R&amp;D wage base, supplies, and contract research inputs and produces a defensible estimate of the federal credit. Output captures the prospect's email at the "send me the detailed report" step.</p>
+
+  <p>The Cost Segregation Benefit Estimator takes property type, purchase price, building basis, and year placed in service. Output produces a benefit projection and recommended next steps.</p>
+
+  <p>Both calculators are SEO and AEO targets in their own right. The search volume on these keywords is real, and the conversion rate from calculator users is materially higher than average site traffic. Additional calculators (Section 199A QBI, Quality of Earnings preparation checklist, business valuation rough cut) are available as Phase 2 builds in the Engine and Partnership tiers.</p>
+
+  <h3 class="sub-header">4. AI Concierge (Engine and Partnership Tiers)</h3>
+
+  <p>A conversational AI assistant trained on CTW's published content, service descriptions, and partner bios. Site visitors ask questions in natural language and get answers in CTW's voice within seconds. When intent is clear, the assistant offers calendar booking and routes to the appropriate practice.</p>
+
+  <p>The concierge runs on the same Cloudflare infrastructure as the Capital Event Readiness Assessment, with a vector store holding embeddings of CTW's content. Operating cost runs between fifty and two hundred dollars per month at expected traffic. The upside is a 24/7 prospect engagement layer that most CPA firms in the region won't have for at least two more years.</p>
+
+  <h3 class="sub-header">5. CRM-Ready Architecture</h3>
+
+  <p>CTW doesn't have a CRM yet. The website is going to operate as if it does.</p>
+
+  <p>Every form, calculator, assessment, and calendar booking writes to a unified event schema. Server-side tracking captures form submissions, page views, and engagement signals. UTM parameter discipline is enforced on every external campaign link. Visitor profile data sits in a structured database, ready to be replayed into HubSpot, Salesforce, or whichever CRM CTW selects when the firm makes that decision.</p>
+
+  <p>In practical terms: the day CTW signs the engagement letter for a CRM, the data layer is already mapped to the contact properties spec. Migration is days, not weeks. The lead generation system doesn't pause while a CRM gets set up.</p>
+
+  <h3 class="sub-header">6. Visitor Identification</h3>
+
+  <p>CTW does not have a CRM yet, which means today, prospects who visit the site without filling out a form are essentially invisible. We are addressing this in two ways.</p>
+
+  <p>First, the lead generation tools (assessment, calculators, calendar booking) capture intent at the moment of conversion. This is the high-value layer.</p>
+
+  <p>Second, we deploy RB2B, a visitor identification platform that identifies individual US-based business visitors at the person level (not just the company level). When a prospect at a target firm visits CTW's Capital Markets practice page, the right CTW partner gets a notification with the visitor's name, title, and LinkedIn profile within minutes. The free tier of RB2B is sufficient to start; the paid tier ($299 per month, paid directly by CTW if elected) expands the identification volume.</p>
+
+  <p>This single capability transforms how CTW thinks about its top-of-funnel pipeline. The old assumption (you cannot follow up with someone who did not fill out a form) becomes obsolete. The new pattern is: a prospect researches CTW, leaves the site without converting, and CTW's partner reaches out the next day with a relevant offer of conversation.</p>
+
+  <p>Most CPA firms in the region will not have this capability for at least two more years.</p>
+
 </div>
 
 <!-- ============================================================
-     SECTION 4: TIMELINE
+     SECTION 7: CONTENT ENGINE AND AEO STRATEGY
      ============================================================ -->
 <div class="page-section section-break">
-  <span class="section-label">Section 4</span>
+  <span class="section-label">Section 7</span>
+  <h2 class="section-header">Content Engine and AEO Strategy</h2>
+
+  <p>Most CPA firm websites treat content as a launch deliverable. Write the pages, ship the site, move on. The result is what the rest of the industry now looks like. Pages from 2019 about regulations that have since changed. A newsroom that goes silent six months after launch. A LinkedIn presence run by someone other than the people who actually do the work.</p>
+
+  <p>CTW's website should be the opposite. Built to be filled, not just built to be launched. The content engine that follows is the system that does the filling. Some pieces we produce. Some pieces CTW produces. The discipline is shared.</p>
+
+  <p>The technical work matters. Schema markup, structured FAQ blocks, site speed under one second on every page, semantic HTML for AI retrieval, every service page architected to be cited by an answer engine. We will deliver every one of these to the highest standard. Other bidders will too. AEO compliance is becoming the price of admission.</p>
+
+  <p>What's harder, and what most firms get wrong, is the sustained human work behind the technical foundation. A partner's voice in writing across a year. A podcast that builds genuine relationships, not download counts. Press releases that say something rather than fill space. Original research that the firm actually conducts, with its actual clients, producing actual findings. The discipline to ship this work weekly, quarterly, annually, without losing the thread.</p>
+
+  <p>This is what we've spent more than a decade learning how to do.</p>
+
+  <!-- AEO BASELINE EXHIBIT -->
+  <div class="chart-container">
+    <div class="chart-title">CTW IN AI SEARCH: APRIL 2026 BASELINE</div>
+    <div class="chart-subtitle">Appearances across 8 representative middle-market queries, by engine</div>
+
+    <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;font-family:'Poppins',sans-serif;">
+      <!-- Background -->
+      <rect width="560" height="220" fill="white"/>
+
+      <!-- Grid lines -->
+      <line x1="160" y1="10" x2="160" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
+      <line x1="260" y1="10" x2="260" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
+      <line x1="360" y1="10" x2="360" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
+      <line x1="460" y1="10" x2="460" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
+      <line x1="510" y1="10" x2="510" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
+
+      <!-- Axis labels -->
+      <text x="160" y="198" text-anchor="middle" font-size="8" fill="#1A2535">25%</text>
+      <text x="260" y="198" text-anchor="middle" font-size="8" fill="#1A2535">50%</text>
+      <text x="360" y="198" text-anchor="middle" font-size="8" fill="#1A2535">75%</text>
+      <text x="510" y="198" text-anchor="middle" font-size="8" fill="#1A2535">100%</text>
+
+      <!-- CLAUDE: 75% = 300px wide -->
+      <text x="10" y="32" font-size="9.5" fill="#1A2535" font-weight="500">Claude</text>
+      <rect x="60" y="18" width="300" height="22" fill="#1A2535" rx="2"/>
+      <text x="350" y="33" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">75%</text>
+      <text x="160" y="33" font-size="8" fill="white" text-anchor="middle">6 of 8</text>
+
+      <!-- PERPLEXITY: 75% -->
+      <text x="10" y="70" font-size="9.5" fill="#1A2535" font-weight="500">Perplexity</text>
+      <rect x="60" y="56" width="300" height="22" fill="#1A2535" rx="2"/>
+      <text x="350" y="71" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">75%</text>
+      <text x="160" y="71" font-size="8" fill="white" text-anchor="middle">6 of 8</text>
+
+      <!-- GEMINI: 62.5% = 250px -->
+      <text x="10" y="108" font-size="9.5" fill="#1A2535" font-weight="500">Gemini</text>
+      <rect x="60" y="94" width="250" height="22" fill="#1A2535" rx="2"/>
+      <text x="310" y="109" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">62%</text>
+      <text x="150" y="109" font-size="8" fill="white" text-anchor="middle">5 of 8</text>
+
+      <!-- CHATGPT: 25% = 100px, Berry color -->
+      <text x="10" y="146" font-size="9.5" fill="#1A2535" font-weight="500">ChatGPT</text>
+      <rect x="60" y="132" width="100" height="22" fill="#D444A0" rx="2"/>
+      <text x="160" y="147" font-size="9" fill="#D444A0" font-weight="600" text-anchor="start" dx="6">25%</text>
+      <text x="110" y="147" font-size="8" fill="white" text-anchor="middle">2 of 8</text>
+
+      <!-- GROK: 12.5% = 50px, Berry color -->
+      <text x="10" y="184" font-size="9.5" fill="#1A2535" font-weight="500">Grok</text>
+      <rect x="60" y="170" width="50" height="22" fill="#D444A0" rx="2"/>
+      <text x="110" y="185" font-size="9" fill="#D444A0" font-weight="600" text-anchor="start" dx="6">12%</text>
+      <text x="85" y="185" font-size="8" fill="white" text-anchor="middle">1/8</text>
+    </svg>
+
+    <div class="chart-footer">Sacramento middle-market query: 0 of 5 engines cited CTW. ChatGPT holds roughly 70% of AI search market share.</div>
+  </div>
+
+  <p>The content engine is built to close the gap on ChatGPT and Grok, where CTW is underrepresented despite those two engines holding the largest share of AI search traffic among business professionals doing initial research.</p>
+
+  <h3 class="sub-header">Content Velocity</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Asset</th>
+        <th>Cadence</th>
+        <th>Owner</th>
+        <th>Purpose</th>
+        <th>First 90 Days</th>
+        <th>Steady State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Podcast episode</td>
+        <td>Biweekly</td>
+        <td>Named partner host</td>
+        <td>AEO + thought leadership</td>
+        <td>First 4 episodes</td>
+        <td>Biweekly</td>
+      </tr>
+      <tr>
+        <td>Long-form article (partner-bylined)</td>
+        <td>Weekly</td>
+        <td>Rotating partners</td>
+        <td>AEO citation magnet</td>
+        <td>One per partner</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>LinkedIn partner post</td>
+        <td>3x/week per partner</td>
+        <td>Each partner</td>
+        <td>Personal brand + reach</td>
+        <td>2x/week per partner</td>
+        <td>3x/week per partner</td>
+      </tr>
+      <tr>
+        <td>YouTube Short / LinkedIn video</td>
+        <td>Weekly</td>
+        <td>Marketing + partner</td>
+        <td>Top-of-funnel awareness</td>
+        <td>Biweekly</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>Newsletter</td>
+        <td>Monthly</td>
+        <td>Marketing</td>
+        <td>Owned audience</td>
+        <td>First issue in week 6</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>Press release (comparative AEO)</td>
+        <td>Monthly</td>
+        <td>Marketing</td>
+        <td>Citation graph + AEO</td>
+        <td>First release in week 8</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>Quarterly market outlook PDF</td>
+        <td>4x per year</td>
+        <td>Senior partner</td>
+        <td>Lead magnet refresh</td>
+        <td>First piece by end of Q1</td>
+        <td>Quarterly</td>
+      </tr>
+      <tr>
+        <td>Annual Tax Outlook</td>
+        <td>Annual + Q3 update</td>
+        <td>Tax practice lead</td>
+        <td>Annual lead magnet hero</td>
+        <td>Year 1 launch in Q4</td>
+        <td>Annual + Q3</td>
+      </tr>
+      <tr>
+        <td>Webinar</td>
+        <td>Quarterly</td>
+        <td>Practice leads</td>
+        <td>Direct lead capture</td>
+        <td>First webinar by end of Q1</td>
+        <td>Quarterly</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-header">Original Research</h3>
+
+  <p>The quarterly State of the Middle Market is a piece we conduct, write, and design. Each quarter we survey seventy-five to one hundred of CTW's clients and friends-of-firm on a focused topic: capital event timing, owner exit planning, audit readiness, regulatory pressure on a named vertical. Results publish as a PDF lead magnet and a series of derivative content: a partner-bylined article, a podcast episode, two or three short videos, a press release with the headline finding, and a webinar. One survey produces a full quarter of content, all attributable to CTW.</p>
+
+  <p>The research is owned by the firm. It cites CTW as the source. It gets distributed to the trade press that covers the audiences CTW wants to reach. After four quarters the firm has a body of original work that doesn't exist anywhere else in the regional market and that AI search engines are already citing.</p>
+
+  <h3 class="sub-header">The Podcast</h3>
+
+  <p>A biweekly show hosted by a named CTW partner. Guests are PE deal partners, M&amp;A attorneys, business brokers, banking relationship managers, CFOs of recently-acquired companies, and founders who have been through exits. The relationship-building is the point. Each episode produces a transcript optimized for AEO retrieval, a YouTube version, two or three short clips for LinkedIn, a written summary article, and quotable insights from named guests that lift trust signals.</p>
+
+  <p>Production happens via Riverside.fm, our preferred remote production platform. Riverside captures broadcast-acceptable audio and video locally on each participant's device, eliminating the studio buildout most podcast programs require. Guests join from wherever they are, including their own offices. The format reads as a polished video conversation, optimized for the category and the audience, without forcing CTW into a recording-studio commitment that gets used six times and then sits idle.</p>
+
+  <p>The Engine tier includes twelve episodes across the first six months. The Partnership tier extends production indefinitely.</p>
+
+  <h3 class="sub-header">Press Release Program</h3>
+
+  <p>Monthly comparative AEO press releases distributed nationally. The pattern is a direct positioning statement that gets indexed by ChatGPT and Perplexity and surfaces when prospects ask category questions. The releases are written for citation, not for general media pickup, though they regularly produce both. Distribution runs through BusinessWire or PR Newswire depending on the topic.</p>
+
+  <h3 class="sub-header">Partner LinkedIn Program</h3>
+
+  <p>Up to four partners receive a one-page personal brand playbook: signature topics, recommended cadence, suggested podcast guest list, target trade publications, and a rotation of post types. Posts are drafted in each partner's voice and approved before publishing. A monthly LinkedIn newsletter sits on top of the partner posts as a separate owned channel.</p>
+
+  <p>The newsletter is worth naming specifically. Monthly issues go directly to subscribers' inboxes, which is the rarest thing in social media right now. Subscribers opted in. Open rates on LinkedIn newsletters consistently run higher than email newsletters because the platform delivers the issue without the algorithm in the way.</p>
+
+  <h3 class="sub-header">AEO Foundation Across the Site</h3>
+
+  <p>Schema markup on every page that supports it. FAQ blocks on every service and industry page, structured for direct citation. Plain-language content optimized for retrieval. Semantic HTML throughout. The site is built so that when a prospect asks a category question on any major AI engine, the answer engine can find CTW's content, parse it cleanly, and cite it by name.</p>
+
+  <p>The output of this work is what produces the second and third levels of attention described in Section 2. Foundation gets CTW mentioned. Engine gets CTW recommended. Partnership keeps people talking about CTW for years.</p>
+
+  <div class="callout-box" style="margin:14pt 0;">
+    <p style="margin:0;font-size:9.5pt;color:#1A2535;line-height:1.55;"><strong>The Claude Voice Skill we deliver in Phase 0 is what makes ongoing content sustainable.</strong> Every partner can write in CTW's voice. Every internal staff member can produce on-brand drafts. Every contractor or freelancer who joins the project can be on-brand from day one. The voice does not live in any one writer's head. It lives in a tool the firm owns.</p>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     SECTION 8: TRUST, COMPLIANCE, AND ACCESSIBILITY
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 8</span>
+  <h2 class="section-header">Trust, Compliance, and Accessibility</h2>
+
+  <h3 class="sub-header">Accessibility</h3>
+
+  <p>WCAG 2.2 AA conformance is built in from the start: semantic HTML, passing contrast ratios at every type size, full keyboard navigation, visible focus states, and screen reader compatibility validated against NVDA and VoiceOver before launch. We do not install accessibility widget overlays. Those products do not satisfy WCAG and have been the basis of recent ADA lawsuits. The site itself is accessible, backed by a published accessibility statement page with testing documentation and a direct contact path for any visitor who finds an issue.</p>
+
+  <h3 class="sub-header">Privacy and Data Handling</h3>
+
+  <p>The existing CTW privacy policy is dated 2020 and predates current California Privacy Rights Act requirements. The rebuild includes a modernized privacy policy drafted against current CCPA standards. All form data, assessment submissions, and calendar booking details travel encrypted with TLS and are stored encrypted at rest. Cookie consent surfaces for visitors in regulatory environments. Analytics run server-side where possible. All visitor data lives on infrastructure CTW controls.</p>
+
+  <h3 class="sub-header">Security Posture</h3>
+
+  <p>Cloudflare provides DDoS protection, web application firewall, bot mitigation, automatic SSL, and edge-level rate limiting as part of the infrastructure. The static site architecture removes the most common attack vectors: no SQL database to inject, no PHP runtime to exploit, no plugins requiring constant patching. The security posture is published alongside the privacy and accessibility statements. Middle-market buyers and CFOs read these pages, and a modern security posture stated plainly is a differentiator in a category where most firms say nothing.</p>
+
+
+</div>
+
+<!-- ============================================================
+     SECTION 9: TIMELINE
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 9</span>
   <h2 class="section-header">Timeline</h2>
 
   <p>Target dates assuming engagement letter signed by May 18, 2026.</p>
@@ -1701,8 +2232,8 @@ tr:last-child td { border-bottom: none; }
       <rect width="600" height="200" fill="white"/>
 
       <!-- Optional zone (weeks 5-12) - light ice linen wash -->
-      <rect x="195" y="40" width="370" height="70" fill="#EEF4F6" rx="2"/>
-      <text x="385" y="32" text-anchor="middle" font-size="7.5" fill="#1A2535" font-style="italic">Optional: Photography &amp; Full Launch Window</text>
+      <rect x="195" y="40" width="185" height="70" fill="#EEF4F6" rx="2"/>
+      <text x="290" y="32" text-anchor="middle" font-size="7.5" fill="#1A2535" font-style="italic">Optional: Photography &amp; Full Launch Window</text>
 
       <!-- Main timeline bar -->
       <rect x="25" y="68" width="550" height="14" rx="3" fill="#d0d8e0"/>
@@ -1772,7 +2303,7 @@ tr:last-child td { border-bottom: none; }
       <text x="370" y="26" text-anchor="middle" font-size="7" fill="#888">Photo/Video</text>
       <text x="370" y="18" text-anchor="middle" font-size="7" fill="#888">Complete</text>
 
-      <!-- Week 12: PUBLIC LAUNCH - Berry -->
+      <!-- Week 8: PUBLIC LAUNCH - Berry -->
       <line x1="553" y1="60" x2="553" y2="150" stroke="#D444A0" stroke-width="1.5" stroke-dasharray="3,2"/>
       <circle cx="553" cy="56" r="5" fill="#D444A0"/>
       <text x="553" y="160" text-anchor="middle" font-size="7.5" fill="#D444A0" font-weight="600">PUBLIC</text>
@@ -1817,7 +2348,7 @@ tr:last-child td { border-bottom: none; }
         <td>MKTNG + CTW</td>
       </tr>
       <tr>
-        <td><strong>Week 12</strong></td>
+        <td><strong>Week 8</strong></td>
         <td><strong>Public launch and stabilization period begins</strong></td>
         <td><strong>MKTNG + CTW</strong></td>
       </tr>
@@ -1826,10 +2357,10 @@ tr:last-child td { border-bottom: none; }
 </div>
 
 <!-- ============================================================
-     SECTION 5: TEAM AND RELEVANT EXPERIENCE
+     SECTION 10: TEAM AND RELEVANT EXPERIENCE
      ============================================================ -->
 <div class="page-section section-break">
-  <span class="section-label">Section 5</span>
+  <span class="section-label">Section 10</span>
   <h2 class="section-header">Team and Relevant Experience</h2>
   <h3 class="sub-header" style="margin-top:0;">The Team Running the Engagement</h3>
   <p style="margin-bottom:20pt;">The senior team on this engagement leads the strategy, the writing, and the build directly. We don't push work down a chain. The people on the call are the people doing the work.</p>
@@ -2010,636 +2541,125 @@ tr:last-child td { border-bottom: none; }
 
 
 <!-- ============================================================
-     SECTION 6: APPROACH AND METHODOLOGY
-     ============================================================ -->
-<div class="page-section section-break">
-  <span class="section-label">Section 6</span>
-  <h2 class="section-header">Approach and Methodology</h2>
-
-  <p>The four-week core commitment is real because the work behind it is staged. Each phase has a defined input, a defined output, and a clean handoff to what follows. The longer engagement modes extend this same process into the year after launch, with the same senior team running the work throughout.</p>
-
-  <h3 class="sub-header">Phase 0: Brand and Messaging Sprint (Week 1)</h3>
-  <p>A focused working session with CTW's leadership locks the firm's position, the value proposition, and the audience-specific framings for the four prospect types: business owners, CFOs, PE sponsors, and capital markets prospects. The output is a brand voice document delivered as both a printed reference guide and a structured AI skill file CTW keeps permanently. The skill file means CTW can generate on-brand content with AI tools indefinitely, without recreating the voice guidelines each time. Everything written from that point forward runs against this document.</p>
-
-  <h3 class="sub-header">Phase 1: Architecture, Content Audit, and AEO Foundation (Week 2)</h3>
-  <p>The existing site gets audited page by page, with a documented retain, rewrite, or retire recommendation against each one. The AEO baseline expands from the eight queries we ran during proposal preparation to twenty-five priority queries mapped to CTW's actual practice areas and named geographies. Sitemap gets finalized jointly with CTW's leadership. Schema architecture is defined. The technical foundation on Astro, Cloudflare, and Keystatic initializes in parallel with the audit so no time is lost.</p>
-
-  <h3 class="sub-header">Phase 2: Design and Content Production (Week 3)</h3>
-  <p>Joshua presents three design directions to CTW's leadership for selection. The chosen direction becomes the component library and visual system for the full site. Content rewrite begins on the priority pages identified in the audit. Where CTW writes, we edit and structure for AEO. Where we write, the copy runs through the brand voice document so the firm's tone holds throughout. CTW reviews all content before it goes live.</p>
-
-  <h3 class="sub-header">Phase 3: Build, Integration, and QA (Week 4)</h3>
-  <p>Development runs against the approved design and audited content. Calendar booking integrates with Microsoft 365. The Capital Event Readiness Assessment, the two calculators, and the CPACharge payment flow all connect. Accessibility testing runs against WCAG 2.2 AA. The site goes to soft launch for CTW's leadership review at the end of the week. CTW selects one design direction by end of week three to hold the four-week delivery commitment.</p>
-
-  <h3 class="sub-header">Phase 4: Launch, Training, and Stabilization (Week 5 and Beyond)</h3>
-  <p>Public launch with 301 redirects mapped from old URLs, search consoles submitted, and analytics confirmed. The four CTW content stewards complete a single live training session on Keystatic, with a recorded video and a one-page reference card for follow-up. Performance monitoring stays active through ninety days of stabilization support. This is the point at which most agencies end their engagement. Ours doesn't.</p>
-
-  <h3 class="sub-header">Phase 5: Ongoing Partnership (Engine and Partnership Tiers)</h3>
-  <p>For CTW selecting the Engine or Partnership modes, Phase 5 extends the engagement into the full ongoing program: the content production cadence documented in Section 10, the quarterly business reviews and competitive monitoring detailed in Section 13, and the proactive strategic input that keeps the engagement generating value past the first year. The senior team that ran the build runs the ongoing program. No handoffs.</p>
-
-  <div class="berry-rule"></div>
-  <p>The site architecture this process produces is detailed in Section 7.</p>
-</div>
-
-<!-- ============================================================
-     SECTION 7: RECOMMENDED SITE ARCHITECTURE
-     ============================================================ -->
-<div class="page-section section-break">
-  <span class="section-label">Section 7</span>
-  <h2 class="section-header">Recommended Site Architecture</h2>
-
-  <p>The architecture below represents a full professional services site of twenty-seven to thirty-six indexed pages, built around three principles. Clarity for the visitor, who should reach any service, industry, or tool in one or two clicks from anywhere on the site. AEO depth at every page that matters, with structured FAQ blocks, schema markup, and plain-language content built for direct citation by AI search engines. And forward-rebrand readiness, so a future identity change propagates across the site without page-by-page rework.</p>
-
-  <p>This is a substantively different scope than the current site. It is not a refresh of eight pages. It is a new site built to perform like a category leader: individual pages for each partner, dedicated service-detail pages for each practice area, a developed Insights structure, and lead-generation tools with their own indexed landing pages.</p>
-
-  <p>Final selections within the architecture, particularly the short list of named industries and the exact partner page roster, happen jointly during the brand sprint. The structure here reflects our best recommendation given what we know about the firm's current trajectory.</p>
-
-  <div class="diagram-container sitemap-container sitemap-landscape-wrap" style="margin:20pt 0;">
-    <svg viewBox="0 0 720 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;font-family:'Poppins',sans-serif;">
-      <!-- ═══ HOME ═══ -->
-      <rect x="270" y="10" width="180" height="32" rx="4" fill="#EEF4F6" stroke="#1A2535" stroke-width="1.2"/>
-      <text x="360" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">HOME</text>
-      <text x="360" y="50" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700" letter-spacing="1">HOMEPAGE · 1 PAGE</text>
-
-      <!-- Trunk connector -->
-      <line x1="360" y1="42" x2="360" y2="76" stroke="#1A2535" stroke-width="1"/>
-
-      <!-- Horizontal nav bar -->
-      <line x1="44" y1="76" x2="677" y2="76" stroke="#1A2535" stroke-width="1"/>
-
-      <!-- Drop lines to L2 nodes at x = 63, 155, 268, 377, 466, 554, 635 -->
-      <line x1="63"  y1="76" x2="63"  y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="155" y1="76" x2="155" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="268" y1="76" x2="268" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="377" y1="76" x2="377" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="466" y1="76" x2="466" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="554" y1="76" x2="554" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-      <line x1="635" y1="76" x2="635" y2="90" stroke="#1A2535" stroke-width="0.8"/>
-
-      <!-- ═══ ABOUT ═══ -->
-      <rect x="21" y="90" width="84" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="63" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">ABOUT</text>
-      <line x1="63" y1="116" x2="63" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="63" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">About Hub</text>
-      <text x="63" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Our Approach</text>
-      <text x="63" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Our History</text>
-      <text x="63" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Community Involvement</text>
-      <text x="63" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Careers</text>
-      <text x="63" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">5 PAGES</text>
-
-      <!-- ═══ TEAM ═══ -->
-      <rect x="111" y="90" width="88" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="155" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">TEAM</text>
-      <line x1="155" y1="116" x2="155" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="155" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Team Hub</text>
-      <text x="155" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Partner Pages (5–7 each)</text>
-      <text x="155" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Senior Staff (2–3)</text>
-      <text x="155" y="181" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">8–11 PAGES</text>
-
-      <!-- ═══ SERVICES (Berry border = lead-gen priority) ═══ -->
-      <rect x="212" y="90" width="112" height="26" rx="3" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
-      <text x="268" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">SERVICES</text>
-
-      <!-- Services pillar connector -->
-      <line x1="268" y1="116" x2="268" y2="132" stroke="#D444A0" stroke-width="1"/>
-      <!-- Pillar horizontal bar -->
-      <line x1="198" y1="132" x2="338" y2="132" stroke="#D444A0" stroke-width="0.8"/>
-      <!-- Pillar drops -->
-      <line x1="208" y1="132" x2="208" y2="143" stroke="#D444A0" stroke-width="0.6"/>
-      <line x1="248" y1="132" x2="248" y2="143" stroke="#D444A0" stroke-width="0.6"/>
-      <line x1="288" y1="132" x2="288" y2="143" stroke="#D444A0" stroke-width="0.6"/>
-      <line x1="328" y1="132" x2="328" y2="143" stroke="#D444A0" stroke-width="0.6"/>
-
-      <!-- Pillar boxes -->
-      <rect x="170" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
-      <text x="208" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">AUDIT &amp; ASSUR.</text>
-      <rect x="210" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
-      <text x="248" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">TAX SERVICES</text>
-      <rect x="250" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
-      <text x="288" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">TRANSACTION / CM</text>
-      <rect x="290" y="143" width="76" height="21" rx="2" fill="#EEF4F6" stroke="#D444A0" stroke-width="0.8"/>
-      <text x="328" y="157" text-anchor="middle" font-size="7" font-weight="600" fill="#D444A0">CONSULTING</text>
-
-      <!-- Pillar sub-page counts -->
-      <text x="208" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–6 service pages</text>
-      <text x="248" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">5–6 service pages</text>
-      <text x="288" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–5 service pages</text>
-      <text x="328" y="174" text-anchor="middle" font-size="6.5" fill="#1A2535">4–5 service pages</text>
-
-      <text x="268" y="191" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">23–27 PAGES TOTAL</text>
-
-      <!-- ═══ INDUSTRIES ═══ -->
-      <rect x="334" y="90" width="86" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="377" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">INDUSTRIES</text>
-      <line x1="377" y1="116" x2="377" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="377" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Industries Hub</text>
-      <text x="377" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Construction &amp; Infra.</text>
-      <text x="377" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Manufacturing &amp; Dist.</text>
-      <text x="377" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Real Estate</text>
-      <text x="377" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Govt. Contractors</text>
-      <text x="377" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">4–6 PAGES (FINAL AT SPRINT)</text>
-
-      <!-- ═══ INSIGHTS ═══ -->
-      <rect x="425" y="90" width="82" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="466" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">INSIGHTS</text>
-      <line x1="466" y1="116" x2="466" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="466" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Insights Hub</text>
-      <text x="466" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Articles (expanding)</text>
-      <text x="466" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">Podcast</text>
-      <text x="466" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Original Research</text>
-      <text x="466" y="192" text-anchor="middle" font-size="7.5" fill="#1A2535">Press Releases</text>
-      <text x="466" y="207" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">5+ PAGES</text>
-
-      <!-- ═══ TOOLS (Berry border = lead-gen priority) ═══ -->
-      <rect x="514" y="90" width="80" height="26" rx="3" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
-      <text x="554" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">TOOLS</text>
-      <line x1="554" y1="116" x2="554" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="554" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Tools Hub</text>
-      <text x="554" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Capital Event Assess.</text>
-      <text x="554" y="166" text-anchor="middle" font-size="7.5" fill="#1A2535">R&amp;D Tax Credit Calc.</text>
-      <text x="554" y="179" text-anchor="middle" font-size="7.5" fill="#1A2535">Cost Seg. Estimator</text>
-      <text x="554" y="194" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">4 PAGES</text>
-
-      <!-- ═══ CONTACT ═══ -->
-      <rect x="601" y="90" width="68" height="26" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="635" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#121A25" font-family="'Plus Jakarta Sans',sans-serif">CONTACT</text>
-      <line x1="635" y1="116" x2="635" y2="128" stroke="#1A2535" stroke-width="0.6"/>
-      <text x="635" y="140" text-anchor="middle" font-size="7.5" fill="#1A2535">Contact</text>
-      <text x="635" y="153" text-anchor="middle" font-size="7.5" fill="#1A2535">Book a Call</text>
-      <text x="635" y="168" text-anchor="middle" font-size="6.5" fill="#2DD4C0" font-weight="700">1 PAGE</text>
-
-      <!-- ═══ FOOTER UTILITIES ═══ -->
-      <rect x="140" y="238" width="190" height="46" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
-      <text x="235" y="256" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1A2535">CLIENT TOOLS</text>
-      <text x="235" y="269" text-anchor="middle" font-size="7.5" fill="#1A2535">Pay Invoice</text>
-      <text x="235" y="280" text-anchor="middle" font-size="7.5" fill="#1A2535">Client Portal (ShareFile)</text>
-
-      <rect x="350" y="238" width="220" height="46" rx="3" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
-      <text x="460" y="256" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1A2535">LEGAL</text>
-      <text x="460" y="269" text-anchor="middle" font-size="7.5" fill="#1A2535">Privacy Policy · Terms of Use</text>
-      <text x="460" y="280" text-anchor="middle" font-size="7.5" fill="#1A2535">Cookie Policy · Accessibility</text>
-
-      <!-- Footer label -->
-      <text x="360" y="303" text-anchor="middle" font-size="7" fill="#888">Footer utilities: existing clients know where to find them; kept out of primary navigation</text>
-
-      <!-- ═══ TOTAL PAGE COUNT ═══ -->
-      <rect x="170" y="320" width="380" height="34" rx="4" fill="#121A25"/>
-      <text x="360" y="341" text-anchor="middle" font-size="10" font-weight="700" fill="#EEF4F6">Estimated total: 27–36 indexed pages at launch</text>
-
-      <!-- ═══ LEGEND ═══ -->
-      <rect x="20" y="380" width="11" height="11" fill="#EEF4F6" stroke="#D444A0" stroke-width="1.5"/>
-      <text x="36" y="390" font-size="7.5" fill="#1A2535">Lead-gen priority surface</text>
-      <rect x="180" y="380" width="11" height="11" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.8"/>
-      <text x="196" y="390" font-size="7.5" fill="#1A2535">Standard navigation node</text>
-      <rect x="355" y="380" width="11" height="11" fill="#EEF4F6" stroke="#1A2535" stroke-width="0.5" stroke-dasharray="4,2"/>
-      <text x="371" y="390" font-size="7.5" fill="#1A2535">Footer / utility pages</text>
-    </svg>
-  </div>
-
-  <h3 class="sub-header">Notes on the Architecture</h3>
-
-  <p>The previous version of this site treats Team as a subsection of About. That structure works for a two-partner firm with nothing to say. CTW has eight partners and a bench of senior staff, each with decades of focused experience. Visitors who care about capital event readiness, construction audit work, or government contracting want to know who specifically they are going to work with. Burying partner bios under About tells prospects that the people are an afterthought. Giving TEAM its own top-level section, with individual pages for each partner and key senior staff, signals the opposite. It also gives each partner page its own AEO surface, which means CTW's people become individually citable by AI search engines answering questions like "who handles construction company audits in Sacramento."</p>
-
-  <p>SERVICES carries the most structural change. The current site lists Consulting as the top-level catch-all, with Transaction Services and Capital Markets buried underneath it. That's backwards for a firm whose most differentiated and high-value work is in advisory and capital events. Transaction Services and Capital Markets get their own pillar at the same level as Audit, Tax, and Consulting. Each of the four pillars becomes a hub page with four to six dedicated service detail pages below it. A service detail page for "R&amp;D Tax Credits" or "Cost Segregation Studies" isn't just a navigation endpoint. It's a standalone AEO retrieval target that answers the specific question a CFO is asking before they ever think about calling an accountant. The difference between a site with one SERVICES page and a site with twenty-three to twenty-seven service-detail pages is the difference between one shot at a citation and twenty-three.</p>
-
-  <p>INDUSTRIES consolidates from twenty-eight to three to five named verticals. The current breadth signals a generalist practice that will work with anyone, which is exactly not how CTW's best clients find them. Vertical specificity in the navigation matches the way CTW actually wins engagements. The final industry list is selected during the brand sprint, with CTW's leadership making the call based on recent advisory and capital event work. The candidates are construction and infrastructure, manufacturing and distribution, real estate, government contractors, and professional services firms.</p>
-
-  <p>INSIGHTS replaces the existing Newsroom, which contains posts from 2019 and 2020, most of which reference regulations that have since changed. The new structure has four sections: Articles, Podcast, Original Research, and Press Releases. Final retain, rewrite, and retire decisions on existing content happen jointly during the content audit. CTW preserves authority over what stays. Nothing gets archived without sign-off.</p>
-
-  <p>TOOLS is a new top-level section. Each tool, the Capital Event Readiness Assessment, the R&amp;D Tax Credit Estimator, and the Cost Segregation Estimator, gets its own indexed page because each one is a discrete AEO retrieval target. Calculator-style queries carry real search volume. A dedicated page gives each tool a legitimate shot at direct citation. A tool buried in a form field on the Contact page does not.</p>
-
-  <p>CLIENT TOOLS and LEGAL live in the footer. Pay Invoice and the ShareFile portal link belong where existing clients expect to find them, not competing with prospect-facing navigation for attention in the primary menu. The legal pages, Privacy Policy, Terms of Use, Cookie Policy, and Accessibility, are present and discoverable but do not consume navigation real estate.</p>
-</div>
-
-<!-- ============================================================
-     SECTION 8: TECHNOLOGY RECOMMENDATIONS
-     ============================================================ -->
-<div class="page-section section-break">
-  <span class="section-label">Section 8</span>
-  <h2 class="section-header">Technology Recommendations</h2>
-
-  <h3 class="sub-header">The Stack</h3>
-
-  <p>We recommend Astro for the website framework, Cloudflare for hosting and delivery, and Keystatic for content management. The combined stack gives CTW a site that loads in under one second on every page, costs a fraction of typical WordPress hosting to operate, and gives non-technical content stewards a clean, web-based interface for managing the site's day-to-day content.</p>
-
-  <p>The technology underneath matters less than what it produces. Here's what the benefits look like in practice.</p>
-
-  <div class="tech-logos">
-    <div class="tech-logo-item">
-      <div class="tech-logo-box">ASTRO</div>
-      <span class="tech-logo-label">Framework</span>
-    </div>
-    <div class="tech-logo-item" style="font-size:20pt;color:#ccc;padding-bottom:12pt;">+</div>
-    <div class="tech-logo-item">
-      <div class="tech-logo-box">CLOUDFLARE</div>
-      <span class="tech-logo-label">Hosting &amp; Edge Delivery</span>
-    </div>
-    <div class="tech-logo-item" style="font-size:20pt;color:#ccc;padding-bottom:12pt;">+</div>
-    <div class="tech-logo-item">
-      <div class="tech-logo-box">KEYSTATIC</div>
-      <span class="tech-logo-label">Content Management</span>
-    </div>
-  </div>
-
-
-  <h3 class="sub-header">Stack Comparison</h3>
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Dimension</th>
-        <th class="col-win">Astro + Cloudflare + Keystatic</th>
-        <th>WordPress (Managed Hosting)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="col-label">Page load (mobile, 4G)</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Under 1 second at launch</td>
-        <td>5 to 10 seconds typical</td>
-      </tr>
-      <tr>
-        <td class="col-label">Hosting cost (annual)</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> $0 to $300</td>
-        <td>$1,500 to $6,000</td>
-      </tr>
-      <tr>
-        <td class="col-label">Security surface area</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Static HTML, no SQL, no PHP</td>
-        <td>Plugin-dependent; ongoing CVEs</td>
-      </tr>
-      <tr>
-        <td class="col-label">Maintenance burden</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Content updates only</td>
-        <td>Plugin updates, core updates, PHP version</td>
-      </tr>
-      <tr>
-        <td class="col-label">AEO readiness</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Static HTML parses instantly</td>
-        <td>Depends on plugin stack and render speed</td>
-      </tr>
-      <tr>
-        <td class="col-label">CMS usability</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Keystatic: web editor, no training debt</td>
-        <td>Gutenberg or ACF: configurable but complex</td>
-      </tr>
-      <tr>
-        <td class="col-label">Rebrand propagation</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> Token-based: site-wide in under 1 hour</td>
-        <td>Page-by-page or theme replacement</td>
-      </tr>
-      <tr>
-        <td class="col-label">Uptime SLA</td>
-        <td class="col-win"><span class="check-berry">&#10003;</span> 99.99% (Cloudflare infrastructure)</td>
-        <td>Varies by hosting tier</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3 class="sub-header">Performance That Compounds</h3>
-
-  <p>Most professional services websites built on WordPress today load in five to ten seconds on a mobile connection. CTW's current site sits squarely in that range. The cost of that lag isn't theoretical. Google's own research shows mobile visitors abandon a page at fifty-three percent likelihood when load time exceeds three seconds. The slower a site loads, the more prospects leave before they ever see the content the site was built to deliver.</p>
-
-  <p>CTW's new site will load in roughly one tenth of that time. We commit to a Largest Contentful Paint score under one second on every page at launch, measured on a standard 4G mobile connection. That's not a target we hit after months of tuning. That's the launch baseline.</p>
-
-  <p>The improvement comes from the architecture. Astro ships static HTML with near-zero JavaScript by default. Cloudflare delivers the static pages from edge servers physically close to every visitor. The entire stack favors performance over flexibility for its own sake.</p>
-
-  <p>Speed isn't only a user experience win. It's an SEO and AEO advantage. Google's ranking algorithms penalize slow pages. AI search engines increasingly favor sources that load and parse quickly. Faster sites get cited more often.</p>
-
-  <h3 class="sub-header">A CMS Built for Non-Developers</h3>
-
-  <p>CTW's RFP makes ease of content updates a top requirement, with the expectation that four internal stewards will manage routine updates without needing developer involvement. Keystatic is built for exactly this case.</p>
-
-  <p>The interface is web-based and reads like a modern document editor: rich text, image uploads, drag-and-drop reordering, version history, simple preview before publish. Editing a page feels closer to editing a Google Doc than configuring a WordPress dashboard. The four CTW content stewards will be trained in a single live session, with a recorded video and a one-page reference guide for follow-up.</p>
-
-  <p>Routine updates (a new team member, a newsroom post, a service description revision, an upcoming event) take minutes. We expect CTW's team will handle the vast majority of content updates internally without calling us. When larger development support is needed (a new section, a major design change, a new lead generation tool), the codebase is structured so any competent developer can ship the change quickly. We are not building a black box. We are building a maintainable system.</p>
-
-  <h3 class="sub-header">Security and Reliability That Don't Require Maintenance</h3>
-
-  <p>Most WordPress security incidents trace back to plugin vulnerabilities. The plugin ecosystem is enormous, the update cadence is constant, and the surface area for attack grows with every plugin a site adds. Professional services firms have been hit hard by this in recent years.</p>
-
-  <p>The stack we're proposing has dramatically less surface area. Static HTML pages can't be SQL-injected. There's no PHP runtime to exploit. Cloudflare provides DDoS protection, a web application firewall, and bot mitigation as part of the infrastructure. The site is protected by default. CTW isn't responsible for maintaining a security posture beyond keeping content current.</p>
-
-  <p>Uptime expectations: 99.99 percent or better, backed by Cloudflare's infrastructure SLA. In practical terms, the site doesn't go down.</p>
-
-  <h3 class="sub-header">Hosting Economics</h3>
-
-  <p>WordPress managed hosting for a site of CTW's expected complexity typically runs fifteen hundred to six thousand dollars per year, depending on the hosting tier and traffic. The stack we're proposing runs between zero and three hundred dollars per year for hosting at expected traffic. The difference compounds across a five-year horizon.</p>
-
-  <p>We mention this not because hosting cost is a deciding factor, but because the savings are real and they free budget for content production and ongoing strategic work, which is where the real value is.</p>
-
-  <h3 class="sub-header">Forward-Rebrand Architecture</h3>
-
-  <p>CTW's leadership flagged in the Q&amp;A that a future full rebrand may happen and the site should be designed to accommodate it. We build for that by default.</p>
-
-  <p>Name references, logo files, color palettes, typography, and brand tokens live as configuration variables, not as values hardcoded into pages or components. When the rebrand happens, a designer updates the token file, the system rebuilds, and the new identity propagates across the entire site in under an hour. No page-by-page edits. No content rewrites required.</p>
-
-  <p>This isn't a feature we'll scope later. It's how the build is structured on day one.</p>
-
-  <h3 class="sub-header">CRM-Ready Data Layer</h3>
-
-  <p>CTW will eventually select a CRM. The website will operate as if one is already in place. Forms, calculators, the Capital Event Readiness Assessment, and calendar bookings all write to a unified event schema designed to map cleanly to HubSpot or Salesforce.</p>
-
-  <p>When CTW signs the CRM engagement letter, the data layer is already structured to receive it. Migration takes days, not weeks. The lead generation work doesn't pause during the CRM rollout.</p>
-
-  <p>For most CPA firms of CTW's stage, we recommend HubSpot as the right entry point. The free CRM tier is genuinely useful, the paid tiers are an order of magnitude less expensive than Salesforce, the marketing automation is serviceable out of the box, and HubSpot's recently launched native AEO tracking tools integrate cleanly with the AEO foundation we'll build. Salesforce becomes the right call when the firm is ready to integrate deeply with audit workflow software or scale beyond fifty staff. Until then, HubSpot is the better tool for the job.</p>
-
-  <h3 class="sub-header">A Note on WordPress</h3>
-
-  <p>WordPress has been the backbone of half the internet for two decades, and for many use cases it remains a solid choice. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), it isn't the right tool. The plugin ecosystem creates ongoing fragility. The hosting overhead is unnecessary. The performance ceiling is lower. Most agencies will recommend WordPress because it's what they know how to build. We're recommending what we believe will serve CTW better.</p>
-</div>
-
-<!-- ============================================================
-     SECTION 9: LEAD GENERATION SYSTEM
-     ============================================================ -->
-<div class="page-section section-break">
-  <span class="section-label">Section 9</span>
-  <h2 class="section-header">Lead Generation System</h2>
-
-  <p>Most accounting firm websites are passive. Visitors arrive, browse, leave, and someone hopes they remember to follow up. CTW's site is built to work harder than that.</p>
-
-  <p>The lead generation architecture has five components. Each one captures a different kind of intent at a different stage of the buyer journey.</p>
-
-
-  <div class="leadgen-hero">
-    <div class="leadgen-hero-item">
-      <div class="leadgen-hero-num">1</div>
-      <div class="leadgen-hero-title">Calendar Booking with Intelligent Routing</div>
-    </div>
-    <div class="leadgen-hero-item">
-      <div class="leadgen-hero-num">2</div>
-      <div class="leadgen-hero-title">Capital Event Readiness Assessment</div>
-    </div>
-    <div class="leadgen-hero-item">
-      <div class="leadgen-hero-num">3</div>
-      <div class="leadgen-hero-title">Embedded Calculators</div>
-    </div>
-    <div class="leadgen-hero-item">
-      <div class="leadgen-hero-num">4</div>
-      <div class="leadgen-hero-title">AI Concierge</div>
-    </div>
-    <div class="leadgen-hero-item">
-      <div class="leadgen-hero-num">5</div>
-      <div class="leadgen-hero-title">Newsletter and Content Subscriber System</div>
-    </div>
-  </div>
-
-  <h3 class="sub-header">1. Calendar Booking with Intelligent Routing</h3>
-
-  <p>Static contact forms turn high-intent moments into low-conversion experiences. A prospect who's ready to talk shouldn't have to wait for someone to read an email.</p>
-
-  <p>We'll integrate Calendly Teams across the site with intelligent routing. A short qualifying form (three questions: nature of inquiry, timeline, current client status) routes the prospect to the right partner or senior manager. Capital event inquiries reach the Capital Markets practice. Audit inquiries route round-robin among audit partners. Tax inquiries route to the right tax practice lead. Existing clients route to a different path entirely so we're not putting current relationships into the prospect funnel.</p>
-
-  <p>Calendly integrates natively with Microsoft 365 and Outlook, which is what CTW's team is already using. We'll configure availability windows, buffer rules, and fallback logic so a fully booked partner doesn't create a dead end. The setup is real work, not heroic.</p>
-
-  <h3 class="sub-header">2. Capital Event Readiness Assessment</h3>
-
-  <p>This is the highest-leverage lead generation tool in the package. It replaces what most professional services firms still do (gated PDFs that anyone can download) with something materially better: a custom-written report generated for the prospect's actual business.</p>
-
-  <p>Here's how it works. A business owner on the site, somewhere in the two-to-five-year window before a sale or recapitalization, clicks "Get your readiness assessment." They answer eight to ten structured questions about their business: industry, revenue range, ownership structure, anticipated transaction type, timeline, current advisory situation, financial reporting maturity. Two open-ended fields capture context.</p>
-
-  <p>The submission triggers a workflow that calls Claude (or GPT-4) against a structured rubric we'll develop in the brand sprint with CTW's Capital Markets practice. The rubric defines what a good readiness story looks like, what the common gaps are at each business size and stage, and what the recommended next steps are based on the inputs. The AI generates a custom-written assessment in CTW's brand voice. Two to three pages. Specific to that prospect's situation.</p>
-
-  <p>The assessment lands in the prospect's inbox as a branded HTML email within minutes of submission. They get something written for them, not for a category. The submission and output are stored for sales follow-up, a Slack notification fires to the practice team, and a conversion event is logged for attribution.</p>
-
-  <p>Three things make this work that competitors won't replicate quickly. The output is delivered as a branded HTML email, not a downloadable file, so the perceived value sits with the firm that produced it. The custom-written content is materially more valuable than a generic guide, which raises the brand value of the firm behind it. And the architecture supports rapid expansion: once the first assessment is proven, we can spin up additional versions (audit readiness, tax planning health check, succession readiness) using the same plumbing.</p>
-
-  <h3 class="sub-header">3. Live Calculators</h3>
-
-  <p>Two embedded calculators ship with the Foundation tier. Both are designed for AEO retrieval and lead capture.</p>
-
-  <p>The R&amp;D Tax Credit Estimator takes industry, R&amp;D wage base, supplies, and contract research inputs and produces a defensible estimate of the federal credit. Output captures the prospect's email at the "send me the detailed report" step.</p>
-
-  <p>The Cost Segregation Benefit Estimator takes property type, purchase price, building basis, and year placed in service. Output produces a benefit projection and recommended next steps.</p>
-
-  <p>Both calculators are SEO and AEO targets in their own right. The search volume on these keywords is real, and the conversion rate from calculator users is materially higher than average site traffic. Additional calculators (Section 199A QBI, Quality of Earnings preparation checklist, business valuation rough cut) are available as Phase 2 builds in the Engine and Partnership tiers.</p>
-
-  <h3 class="sub-header">4. AI Concierge (Engine and Partnership Tiers)</h3>
-
-  <p>A conversational AI assistant trained on CTW's published content, service descriptions, and partner bios. Site visitors ask questions in natural language and get answers in CTW's voice within seconds. When intent is clear, the assistant offers calendar booking and routes to the appropriate practice.</p>
-
-  <p>The concierge runs on the same Cloudflare infrastructure as the Capital Event Readiness Assessment, with a vector store holding embeddings of CTW's content. Operating cost runs between fifty and two hundred dollars per month at expected traffic. The upside is a 24/7 prospect engagement layer that most CPA firms in the region won't have for at least two more years.</p>
-
-  <h3 class="sub-header">5. CRM-Ready Architecture</h3>
-
-  <p>CTW doesn't have a CRM yet. The website is going to operate as if it does.</p>
-
-  <p>Every form, calculator, assessment, and calendar booking writes to a unified event schema. Server-side tracking captures form submissions, page views, and engagement signals. UTM parameter discipline is enforced on every external campaign link. Visitor profile data sits in a structured database, ready to be replayed into HubSpot, Salesforce, or whichever CRM CTW selects when the firm makes that decision.</p>
-
-  <p>In practical terms: the day CTW signs the engagement letter for a CRM, the data layer is already mapped to the contact properties spec. Migration is days, not weeks. The lead generation system doesn't pause while a CRM gets set up.</p>
-</div>
-
-<!-- ============================================================
-     SECTION 10: CONTENT ENGINE AND AEO STRATEGY
-     ============================================================ -->
-<div class="page-section section-break">
-  <span class="section-label">Section 10</span>
-  <h2 class="section-header">Content Engine and AEO Strategy</h2>
-
-  <p>Most CPA firm websites treat content as a launch deliverable. Write the pages, ship the site, move on. The result is what the rest of the industry now looks like. Pages from 2019 about regulations that have since changed. A newsroom that goes silent six months after launch. A LinkedIn presence run by someone other than the people who actually do the work.</p>
-
-  <p>CTW's website should be the opposite. Built to be filled, not just built to be launched. The content engine that follows is the system that does the filling. Some pieces we produce. Some pieces CTW produces. The discipline is shared.</p>
-
-  <p>The technical work matters. Schema markup, structured FAQ blocks, site speed under one second on every page, semantic HTML for AI retrieval, every service page architected to be cited by an answer engine. We will deliver every one of these to the highest standard. Other bidders will too. AEO compliance is becoming the price of admission.</p>
-
-  <p>What's harder, and what most firms get wrong, is the sustained human work behind the technical foundation. A partner's voice in writing across a year. A podcast that builds genuine relationships, not download counts. Press releases that say something rather than fill space. Original research that the firm actually conducts, with its actual clients, producing actual findings. The discipline to ship this work weekly, quarterly, annually, without losing the thread.</p>
-
-  <p>This is what we've spent more than a decade learning how to do.</p>
-
-  <!-- AEO BASELINE EXHIBIT -->
-  <div class="chart-container">
-    <div class="chart-title">CTW IN AI SEARCH: APRIL 2026 BASELINE</div>
-    <div class="chart-subtitle">Appearances across 8 representative middle-market queries, by engine</div>
-
-    <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;font-family:'Poppins',sans-serif;">
-      <!-- Background -->
-      <rect width="560" height="220" fill="white"/>
-
-      <!-- Grid lines -->
-      <line x1="160" y1="10" x2="160" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
-      <line x1="260" y1="10" x2="260" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
-      <line x1="360" y1="10" x2="360" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
-      <line x1="460" y1="10" x2="460" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
-      <line x1="510" y1="10" x2="510" y2="185" stroke="#e8eef2" stroke-width="0.5"/>
-
-      <!-- Axis labels -->
-      <text x="160" y="198" text-anchor="middle" font-size="8" fill="#1A2535">25%</text>
-      <text x="260" y="198" text-anchor="middle" font-size="8" fill="#1A2535">50%</text>
-      <text x="360" y="198" text-anchor="middle" font-size="8" fill="#1A2535">75%</text>
-      <text x="510" y="198" text-anchor="middle" font-size="8" fill="#1A2535">100%</text>
-
-      <!-- CLAUDE: 75% = 300px wide -->
-      <text x="10" y="32" font-size="9.5" fill="#1A2535" font-weight="500">Claude</text>
-      <rect x="60" y="18" width="300" height="22" fill="#1A2535" rx="2"/>
-      <text x="350" y="33" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">75%</text>
-      <text x="160" y="33" font-size="8" fill="white" text-anchor="middle">6 of 8</text>
-
-      <!-- PERPLEXITY: 75% -->
-      <text x="10" y="70" font-size="9.5" fill="#1A2535" font-weight="500">Perplexity</text>
-      <rect x="60" y="56" width="300" height="22" fill="#1A2535" rx="2"/>
-      <text x="350" y="71" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">75%</text>
-      <text x="160" y="71" font-size="8" fill="white" text-anchor="middle">6 of 8</text>
-
-      <!-- GEMINI: 62.5% = 250px -->
-      <text x="10" y="108" font-size="9.5" fill="#1A2535" font-weight="500">Gemini</text>
-      <rect x="60" y="94" width="250" height="22" fill="#1A2535" rx="2"/>
-      <text x="310" y="109" font-size="9" fill="#1A2535" font-weight="600" text-anchor="start" dx="6">62%</text>
-      <text x="150" y="109" font-size="8" fill="white" text-anchor="middle">5 of 8</text>
-
-      <!-- CHATGPT: 25% = 100px, Berry color -->
-      <text x="10" y="146" font-size="9.5" fill="#1A2535" font-weight="500">ChatGPT</text>
-      <rect x="60" y="132" width="100" height="22" fill="#D444A0" rx="2"/>
-      <text x="160" y="147" font-size="9" fill="#D444A0" font-weight="600" text-anchor="start" dx="6">25%</text>
-      <text x="110" y="147" font-size="8" fill="white" text-anchor="middle">2 of 8</text>
-
-      <!-- GROK: 12.5% = 50px, Berry color -->
-      <text x="10" y="184" font-size="9.5" fill="#1A2535" font-weight="500">Grok</text>
-      <rect x="60" y="170" width="50" height="22" fill="#D444A0" rx="2"/>
-      <text x="110" y="185" font-size="9" fill="#D444A0" font-weight="600" text-anchor="start" dx="6">12%</text>
-      <text x="85" y="185" font-size="8" fill="white" text-anchor="middle">1/8</text>
-    </svg>
-
-    <div class="chart-footer">Sacramento middle-market query: 0 of 5 engines cited CTW. ChatGPT holds roughly 70% of AI search market share.</div>
-  </div>
-
-  <p>The content engine is built to close the gap on ChatGPT and Grok, where CTW is underrepresented despite those two engines holding the largest share of AI search traffic among business professionals doing initial research.</p>
-
-  <h3 class="sub-header">Content Velocity</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Asset</th>
-        <th>Cadence</th>
-        <th>Owner</th>
-        <th>Purpose</th>
-        <th>First 90 Days</th>
-        <th>Steady State</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Podcast episode</td>
-        <td>Biweekly</td>
-        <td>Named partner host</td>
-        <td>AEO + thought leadership</td>
-        <td>First 4 episodes</td>
-        <td>Biweekly</td>
-      </tr>
-      <tr>
-        <td>Long-form article (partner-bylined)</td>
-        <td>Weekly</td>
-        <td>Rotating partners</td>
-        <td>AEO citation magnet</td>
-        <td>One per partner</td>
-        <td>Weekly</td>
-      </tr>
-      <tr>
-        <td>LinkedIn partner post</td>
-        <td>3x/week per partner</td>
-        <td>Each partner</td>
-        <td>Personal brand + reach</td>
-        <td>2x/week per partner</td>
-        <td>3x/week per partner</td>
-      </tr>
-      <tr>
-        <td>YouTube Short / LinkedIn video</td>
-        <td>Weekly</td>
-        <td>Marketing + partner</td>
-        <td>Top-of-funnel awareness</td>
-        <td>Biweekly</td>
-        <td>Weekly</td>
-      </tr>
-      <tr>
-        <td>Newsletter</td>
-        <td>Monthly</td>
-        <td>Marketing</td>
-        <td>Owned audience</td>
-        <td>First issue in week 6</td>
-        <td>Monthly</td>
-      </tr>
-      <tr>
-        <td>Press release (comparative AEO)</td>
-        <td>Monthly</td>
-        <td>Marketing</td>
-        <td>Citation graph + AEO</td>
-        <td>First release in week 8</td>
-        <td>Monthly</td>
-      </tr>
-      <tr>
-        <td>Quarterly market outlook PDF</td>
-        <td>4x per year</td>
-        <td>Senior partner</td>
-        <td>Lead magnet refresh</td>
-        <td>First piece by end of Q1</td>
-        <td>Quarterly</td>
-      </tr>
-      <tr>
-        <td>Annual Tax Outlook</td>
-        <td>Annual + Q3 update</td>
-        <td>Tax practice lead</td>
-        <td>Annual lead magnet hero</td>
-        <td>Year 1 launch in Q4</td>
-        <td>Annual + Q3</td>
-      </tr>
-      <tr>
-        <td>Webinar</td>
-        <td>Quarterly</td>
-        <td>Practice leads</td>
-        <td>Direct lead capture</td>
-        <td>First webinar by end of Q1</td>
-        <td>Quarterly</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3 class="sub-header">Original Research</h3>
-
-  <p>The quarterly State of the Middle Market is a piece we conduct, write, and design. Each quarter we survey seventy-five to one hundred of CTW's clients and friends-of-firm on a focused topic: capital event timing, owner exit planning, audit readiness, regulatory pressure on a named vertical. Results publish as a PDF lead magnet and a series of derivative content: a partner-bylined article, a podcast episode, two or three short videos, a press release with the headline finding, and a webinar. One survey produces a full quarter of content, all attributable to CTW.</p>
-
-  <p>The research is owned by the firm. It cites CTW as the source. It gets distributed to the trade press that covers the audiences CTW wants to reach. After four quarters the firm has a body of original work that doesn't exist anywhere else in the regional market and that AI search engines are already citing.</p>
-
-  <h3 class="sub-header">The Podcast</h3>
-
-  <p>A named CTW partner hosts. Guests are PE deal partners, M&amp;A attorneys, business brokers, banking relationship managers, CFOs of recently acquired companies, and founders who have been through exits. The relationship-building is the point. Every guest leaves the recording having had a real conversation with a senior person at CTW, on the record, about their work.</p>
-
-  <p>Each episode produces a transcript optimized for AEO retrieval, a YouTube version, two or three short clips for LinkedIn, a written summary article, and quotable insights from named guests that compound trust signals across the site. The first twelve episodes are produced in the Engine tier. Steady-state cadence is biweekly.</p>
-
-  <h3 class="sub-header">Press Release Program</h3>
-
-  <p>Monthly comparative AEO press releases distributed nationally. The pattern is a direct positioning statement that gets indexed by ChatGPT and Perplexity and surfaces when prospects ask category questions. The releases are written for citation, not for general media pickup, though they regularly produce both. Distribution runs through BusinessWire or PR Newswire depending on the topic.</p>
-
-  <h3 class="sub-header">Partner LinkedIn Program</h3>
-
-  <p>Up to four partners receive a one-page personal brand playbook: signature topics, recommended cadence, suggested podcast guest list, target trade publications, and a rotation of post types. Posts are drafted in each partner's voice and approved before publishing. A monthly LinkedIn newsletter sits on top of the partner posts as a separate owned channel.</p>
-
-  <p>The newsletter is worth naming specifically. Monthly issues go directly to subscribers' inboxes, which is the rarest thing in social media right now. Subscribers opted in. Open rates on LinkedIn newsletters consistently run higher than email newsletters because the platform delivers the issue without the algorithm in the way.</p>
-
-  <h3 class="sub-header">AEO Foundation Across the Site</h3>
-
-  <p>Schema markup on every page that supports it. FAQ blocks on every service and industry page, structured for direct citation. Plain-language content optimized for retrieval. Semantic HTML throughout. The site is built so that when a prospect asks a category question on any major AI engine, the answer engine can find CTW's content, parse it cleanly, and cite it by name.</p>
-
-  <p>The output of this work is what produces the second and third levels of attention described in Section 2. Foundation gets CTW mentioned. Engine gets CTW recommended. Partnership keeps people talking about CTW for years.</p>
-</div>
-
-<!-- ============================================================
-     SECTION 11: TRUST, COMPLIANCE, AND ACCESSIBILITY
+     SECTION 11: INVESTMENT
      ============================================================ -->
 <div class="page-section section-break">
   <span class="section-label">Section 11</span>
-  <h2 class="section-header">Trust, Compliance, and Accessibility</h2>
+  <h2 class="section-header">Investment</h2>
 
-  <h3 class="sub-header">Accessibility</h3>
+  <p>Investment is structured to give CTW clear options at three commitment levels. Each engagement mode has a one-time build investment and, where applicable, a monthly ongoing retainer. We are happy to walk through the line items and discuss adjustments in any follow-up conversation.</p>
 
-  <p>WCAG 2.2 AA conformance is built in from the start: semantic HTML, passing contrast ratios at every type size, full keyboard navigation, visible focus states, and screen reader compatibility validated against NVDA and VoiceOver before launch. We do not install accessibility widget overlays. Those products do not satisfy WCAG and have been the basis of recent ADA lawsuits. The site itself is accessible, backed by a published accessibility statement page with testing documentation and a direct contact path for any visitor who finds an issue.</p>
+  <div class="pricing-tier-block">
+    <div class="pricing-tier-name">Path Forward Foundation</div>
 
-  <h3 class="sub-header">Privacy and Data Handling</h3>
+    <div class="pricing-line">
+      <div class="pricing-line-label">Brand and Messaging Sprint <em>(recommended)</em></div>
+      <div class="pricing-line-value">$8,000</div>
+    </div>
+    <p class="pricing-detail">Four-hour facilitated workshop with CTW leadership, plus development of the brand voice document and Claude Voice Skill leave-behind. Surfaces the firm's actual position, structures the messaging architecture, and produces deliverables CTW keeps permanently.</p>
 
-  <p>The existing CTW privacy policy is dated 2020 and predates current California Privacy Rights Act requirements. The rebuild includes a modernized privacy policy drafted against current CCPA standards. All form data, assessment submissions, and calendar booking details travel encrypted with TLS and are stored encrypted at rest. Cookie consent surfaces for visitors in regulatory environments. Analytics run server-side where possible. All visitor data lives on infrastructure CTW controls.</p>
+    <div class="pricing-line">
+      <div class="pricing-line-label">Core Build</div>
+      <div class="pricing-line-value">$30,000</div>
+    </div>
+    <p class="pricing-detail">Full website rebuild on Astro, Cloudflare, and Keystatic. Includes content audit, rewrite of priority pages, AEO foundation, calendar booking with intelligent routing, the Capital Event Readiness Assessment, two embedded calculators, branded payment landing page, accessibility, redirect map, CMS training for four content stewards, and ninety days of stabilization.</p>
 
-  <h3 class="sub-header">Security Posture</h3>
+    <div class="pricing-total-row">
+      <div class="pricing-line-label">Foundation Total <em>(with Brand Sprint)</em></div>
+      <div class="pricing-line-value">$38,000</div>
+    </div>
+    <div class="pricing-line">
+      <div class="pricing-line-label" style="font-size:9pt;color:#1A2535;font-weight:400;">Core Build only</div>
+      <div class="pricing-line-value" style="font-size:11pt;color:#1A2535;font-weight:600;">$30,000</div>
+    </div>
 
-  <p>Cloudflare provides DDoS protection, web application firewall, bot mitigation, automatic SSL, and edge-level rate limiting as part of the infrastructure. The static site architecture removes the most common attack vectors: no SQL database to inject, no PHP runtime to exploit, no plugins requiring constant patching. The security posture is published alongside the privacy and accessibility statements. Middle-market buyers and CFOs read these pages, and a modern security posture stated plainly is a differentiator in a category where most firms say nothing.</p>
+    <div class="pricing-line" style="margin-top:10pt;">
+      <div class="pricing-line-label"><em>Optional:</em> AI Tools Care Retainer</div>
+      <div class="pricing-line-value">$400 / mo</div>
+    </div>
+    <p class="pricing-detail">Covers AI API costs (Anthropic, OpenAI), assessment tool monitoring, quarterly system tuning, and minor content updates. CTW can decline this and pay API costs directly; the choice does not affect the build.</p>
+  </div>
 
+  <div class="pricing-tier-block">
+    <div class="pricing-tier-name">Path Forward Engine</div>
 
+    <div class="pricing-line">
+      <div class="pricing-line-label">Engine Build</div>
+      <div class="pricing-line-value">$44,000</div>
+    </div>
+    <p class="pricing-detail">Everything in Foundation, plus AI Concierge build and deployment, partner LinkedIn personal brand playbooks for up to four named partners, and the brand voice deliverable extended to support multi-channel content production.</p>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Engine Retainer</div>
+      <div class="pricing-line-value">$8,500 / mo</div>
+    </div>
+    <p class="pricing-detail">Includes the podcast launch and twelve episodes ($12,000 in value) produced via Riverside.fm, quarterly State of the Middle Market original research, monthly comparative AEO press releases with national distribution, LinkedIn newsletter setup and the first six monthly issues, AI Concierge ongoing maintenance, and twelve months of structured content production support.</p>
+  </div>
+
+  <div class="pricing-tier-block">
+    <div class="pricing-tier-name">Path Forward Partnership</div>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Partnership Build</div>
+      <div class="pricing-line-value">$48,000</div>
+    </div>
+    <p class="pricing-detail">Everything in Engine, plus a custom Quarterly Business Review dashboard, an additional calculator build, and the AI content production training workshop deliverable.</p>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Partnership Retainer</div>
+      <div class="pricing-line-value">$14,000 / mo</div>
+    </div>
+    <p class="pricing-detail">Includes everything in Engine, plus full ongoing content production aligned to the content engine cadence (weekly long-form articles, weekly short-form video, ongoing supplemental campaign work), quarterly business reviews with AEO citation tracking and competitor benchmarking, half-day AI content production training for CTW's content stewards, and priority response on new content needs.</p>
+  </div>
+
+  <div class="pricing-addons">
+    <div class="pricing-addons-title">Optional Add-Ons</div>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Original Photography Session</div>
+      <div class="pricing-line-value">$6,500</div>
+    </div>
+    <p class="pricing-detail">Professional headshots for up to twenty-five staff members, plus in-office b-roll, plus full editing and retouching. Delivered as a curated asset library sized for web, print, and social. Photography day occurs in week 2 or 3, edits delivered weeks 4 to 6, public launch with photography lands at week 8.</p>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Additional Capital Event Readiness Assessment variants</div>
+      <div class="pricing-line-value">$8,000 each</div>
+    </div>
+    <p class="pricing-detail">Audit readiness, tax planning health check, succession readiness, or other variants tailored to specific service lines.</p>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">Additional custom calculator</div>
+      <div class="pricing-line-value">$3,500 each</div>
+    </div>
+    <p class="pricing-detail">Beyond the two included in Foundation. Examples include Section 199A QBI, business valuation rough cut, multi-state tax exposure.</p>
+
+    <div class="pricing-line">
+      <div class="pricing-line-label">AI content production training workshop</div>
+      <div class="pricing-line-value">$3,500</div>
+    </div>
+    <p class="pricing-detail">Half-day workshop for up to four CTW staff (included in Partnership tier; available standalone for Foundation or Engine clients).</p>
+  </div>
+
+  <div class="year-one-summary">
+    <div class="year-one-title">Year One Commitment Summary <span style="font-weight:400;font-size:8.5pt;color:#a8b5c5;text-transform:none;letter-spacing:0;">(assuming photography is elected)</span></div>
+    <div class="year-one-row">
+      <div class="year-one-tier">FOUNDATION</div>
+      <div class="year-one-calc">$38,000 build &middot; $4,800 AI Care &middot; $6,500 photography</div>
+      <div class="year-one-total">$49,300</div>
+    </div>
+    <div class="year-one-row">
+      <div class="year-one-tier">ENGINE</div>
+      <div class="year-one-calc">$44,000 build &middot; $102,000 retainer &middot; $6,500 photography</div>
+      <div class="year-one-total">$152,500</div>
+    </div>
+    <div class="year-one-row">
+      <div class="year-one-tier">PARTNERSHIP</div>
+      <div class="year-one-calc">$48,000 build &middot; $168,000 retainer &middot; $6,500 photography</div>
+      <div class="year-one-total">$222,500</div>
+    </div>
+  </div>
+
+  <p style="font-size:9pt;color:#1A2535;margin-top:14pt;font-style:italic;">All pricing held for sixty days from proposal submission. Final scope, terms, and milestone payment schedule are set in the engagement letter. Pricing assumes a target kickoff of May 20, 2026.</p>
 </div>
 
 <!-- ============================================================
@@ -2677,7 +2697,7 @@ tr:last-child td { border-bottom: none; }
     <li>Organic search rankings for priority queries (tracked monthly)</li>
     <li>Organic traffic by landing page (with attribution to specific content investments)</li>
     <li>Core Web Vitals scores across every page (sustained green at launch and ongoing)</li>
-    <li>AEO citation tracking against named competitors across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews (tracked quarterly, with the baseline already established in Section 10)</li>
+    <li>AEO citation tracking against named competitors across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews (tracked quarterly, with the baseline already established in Section 7)</li>
     <li>Referring domains and backlink profile growth</li>
     <li>Press release pickup and citation in AI search results</li>
   </ul>
@@ -2762,7 +2782,7 @@ tr:last-child td { border-bottom: none; }
 
   <div class="faq-item">
     <div class="faq-q">Can you really deliver the core website in four weeks?</div>
-    <div class="faq-a">Yes. The four-week timeline assumes the engagement letter is signed by May 18, 2026 and CTW selects one of three design directions by end of week three. Original photography, if elected, extends the timeline to twelve weeks. The compressed schedule is achievable because of three things: an AI-assisted content extraction and rewriting process we've developed and used on prior projects, a technology stack that doesn't require the configuration overhead of WordPress, and a senior team that runs the work directly without handoffs.</div>
+    <div class="faq-a">Yes. The four-week timeline assumes the engagement letter is signed by May 18, 2026 and CTW selects one of three design directions by end of week three. Original photography, if elected, extends the timeline to eight weeks. The compressed schedule is achievable because of three things: an AI-assisted content extraction and rewriting process we've developed and used on prior projects, a technology stack that doesn't require the configuration overhead of WordPress, and a senior team that runs the work directly without handoffs.</div>
   </div>
 
   <div class="faq-item">
@@ -2792,7 +2812,7 @@ tr:last-child td { border-bottom: none; }
 
   <div class="faq-item">
     <div class="faq-q">How do we know your AEO claims are real?</div>
-    <div class="faq-a">We ran a baseline AEO analysis as part of preparing this proposal. CTW currently appears in fifty percent of the test queries we ran across five major AI search engines, with significant gaps on the engines holding the largest market share (ChatGPT and Grok). Full results are included in Section 10 and Appendix A. We will track quarterly improvement against this baseline as part of the Engine and Partnership tiers.</div>
+    <div class="faq-a">We ran a baseline AEO analysis as part of preparing this proposal. CTW currently appears in fifty percent of the test queries we ran across five major AI search engines, with significant gaps on the engines holding the largest market share (ChatGPT and Grok). Full results are included in Section 7 and Appendix A. We will track quarterly improvement against this baseline as part of the Engine and Partnership tiers.</div>
   </div>
 
   <div class="faq-item">
@@ -2802,7 +2822,7 @@ tr:last-child td { border-bottom: none; }
 
   <div class="faq-item">
     <div class="faq-q">How is pricing structured across the three engagement modes?</div>
-    <div class="faq-a">Each mode has a one-time build investment and (in the Engine and Partnership tiers) an ongoing monthly retainer. Detailed pricing is in Section 3. We are happy to walk through the line items in any follow-up conversation.</div>
+    <div class="faq-a">Each mode has a one-time build investment and (in the Engine and Partnership tiers) an ongoing monthly retainer. Detailed pricing is in Section 11. We are happy to walk through the line items in any follow-up conversation.</div>
   </div>
 
   <div class="faq-item">
@@ -2812,7 +2832,7 @@ tr:last-child td { border-bottom: none; }
 
   <div class="faq-item">
     <div class="faq-q">Why are you recommending against WordPress?</div>
-    <div class="faq-a">For most use cases, WordPress is fine. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), the plugin-ecosystem fragility, hosting overhead, and performance ceiling make it the wrong tool. We address this in detail in Section 8.</div>
+    <div class="faq-a">For most use cases, WordPress is fine. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), the plugin-ecosystem fragility, hosting overhead, and performance ceiling make it the wrong tool. We address this in detail in Section 5.</div>
   </div>
 
   <div class="faq-item">
@@ -2965,7 +2985,7 @@ tr:last-child td { border-bottom: none; }
 
     <div class="qr-block">
       <span class="qr-label">Core Delivery Commitment</span>
-      <span class="qr-value">A complete website rebuild on a modern, performance-first stack, ready for launch in four weeks (core build without original photography) or twelve weeks (full launch with original photography). Most professional services website rebuilds run six to nine months. Ours doesn't.</span>
+      <span class="qr-value">A complete website rebuild on a modern, performance-first stack, ready for launch in four weeks (core build without original photography) or eight weeks (full launch with original photography). Most professional services website rebuilds run six to nine months. Ours doesn't.</span>
     </div>
 
     <div class="qr-block">
@@ -2975,7 +2995,7 @@ tr:last-child td { border-bottom: none; }
 
     <div class="qr-block">
       <span class="qr-label">AEO Positioning</span>
-      <span class="qr-value">Site architecture built for AI search discoverability from day one. Includes structured schema, FAQ blocks across service and industry pages, plain-language content optimized for citation by ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. Quarterly AEO citation tracking included in Engine and Partnership tiers. We have already run a baseline AEO analysis for CTW (eight queries across five engines, results in Section 10).</span>
+      <span class="qr-value">Site architecture built for AI search discoverability from day one. Includes structured schema, FAQ blocks across service and industry pages, plain-language content optimized for citation by ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. Quarterly AEO citation tracking included in Engine and Partnership tiers. We have already run a baseline AEO analysis for CTW (eight queries across five engines, results in Section 7).</span>
     </div>
 
     <div class="qr-block">
@@ -3040,73 +3060,73 @@ tr:last-child td { border-bottom: none; }
 
       <div class="compliance-group">
         <div class="cg-header">Proposal Objectives (RFP Section 2)</div>
-        <div class="cg-row"><span class="cg-req">Clearly communicate CTW's value proposition</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">6</span> (brand sprint), Quick Reference Summary</span></div>
-        <div class="cg-row"><span class="cg-req">Position CTW as a sophisticated advisory partner</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">10</span> (content engine), Section <span class="cg-num">2</span> (engagement modes)</span></div>
-        <div class="cg-row"><span class="cg-req">Support lead generation</span><span class="cg-ref">Section <span class="cg-num">9</span> (full lead generation system), Section <span class="cg-num">12</span> (success metrics)</span></div>
-        <div class="cg-row"><span class="cg-req">Ensure ease of updates and maintenance</span><span class="cg-ref">Section <span class="cg-num">8</span> (Keystatic CMS rationale), Section <span class="cg-num">12</span> (CMS training)</span></div>
-        <div class="cg-row"><span class="cg-req">Deliver a modern, professional aesthetic</span><span class="cg-ref">Section <span class="cg-num">8</span> (technology and performance), Section <span class="cg-num">5</span> (creative team)</span></div>
+        <div class="cg-row"><span class="cg-req">Clearly communicate CTW's value proposition</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">3</span> (brand sprint), Quick Reference Summary</span></div>
+        <div class="cg-row"><span class="cg-req">Position CTW as a sophisticated advisory partner</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">7</span> (content engine), Section <span class="cg-num">2</span> (engagement modes)</span></div>
+        <div class="cg-row"><span class="cg-req">Support lead generation</span><span class="cg-ref">Section <span class="cg-num">6</span> (full lead generation system), Section <span class="cg-num">12</span> (success metrics)</span></div>
+        <div class="cg-row"><span class="cg-req">Ensure ease of updates and maintenance</span><span class="cg-ref">Section <span class="cg-num">5</span> (Keystatic CMS rationale), Section <span class="cg-num">12</span> (CMS training)</span></div>
+        <div class="cg-row"><span class="cg-req">Deliver a modern, professional aesthetic</span><span class="cg-ref">Section <span class="cg-num">5</span> (technology and performance), Section <span class="cg-num">10</span> (creative team)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Scope of Work (RFP Section 3)</div>
-        <div class="cg-row"><span class="cg-req">Strategy and Planning (messaging and sitemap)</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 0 brand sprint, Phase 1 architecture), Section <span class="cg-num">7</span> (sitemap)</span></div>
-        <div class="cg-row"><span class="cg-req">Design</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 2), Section <span class="cg-num">5</span> (creative team and visual identity work)</span></div>
-        <div class="cg-row"><span class="cg-req">Development</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 3), Section <span class="cg-num">8</span> (technology stack)</span></div>
-        <div class="cg-row"><span class="cg-req">Content Strategy and Support</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 2 content production), Section <span class="cg-num">10</span> (content engine)</span></div>
-        <div class="cg-row"><span class="cg-req">Testing and Launch</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 3 QA, Phase 4 launch), Section <span class="cg-num">8</span> (Core Web Vitals and accessibility testing)</span></div>
-        <div class="cg-row"><span class="cg-req">Post-Launch Support</span><span class="cg-ref">Section <span class="cg-num">6</span> (Phase 4 stabilization), Section <span class="cg-num">13</span> (ongoing partnership)</span></div>
+        <div class="cg-row"><span class="cg-req">Strategy and Planning (messaging and sitemap)</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 0 brand sprint, Phase 1 architecture), Section <span class="cg-num">4</span> (sitemap)</span></div>
+        <div class="cg-row"><span class="cg-req">Design</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 2), Section <span class="cg-num">10</span> (creative team and visual identity work)</span></div>
+        <div class="cg-row"><span class="cg-req">Development</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 3), Section <span class="cg-num">5</span> (technology stack)</span></div>
+        <div class="cg-row"><span class="cg-req">Content Strategy and Support</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 2 content production), Section <span class="cg-num">7</span> (content engine)</span></div>
+        <div class="cg-row"><span class="cg-req">Testing and Launch</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 3 QA, Phase 4 launch), Section <span class="cg-num">5</span> (Core Web Vitals and accessibility testing)</span></div>
+        <div class="cg-row"><span class="cg-req">Post-Launch Support</span><span class="cg-ref">Section <span class="cg-num">3</span> (Phase 4 stabilization), Section <span class="cg-num">13</span> (ongoing partnership)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Key Requirements (RFP Section 4)</div>
-        <div class="cg-row"><span class="cg-req">Ease of use and intuitive navigation</span><span class="cg-ref">Section <span class="cg-num">7</span> (sitemap), Section <span class="cg-num">8</span> (CMS rationale)</span></div>
-        <div class="cg-row"><span class="cg-req">Attractive, modern design</span><span class="cg-ref">Section <span class="cg-num">8</span> (technology stack), Section <span class="cg-num">5</span> (creative direction)</span></div>
-        <div class="cg-row"><span class="cg-req">Easy-to-update CMS</span><span class="cg-ref">Section <span class="cg-num">8</span> (Keystatic), Section <span class="cg-num">2</span> (training included)</span></div>
-        <div class="cg-row"><span class="cg-req">Mobile-first performance</span><span class="cg-ref">Section <span class="cg-num">8</span> (sub-one-second LCP commitment, mobile-first measurement)</span></div>
+        <div class="cg-row"><span class="cg-req">Ease of use and intuitive navigation</span><span class="cg-ref">Section <span class="cg-num">4</span> (sitemap), Section <span class="cg-num">5</span> (CMS rationale)</span></div>
+        <div class="cg-row"><span class="cg-req">Attractive, modern design</span><span class="cg-ref">Section <span class="cg-num">5</span> (technology stack), Section <span class="cg-num">10</span> (creative direction)</span></div>
+        <div class="cg-row"><span class="cg-req">Easy-to-update CMS</span><span class="cg-ref">Section <span class="cg-num">5</span> (Keystatic), Section <span class="cg-num">2</span> (training included)</span></div>
+        <div class="cg-row"><span class="cg-req">Mobile-first performance</span><span class="cg-ref">Section <span class="cg-num">5</span> (sub-one-second LCP commitment, mobile-first measurement)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Additional Considerations (RFP Section 5)</div>
-        <div class="cg-row"><span class="cg-req">SEO / AEO strategy and implementation</span><span class="cg-ref">Section <span class="cg-num">10</span> (full content engine and AEO strategy), Section <span class="cg-num">12</span> (success metrics)</span></div>
-        <div class="cg-row"><span class="cg-req">Lead generation and conversion optimization</span><span class="cg-ref">Section <span class="cg-num">9</span> (full lead generation system)</span></div>
+        <div class="cg-row"><span class="cg-req">SEO / AEO strategy and implementation</span><span class="cg-ref">Section <span class="cg-num">7</span> (full content engine and AEO strategy), Section <span class="cg-num">12</span> (success metrics)</span></div>
+        <div class="cg-row"><span class="cg-req">Lead generation and conversion optimization</span><span class="cg-ref">Section <span class="cg-num">6</span> (full lead generation system)</span></div>
         <div class="cg-row"><span class="cg-req">Analytics and performance tracking tied to business outcomes</span><span class="cg-ref">Section <span class="cg-num">12</span> (instrumentation and reporting)</span></div>
-        <div class="cg-row"><span class="cg-req">Security and accessibility</span><span class="cg-ref">Section <span class="cg-num">11</span> (WCAG 2.2 AA, security posture), Section <span class="cg-num">8</span> (Cloudflare-level security)</span></div>
-        <div class="cg-row"><span class="cg-req">Integration with CRM and other business systems</span><span class="cg-ref">Section <span class="cg-num">8</span> (CRM-ready data layer), Section <span class="cg-num">9</span> (form schema and event tracking)</span></div>
+        <div class="cg-row"><span class="cg-req">Security and accessibility</span><span class="cg-ref">Section <span class="cg-num">8</span> (WCAG 2.2 AA, security posture), Section <span class="cg-num">5</span> (Cloudflare-level security)</span></div>
+        <div class="cg-row"><span class="cg-req">Integration with CRM and other business systems</span><span class="cg-ref">Section <span class="cg-num">5</span> (CRM-ready data layer), Section <span class="cg-num">6</span> (form schema and event tracking)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Deliverables (RFP Section 6)</div>
         <div class="cg-row"><span class="cg-req">Fully functional website</span><span class="cg-ref">Section <span class="cg-num">2</span> (Foundation tier deliverables)</span></div>
-        <div class="cg-row"><span class="cg-req">CMS setup</span><span class="cg-ref">Section <span class="cg-num">2</span> (Keystatic configuration), Section <span class="cg-num">8</span></span></div>
+        <div class="cg-row"><span class="cg-req">CMS setup</span><span class="cg-ref">Section <span class="cg-num">2</span> (Keystatic configuration), Section <span class="cg-num">5</span></span></div>
         <div class="cg-row"><span class="cg-req">Training</span><span class="cg-ref">Section <span class="cg-num">2</span> (training session for four content stewards)</span></div>
         <div class="cg-row"><span class="cg-req">Support plan</span><span class="cg-ref">Section <span class="cg-num">2</span> (stabilization), Section <span class="cg-num">13</span> (ongoing partnership)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Vendor Qualifications (RFP Section 7)</div>
-        <div class="cg-row"><span class="cg-req">Relevant experience</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">5</span> (case studies and work samples)</span></div>
-        <div class="cg-row"><span class="cg-req">Portfolio and case studies</span><span class="cg-ref">Section <span class="cg-num">5</span> (work samples and case studies)</span></div>
-        <div class="cg-row"><span class="cg-req">Team overview</span><span class="cg-ref">Section <span class="cg-num">5</span> (team bios)</span></div>
-        <div class="cg-row"><span class="cg-req">References</span><span class="cg-ref">Section <span class="cg-num">5</span> (three named references with contact information)</span></div>
+        <div class="cg-row"><span class="cg-req">Relevant experience</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">10</span> (case studies and work samples)</span></div>
+        <div class="cg-row"><span class="cg-req">Portfolio and case studies</span><span class="cg-ref">Section <span class="cg-num">10</span> (work samples and case studies)</span></div>
+        <div class="cg-row"><span class="cg-req">Team overview</span><span class="cg-ref">Section <span class="cg-num">10</span> (team bios)</span></div>
+        <div class="cg-row"><span class="cg-req">References</span><span class="cg-ref">Section <span class="cg-num">10</span> (three named references with contact information)</span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Proposal Requirements (RFP Section 9)</div>
-        <div class="cg-row"><span class="cg-req">Overall approach and methodology</span><span class="cg-ref">Section <span class="cg-num">6</span></span></div>
-        <div class="cg-row"><span class="cg-req">Proposed sitemap and site architecture</span><span class="cg-ref">Section <span class="cg-num">7</span></span></div>
-        <div class="cg-row"><span class="cg-req">Examples of relevant work</span><span class="cg-ref">Section <span class="cg-num">5</span> (work samples with live URLs)</span></div>
-        <div class="cg-row"><span class="cg-req">Technology recommendations and CMS rationale</span><span class="cg-ref">Section <span class="cg-num">8</span></span></div>
-        <div class="cg-row"><span class="cg-req">Project timeline and key milestones</span><span class="cg-ref">Section <span class="cg-num">4</span></span></div>
-        <div class="cg-row"><span class="cg-req">Pricing and ongoing support model</span><span class="cg-ref">Section <span class="cg-num">3</span></span></div>
+        <div class="cg-row"><span class="cg-req">Overall approach and methodology</span><span class="cg-ref">Section <span class="cg-num">3</span></span></div>
+        <div class="cg-row"><span class="cg-req">Proposed sitemap and site architecture</span><span class="cg-ref">Section <span class="cg-num">4</span></span></div>
+        <div class="cg-row"><span class="cg-req">Examples of relevant work</span><span class="cg-ref">Section <span class="cg-num">10</span> (work samples with live URLs)</span></div>
+        <div class="cg-row"><span class="cg-req">Technology recommendations and CMS rationale</span><span class="cg-ref">Section <span class="cg-num">5</span></span></div>
+        <div class="cg-row"><span class="cg-req">Project timeline and key milestones</span><span class="cg-ref">Section <span class="cg-num">9</span></span></div>
+        <div class="cg-row"><span class="cg-req">Pricing and ongoing support model</span><span class="cg-ref">Section <span class="cg-num">11</span></span></div>
         <div class="cg-row"><span class="cg-req">Ongoing support, maintenance, and optimization approach</span><span class="cg-ref">Section <span class="cg-num">13</span></span></div>
       </div>
 
       <div class="compliance-group">
         <div class="cg-header">Evaluation Criteria (RFP Section 10)</div>
         <div class="cg-row"><span class="cg-req">Understanding of CTW's business and target audience</span><span class="cg-ref">Section <span class="cg-num">1</span>, Quick Reference Summary</span></div>
-        <div class="cg-row"><span class="cg-req">Strength of proposed strategy and site architecture</span><span class="cg-ref">Sections <span class="cg-num">6</span>, <span class="cg-num">7</span>, <span class="cg-num">8</span>, <span class="cg-num">9</span>, <span class="cg-num">10</span></span></div>
-        <div class="cg-row"><span class="cg-req">Relevant experience with professional services firms</span><span class="cg-ref">Section <span class="cg-num">5</span></span></div>
-        <div class="cg-row"><span class="cg-req">Design quality and user experience</span><span class="cg-ref">Section <span class="cg-num">8</span>, Section <span class="cg-num">5</span></span></div>
+        <div class="cg-row"><span class="cg-req">Strength of proposed strategy and site architecture</span><span class="cg-ref">Sections <span class="cg-num">3</span>, <span class="cg-num">4</span>, <span class="cg-num">5</span>, <span class="cg-num">6</span>, <span class="cg-num">7</span></span></div>
+        <div class="cg-row"><span class="cg-req">Relevant experience with professional services firms</span><span class="cg-ref">Section <span class="cg-num">10</span></span></div>
+        <div class="cg-row"><span class="cg-req">Design quality and user experience</span><span class="cg-ref">Section <span class="cg-num">5</span>, Section <span class="cg-num">10</span></span></div>
         <div class="cg-row"><span class="cg-req">Value and long-term partnership potential</span><span class="cg-ref">Section <span class="cg-num">2</span>, Section <span class="cg-num">13</span></span></div>
       </div>
 
