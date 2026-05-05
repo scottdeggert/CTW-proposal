@@ -832,6 +832,208 @@ tr:last-child td { border-bottom: none; }
   font-style: italic;
   white-space: nowrap;
 }
+
+/* ============================================================
+   WORK SAMPLES
+   ============================================================ */
+.work-sample {
+  page-break-inside: avoid;
+  margin-bottom: 18pt;
+}
+
+.screenshot-placeholder {
+  width: 100%;
+  height: 200pt;
+  background: var(--ice);
+  border: 1pt solid var(--slate);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10pt;
+  gap: 6pt;
+}
+
+.screenshot-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--deep-slate);
+}
+
+.screenshot-pending {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9pt;
+  color: var(--slate);
+  font-style: italic;
+}
+
+.ws-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14pt;
+  font-weight: 800;
+  color: var(--deep-slate);
+  margin-bottom: 4pt;
+}
+
+.ws-meta {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5pt;
+  color: var(--slate);
+  margin-bottom: 2pt;
+}
+
+.ws-label {
+  font-weight: 500;
+  color: var(--slate);
+}
+
+.ws-link {
+  color: var(--berry);
+  text-decoration: none;
+}
+
+.work-sample > p {
+  margin-top: 8pt;
+}
+
+.work-sample-rule {
+  width: 100%;
+  height: 1pt;
+  background: var(--berry);
+  margin: 16pt 0 18pt 0;
+}
+
+/* ============================================================
+   REFERENCES
+   ============================================================ */
+.reference-block {
+  page-break-inside: avoid;
+  margin-bottom: 14pt;
+}
+
+.ref-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: 800;
+  color: var(--deep-slate);
+  margin-bottom: 2pt;
+}
+
+.ref-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10pt;
+  font-weight: 500;
+  color: var(--slate);
+  margin-bottom: 6pt;
+}
+
+.ref-contact {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5pt;
+  color: var(--slate);
+  margin-bottom: 1pt;
+}
+
+.ref-email {
+  color: var(--berry);
+  text-decoration: none;
+}
+
+.ref-engagement {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10pt;
+  color: var(--slate);
+  margin-top: 8pt;
+  margin-bottom: 0;
+}
+
+.reference-rule {
+  width: 100%;
+  height: 0.5pt;
+  background: var(--slate);
+  margin: 12pt 0 14pt 0;
+  opacity: 0.4;
+}
+
+/* ============================================================
+   COMPLIANCE AUDIT
+   ============================================================ */
+.compliance-group {
+  margin-bottom: 12pt;
+  page-break-inside: avoid;
+}
+
+.cg-header {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--deep-slate);
+  border-bottom: 0.5pt solid var(--berry);
+  padding-bottom: 3pt;
+  margin-bottom: 5pt;
+}
+
+.cg-row {
+  display: flex;
+  gap: 10pt;
+  padding: 3pt 0;
+  border-bottom: 0.5pt dotted #c8d0d8;
+  font-size: 8.5pt;
+  align-items: baseline;
+}
+
+.cg-row:last-child {
+  border-bottom: none;
+}
+
+.cg-req {
+  flex: 0 0 45%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: var(--deep-slate);
+}
+
+.cg-ref {
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--slate);
+}
+
+.cg-num {
+  color: var(--berry);
+  font-weight: 600;
+}
+
+/* ============================================================
+   METRIC LIST (Section 12)
+   ============================================================ */
+.metric-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 14pt;
+}
+
+.metric-list li {
+  position: relative;
+  padding-left: 16pt;
+  margin-bottom: 5pt;
+  line-height: 1.55;
+}
+
+.metric-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7pt;
+  width: 5pt;
+  height: 5pt;
+  border-radius: 50%;
+  background: var(--berry);
+}
 </style>
 </head>
 <body>
@@ -948,7 +1150,90 @@ tr:last-child td { border-bottom: none; }
       <span class="qr-value qr-indent">"Deliver a modern, professional aesthetic" -- addressed through the design phase led by Creative Director Joshua McCowen.</span>
     </div>
 
-    <p style="font-size:8.5pt;color:#1A2535;margin-top:12pt;font-style:italic;">Full detail on each item follows in Sections 1 through 12.</p>
+    
+    <div style="margin-top:18pt;border-top:1pt solid #D444A0;padding-top:14pt;">
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:11pt;color:#121A25;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8pt;">RFP Compliance Audit</div>
+      <p style="font-size:9pt;color:#1A2535;margin-bottom:14pt;">This proposal is structured to address every requirement specified in CTW's Request for Proposal dated April 13, 2026. The table below maps each RFP requirement to the section in this proposal that addresses it, for ease of evaluation.</p>
+
+      <div class="compliance-group">
+        <div class="cg-header">Proposal Objectives (RFP Section 2)</div>
+        <div class="cg-row"><span class="cg-req">Clearly communicate CTW's value proposition</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">2</span> (brand sprint), Quick Reference Summary</span></div>
+        <div class="cg-row"><span class="cg-req">Position CTW as a sophisticated advisory partner</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">6</span> (content engine), Section <span class="cg-num">8</span> (engagement modes)</span></div>
+        <div class="cg-row"><span class="cg-req">Support lead generation</span><span class="cg-ref">Section <span class="cg-num">5</span> (full lead generation system), Section <span class="cg-num">12</span> (success metrics)</span></div>
+        <div class="cg-row"><span class="cg-req">Ensure ease of updates and maintenance</span><span class="cg-ref">Section <span class="cg-num">4</span> (Keystatic CMS rationale), Section <span class="cg-num">12</span> (CMS training)</span></div>
+        <div class="cg-row"><span class="cg-req">Deliver a modern, professional aesthetic</span><span class="cg-ref">Section <span class="cg-num">4</span> (technology and performance), Section <span class="cg-num">11</span> (creative team)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Scope of Work (RFP Section 3)</div>
+        <div class="cg-row"><span class="cg-req">Strategy and Planning (messaging and sitemap)</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 0 brand sprint, Phase 1 architecture), Section <span class="cg-num">3</span> (sitemap)</span></div>
+        <div class="cg-row"><span class="cg-req">Design</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 2), Section <span class="cg-num">11</span> (creative team and visual identity work)</span></div>
+        <div class="cg-row"><span class="cg-req">Development</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 3), Section <span class="cg-num">4</span> (technology stack)</span></div>
+        <div class="cg-row"><span class="cg-req">Content Strategy and Support</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 2 content production), Section <span class="cg-num">6</span> (content engine)</span></div>
+        <div class="cg-row"><span class="cg-req">Testing and Launch</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 3 QA, Phase 4 launch), Section <span class="cg-num">4</span> (Core Web Vitals and accessibility testing)</span></div>
+        <div class="cg-row"><span class="cg-req">Post-Launch Support</span><span class="cg-ref">Section <span class="cg-num">2</span> (Phase 4 stabilization), Section <span class="cg-num">13</span> (ongoing partnership)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Key Requirements (RFP Section 4)</div>
+        <div class="cg-row"><span class="cg-req">Ease of use and intuitive navigation</span><span class="cg-ref">Section <span class="cg-num">3</span> (sitemap), Section <span class="cg-num">4</span> (CMS rationale)</span></div>
+        <div class="cg-row"><span class="cg-req">Attractive, modern design</span><span class="cg-ref">Section <span class="cg-num">4</span> (technology stack), Section <span class="cg-num">11</span> (creative direction)</span></div>
+        <div class="cg-row"><span class="cg-req">Easy-to-update CMS</span><span class="cg-ref">Section <span class="cg-num">4</span> (Keystatic), Section <span class="cg-num">8</span> (training included)</span></div>
+        <div class="cg-row"><span class="cg-req">Mobile-first performance</span><span class="cg-ref">Section <span class="cg-num">4</span> (sub-one-second LCP commitment, mobile-first measurement)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Additional Considerations (RFP Section 5)</div>
+        <div class="cg-row"><span class="cg-req">SEO / AEO strategy and implementation</span><span class="cg-ref">Section <span class="cg-num">6</span> (full content engine and AEO strategy), Section <span class="cg-num">12</span> (success metrics)</span></div>
+        <div class="cg-row"><span class="cg-req">Lead generation and conversion optimization</span><span class="cg-ref">Section <span class="cg-num">5</span> (full lead generation system)</span></div>
+        <div class="cg-row"><span class="cg-req">Analytics and performance tracking tied to business outcomes</span><span class="cg-ref">Section <span class="cg-num">12</span> (instrumentation and reporting)</span></div>
+        <div class="cg-row"><span class="cg-req">Security and accessibility</span><span class="cg-ref">Section <span class="cg-num">7</span> (WCAG 2.2 AA, security posture), Section <span class="cg-num">4</span> (Cloudflare-level security)</span></div>
+        <div class="cg-row"><span class="cg-req">Integration with CRM and other business systems</span><span class="cg-ref">Section <span class="cg-num">4</span> (CRM-ready data layer), Section <span class="cg-num">5</span> (form schema and event tracking)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Deliverables (RFP Section 6)</div>
+        <div class="cg-row"><span class="cg-req">Fully functional website</span><span class="cg-ref">Section <span class="cg-num">8</span> (Foundation tier deliverables)</span></div>
+        <div class="cg-row"><span class="cg-req">CMS setup</span><span class="cg-ref">Section <span class="cg-num">8</span> (Keystatic configuration), Section <span class="cg-num">4</span></span></div>
+        <div class="cg-row"><span class="cg-req">Training</span><span class="cg-ref">Section <span class="cg-num">8</span> (training session for four content stewards)</span></div>
+        <div class="cg-row"><span class="cg-req">Support plan</span><span class="cg-ref">Section <span class="cg-num">8</span> (stabilization), Section <span class="cg-num">13</span> (ongoing partnership)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Vendor Qualifications (RFP Section 7)</div>
+        <div class="cg-row"><span class="cg-req">Relevant experience</span><span class="cg-ref">Section <span class="cg-num">1</span>, Section <span class="cg-num">11</span> (case studies and work samples)</span></div>
+        <div class="cg-row"><span class="cg-req">Portfolio and case studies</span><span class="cg-ref">Section <span class="cg-num">11</span> (work samples and case studies)</span></div>
+        <div class="cg-row"><span class="cg-req">Team overview</span><span class="cg-ref">Section <span class="cg-num">11</span> (team bios)</span></div>
+        <div class="cg-row"><span class="cg-req">References</span><span class="cg-ref">Section <span class="cg-num">11</span> (three named references with contact information)</span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Proposal Requirements (RFP Section 9)</div>
+        <div class="cg-row"><span class="cg-req">Overall approach and methodology</span><span class="cg-ref">Section <span class="cg-num">2</span></span></div>
+        <div class="cg-row"><span class="cg-req">Proposed sitemap and site architecture</span><span class="cg-ref">Section <span class="cg-num">3</span></span></div>
+        <div class="cg-row"><span class="cg-req">Examples of relevant work</span><span class="cg-ref">Section <span class="cg-num">11</span> (work samples with live URLs)</span></div>
+        <div class="cg-row"><span class="cg-req">Technology recommendations and CMS rationale</span><span class="cg-ref">Section <span class="cg-num">4</span></span></div>
+        <div class="cg-row"><span class="cg-req">Project timeline and key milestones</span><span class="cg-ref">Section <span class="cg-num">9</span></span></div>
+        <div class="cg-row"><span class="cg-req">Pricing and ongoing support model</span><span class="cg-ref">Section <span class="cg-num">10</span></span></div>
+        <div class="cg-row"><span class="cg-req">Ongoing support, maintenance, and optimization approach</span><span class="cg-ref">Section <span class="cg-num">13</span></span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Evaluation Criteria (RFP Section 10)</div>
+        <div class="cg-row"><span class="cg-req">Understanding of CTW's business and target audience</span><span class="cg-ref">Section <span class="cg-num">1</span>, Quick Reference Summary</span></div>
+        <div class="cg-row"><span class="cg-req">Strength of proposed strategy and site architecture</span><span class="cg-ref">Sections <span class="cg-num">2</span>, <span class="cg-num">3</span>, <span class="cg-num">4</span>, <span class="cg-num">5</span>, <span class="cg-num">6</span></span></div>
+        <div class="cg-row"><span class="cg-req">Relevant experience with professional services firms</span><span class="cg-ref">Section <span class="cg-num">11</span></span></div>
+        <div class="cg-row"><span class="cg-req">Design quality and user experience</span><span class="cg-ref">Section <span class="cg-num">4</span>, Section <span class="cg-num">11</span></span></div>
+        <div class="cg-row"><span class="cg-req">Value and long-term partnership potential</span><span class="cg-ref">Section <span class="cg-num">8</span>, Section <span class="cg-num">13</span></span></div>
+      </div>
+
+      <div class="compliance-group">
+        <div class="cg-header">Success Metrics (RFP Section 11)</div>
+        <div class="cg-row"><span class="cg-req">Vendor outline of how success will be measured</span><span class="cg-ref">Section <span class="cg-num">12</span> (full metrics framework)</span></div>
+      </div>
+    </div>
+
+    <p style="font-size:8.5pt;color:#1A2535;margin-top:12pt;font-style:italic;">Full detail on each item follows in Sections 1 through 13.</p>
   </div>
 </div>
 
@@ -1003,7 +1288,7 @@ tr:last-child td { border-bottom: none; }
   <p>Public launch with 301 redirects mapped from old URLs, search consoles submitted, and analytics confirmed. The four CTW content stewards complete a single live training session on Keystatic, with a recorded video and a one-page reference card for follow-up. Performance monitoring stays active through ninety days of stabilization support. This is the point at which most agencies end their engagement. Ours doesn't.</p>
 
   <h3 class="sub-header">Phase 5: Ongoing Partnership (Engine and Partnership Tiers)</h3>
-  <p>For CTW selecting the Engine or Partnership modes, Phase 5 extends the engagement into the full ongoing program: the content production cadence documented in Section 6, the quarterly business reviews and competitive monitoring detailed in Section 12, and the proactive strategic input that keeps the engagement generating value past the first year. The senior team that ran the build runs the ongoing program. No handoffs.</p>
+  <p>For CTW selecting the Engine or Partnership modes, Phase 5 extends the engagement into the full ongoing program: the content production cadence documented in Section 6, the quarterly business reviews and competitive monitoring detailed in Section 13, and the proactive strategic input that keeps the engagement generating value past the first year. The senior team that ran the build runs the ongoing program. No handoffs.</p>
 
   <div class="berry-rule"></div>
   <p>The architecture this process produces is the subject of the next section.</p>
@@ -1877,6 +2162,53 @@ tr:last-child td { border-bottom: none; }
     </div>
   </div>
 
+
+  <div class="section-divider"></div>
+  <h3 class="sub-header">Work Samples</h3>
+
+  <p style="margin-bottom:18pt;">Three live builds that demonstrate the capabilities being proposed for CTW.</p>
+
+  <div class="work-sample">
+    <div class="screenshot-placeholder">
+      <div class="screenshot-label">MoragaCountryClubRealEstate.com</div>
+      <div class="screenshot-pending">Screenshot pending</div>
+    </div>
+    <div class="ws-name">MoragaCountryClubRealEstate.com</div>
+    <div class="ws-meta"><span class="ws-label">Live URL:</span> <a href="https://moragacountryclubrealestate.com" class="ws-link">moragacountryclubrealestate.com</a></div>
+    <div class="ws-meta"><span class="ws-label">Built on:</span> Astro + Cloudflare (the same stack proposed for CTW)</div>
+    <div class="ws-meta"><span class="ws-label">Built in:</span> Under two weeks</div>
+    <p>A neighborhood-specific real estate site for Ben Olsen at BrightWork Realty Advocates. Three integrated lead generation tools built directly into the site, including the personalized property assessment tool that produces custom-written recommendations rather than generic Zillow-style estimates. The site is closing visitors who would have otherwise bounced from a generic agent page. It has become the de facto community reference for the Moraga Country Club neighborhood, surpassing even the country club's own primary site in usability and engagement.</p>
+    <p><strong>Why this is relevant to CTW:</strong> same technology stack we are proposing, the same personalized assessment architecture we are proposing for the Capital Event Readiness Assessment, and a build timeline that proves the four-week core delivery commitment is achievable.</p>
+  </div>
+
+  <div class="work-sample-rule"></div>
+
+  <div class="work-sample">
+    <div class="screenshot-placeholder">
+      <div class="screenshot-label">AdvocacyChiefs.com</div>
+      <div class="screenshot-pending">Screenshot pending</div>
+    </div>
+    <div class="ws-name">AdvocacyChiefs.com</div>
+    <div class="ws-meta"><span class="ws-label">Live URL:</span> <a href="https://www.advocacychiefs.com" class="ws-link">www.advocacychiefs.com</a></div>
+    <div class="ws-meta"><span class="ws-label">Built on:</span> Webflow</div>
+    <p>A consolidation rebuild for an integrated services firm. The previous site was eight to ten pages, disorganized, and gave visitors many places to click but few reasons to convert. We streamlined to a single focused page that closes visitors by leading with positioning, recent wins, case studies, testimonials, team credentials, and named differentiators. The before-and-after comparison demonstrates how strategic content consolidation outperforms exhaustive content sprawl, which is the exact thesis we are proposing for CTW's site.</p>
+    <p><strong>Why this is relevant to CTW:</strong> this is the same content consolidation philosophy we are recommending for CTW's current sixty service pages and twenty-eight industry verticals. We have done this before. We know what gets cut and what stays.</p>
+  </div>
+
+  <div class="work-sample-rule"></div>
+
+  <div class="work-sample">
+    <div class="screenshot-placeholder">
+      <div class="screenshot-label">MKTNG.co</div>
+      <div class="screenshot-pending">Screenshot pending</div>
+    </div>
+    <div class="ws-name">MKTNG.co</div>
+    <div class="ws-meta"><span class="ws-label">Live URL:</span> <a href="https://mktng.co" class="ws-link">mktng.co</a></div>
+    <div class="ws-meta"><span class="ws-label">Built on:</span> Astro + Cloudflare + Keystatic (the exact stack proposed for CTW)</div>
+    <p>Our own firm's website rebuild. The previous site had eighty to one hundred pages of accumulated content, inconsistent voice, and an outdated design system. We streamlined to roughly five core pages plus a blog and case studies architecture. The new site is being built on the exact technology stack we are proposing for CTW, which means the build patterns, the CMS workflows, and the performance benchmarks transfer directly.</p>
+    <p><strong>Why this is relevant to CTW:</strong> this is the closest possible analog to the engagement we are proposing. Same scope of consolidation, same technology stack, same goals around AEO foundation and content architecture. CTW will benefit from a build pattern we are simultaneously refining on our own site.</p>
+  </div>
+
   <div class="section-divider"></div>
   <h3 class="sub-header">Case Studies</h3>
 
@@ -1941,13 +2273,126 @@ tr:last-child td { border-bottom: none; }
     <p>We built and ran the program through groundbreaking. Stakeholder coordination across regulators, elected officials, and trade press. Earned media at each significant milestone. Partnership development with industry associations. The campaign sustained coverage through the project's lifecycle and contributed to state and federal grant recognition.</p>
     <p>CTW's clients live in the same kind of environment. Construction firms tracking FAR compliance. Government contractors managing audit relationships. Manufacturers operating across multiple state jurisdictions. The communications discipline that holds up under regulatory scrutiny is the same discipline that earns trust with audiences who have memory.</p>
   </div>
+
+  <div class="section-divider"></div>
+  <h3 class="sub-header">References</h3>
+
+  <p style="margin-bottom:18pt;">Three references familiar with our work, available to speak to the depth, durability, and quality of the engagements they have known us through.</p>
+
+  <div class="reference-block">
+    <div class="ref-name">Benjamin M. Cadranel, Esq.</div>
+    <div class="ref-title">Chief Executive Officer, Advocacy Chiefs Coalition</div>
+    <div class="ref-contact"><a href="mailto:Benjamin@advocacychiefs.com" class="ref-email">Benjamin@advocacychiefs.com</a></div>
+    <div class="ref-contact">916-878-9438</div>
+    <div class="ref-contact">LinkedIn: <a href="https://linkedin.com/in/bmcesq" class="ref-email">linkedin.com/in/bmcesq</a></div>
+    <p class="ref-engagement"><strong>Engagement:</strong> Brand architecture, positioning, visual identity, and website rebuild for Advocacy Chiefs Coalition. See the live build at advocacychiefs.com.</p>
+  </div>
+
+  <div class="reference-rule"></div>
+
+  <div class="reference-block">
+    <div class="ref-name">Perry Thompson</div>
+    <div class="ref-title">Chief Executive Officer, Hat Creek Construction</div>
+    <div class="ref-contact"><a href="mailto:perry@hatcreekconstruction.com" class="ref-email">perry@hatcreekconstruction.com</a></div>
+    <div class="ref-contact">530-949-6145</div>
+    <p class="ref-engagement"><strong>Engagement:</strong> Three years of public relations, communications, and digital work for Hat Creek Construction, a Northern California construction firm operating in the same regulatory environment many of CTW's clients live in. Perry can speak to the durability of the partnership and the discipline of sustained communications work over multi-year engagements.</p>
+  </div>
+
+  <div class="reference-rule"></div>
+
+  <div class="reference-block">
+    <div class="ref-name">Ben Olsen</div>
+    <div class="ref-title">Founder and Chief Executive Officer, BrightWork Realty Advocates</div>
+    <div class="ref-contact"><a href="mailto:ben@brightworkrealty.com" class="ref-email">ben@brightworkrealty.com</a></div>
+    <div class="ref-contact">925-381-2151</div>
+    <p class="ref-engagement"><strong>Engagement:</strong> Two distinct builds for Ben Olsen, including MoragaCountryClubRealEstate.com and a personalized direct mail program. Ben can speak to the speed of build, the quality of the personalized AI assessment architecture, and the conversion performance of the lead generation tools.</p>
+  </div>
 </div>
 
+
 <!-- ============================================================
-     SECTION 12: APPROACH TO PARTNERSHIP
+     SECTION 12: SUCCESS METRICS (NEW)
      ============================================================ -->
 <div class="page-section section-break">
   <span class="section-label">Section 12</span>
+  <h2 class="section-header">Success Metrics</h2>
+
+  <p>CTW's RFP asks how website success will be measured. Here is what we will track, what we expect, and how we will report it back.</p>
+
+  <h3 class="sub-header">What We Track</h3>
+
+  <h4 class="sub-sub-header">Lead Generation</h4>
+  <ul class="metric-list">
+    <li>Form submissions by source and content surface</li>
+    <li>Calendar bookings (volume, conversion to held meetings, downstream pipeline value)</li>
+    <li>Capital Event Readiness Assessment completions and follow-up engagement</li>
+    <li>Calculator completions and email capture rates</li>
+    <li>Newsletter subscribers (monthly net growth)</li>
+    <li>Inbound contact attribution (organic search, AEO citation, direct, referral, paid)</li>
+  </ul>
+
+  <h4 class="sub-sub-header">User Engagement</h4>
+  <ul class="metric-list">
+    <li>Sessions, unique visitors, returning visitors, session duration</li>
+    <li>Pages per session and depth-of-engagement signals</li>
+    <li>Scroll depth on long-form content</li>
+    <li>Conversion path analysis (which pages most often appear before a form submit)</li>
+    <li>Mobile versus desktop behavior splits</li>
+  </ul>
+
+  <h4 class="sub-sub-header">SEO and AEO Performance</h4>
+  <ul class="metric-list">
+    <li>Organic search rankings for priority queries (tracked monthly)</li>
+    <li>Organic traffic by landing page (with attribution to specific content investments)</li>
+    <li>Core Web Vitals scores across every page (sustained green at launch and ongoing)</li>
+    <li>AEO citation tracking against named competitors across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews (tracked quarterly, with the baseline already established in Section 6)</li>
+    <li>Referring domains and backlink profile growth</li>
+    <li>Press release pickup and citation in AI search results</li>
+  </ul>
+
+  <h4 class="sub-sub-header">Site Effectiveness</h4>
+  <ul class="metric-list">
+    <li>Page-by-page conversion rates</li>
+    <li>Bounce rates by page type</li>
+    <li>Calendar booking completion versus abandonment</li>
+    <li>Assessment completion versus abandonment</li>
+    <li>Calculator completion versus abandonment</li>
+  </ul>
+
+  <h3 class="sub-header">What We Expect</h3>
+
+  <p>A performance baseline will be established in the first thirty days post-launch. Specific targets will be set jointly with CTW leadership against that baseline. Realistic ranges based on similar engagements:</p>
+
+  <ul class="metric-list">
+    <li><strong>Organic search traffic:</strong> 200 to 400 percent growth over the existing baseline within twelve months, driven by AEO foundation, content velocity, and improved Core Web Vitals</li>
+    <li><strong>AEO citation rate</strong> (currently 50 percent across the eight queries we baselined): targeted to 75 percent or better within twelve months, with a particular focus on closing the gap on ChatGPT and Grok where CTW currently underperforms</li>
+    <li><strong>Calendar booking conversion:</strong> industry benchmark for professional services is 1 to 3 percent of qualified site visitors; we target the higher end of that range with the routing system in place</li>
+    <li><strong>Capital Event Readiness Assessment completion:</strong> target completion rate of 35 to 50 percent of users who initiate the assessment; target email capture of 90 percent or better at completion</li>
+    <li><strong>Newsletter list growth:</strong> target of 50 to 100 net new subscribers per month after the first quarter</li>
+  </ul>
+
+  <p>These are forecasts, not guarantees. We will refine them quarterly based on observed performance.</p>
+
+  <h3 class="sub-header">How We Report</h3>
+
+  <p><strong>Monthly:</strong> A short written brief summarizing top-line metrics, notable shifts, and any operational items requiring CTW's attention. Delivered to a named CTW contact.</p>
+
+  <p><strong>Quarterly:</strong> A live business review with CTW leadership covering site performance, AEO citation tracking against competitors, lead funnel analysis, content production review, and a prioritized recommendation list for the next quarter. Two named MKTNG leaders attend.</p>
+
+  <p><strong>Annually:</strong> An end-of-year strategic review with cumulative results, ROI analysis, and recommendations for the following year's engagement.</p>
+
+  <h3 class="sub-header">Instrumentation</h3>
+
+  <p>The website ships with PostHog for product analytics and event tracking. Cloudflare Analytics for traffic and edge performance. Server-side event tracking for conversion attribution. Custom AEO citation tracking against a named competitor set, run quarterly using a structured query protocol developed during this engagement.</p>
+
+  <p>When CTW selects a CRM, the data layer is already mapped to receive events and the reporting consolidates into the CRM's native dashboards plus our quarterly review.</p>
+</div>
+
+<!-- ============================================================
+     SECTION 13: APPROACH TO PARTNERSHIP (RENUMBERED FROM 12)
+     ============================================================ -->
+<div class="page-section section-break">
+  <span class="section-label">Section 13</span>
   <h2 class="section-header">Approach to Partnership</h2>
 
   <p>CTW's RFP says it directly: the firm is looking for a long-term partner, not just a developer. Most agency proposals respond to that line with a sentence about ongoing support and move on. We want to be more specific.</p>
@@ -2026,6 +2471,11 @@ tr:last-child td { border-bottom: none; }
   <div class="faq-item">
     <div class="faq-q">How is pricing structured across the three engagement modes?</div>
     <div class="faq-a">Each mode has a one-time build investment and (in the Engine and Partnership tiers) an ongoing monthly retainer. Detailed pricing is in Section 10. We are happy to walk through the line items in any follow-up conversation.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How will success be measured?</div>
+    <div class="faq-a">We track lead generation metrics (form submissions, calendar bookings, assessment completions, calculator engagement), user engagement metrics (traffic, depth of engagement, conversion path analysis), SEO and AEO performance (organic rankings, traffic, AEO citation tracking against named competitors), and site effectiveness (page-level conversion rates). Reporting is monthly in writing and quarterly in live business reviews. Full framework is detailed in Section 12.</div>
   </div>
 
   <div class="faq-item">
