@@ -1,0 +1,2898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CTW Website Proposal | MKTNG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --radiant-berry: #D444A0;
+      --electric-cyan: #2DD4C0;
+      --slate: #1A2535;
+      --ice-linen: #EEF4F6;
+      --deep-slate: #121A25;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      font-size: 13px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 12pt;
+      line-height: 1.48;
+      color: var(--slate);
+      background: var(--white);
+      hyphens: none;
+    }
+
+    .display {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      color: var(--deep-slate);
+    }
+
+    /* ---------- Cover ---------- */
+    .cover-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem 4rem;
+      position: relative;
+      background: var(--white);
+    }
+
+    .cover-brand-row {
+      position: absolute;
+      top: 1in;
+      left: 1in;
+      right: 1in;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .cover-mktng-logo img {
+      height: 36pt;
+      width: auto;
+      display: block;
+    }
+
+    .ctw-cover-logo {
+      margin: 0;
+      padding-top: 4px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .ctw-cover-logo img {
+      height: 36pt;
+      width: auto;
+      max-width: min(200px, 42vw);
+      object-fit: contain;
+      display: block;
+    }
+
+    .cover-center {
+      text-align: center;
+      max-width: 42rem;
+      margin-top: 3rem;
+    }
+
+    .cover-headline {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: clamp(32px, 6vw, 54px);
+      line-height: 1.08;
+      color: var(--deep-slate);
+      margin: 0 0 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .cover-sub {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 14pt;
+      line-height: 1.45;
+      margin: 0 0 1.25rem;
+      color: var(--slate);
+    }
+
+    .cover-rule {
+      width: 80pt;
+      height: 2pt;
+      background: var(--radiant-berry);
+      margin: 0 auto 1rem;
+      border: none;
+    }
+
+    .cover-submit {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 11pt;
+      margin: 0;
+      color: var(--slate);
+    }
+
+    .cover-date {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 10pt;
+      margin: 0.35rem 0 0;
+      color: var(--slate);
+    }
+
+    /* ---------- Running chrome ---------- */
+    .print-only {
+      display: none;
+    }
+
+    .running-head {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0.35rem 1in 0.25rem;
+      font-size: 9pt;
+      color: var(--slate);
+      background: var(--white);
+      z-index: 100;
+      border-bottom: 0.5pt solid var(--radiant-berry);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .running-head-left {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+    }
+
+    .running-head-right {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+    }
+
+    .running-foot {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.35rem 1in;
+      font-size: 9pt;
+      color: var(--slate);
+      background: var(--white);
+      z-index: 100;
+      border-top: 0.5pt solid var(--slate);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .running-foot-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .running-foot-left img {
+      height: 14pt;
+      width: auto;
+      display: block;
+    }
+
+    .running-foot-right {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+    }
+
+    /* ---------- Body layout ---------- */
+    .document-main {
+      padding: 1rem 1in 3rem;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    @media screen {
+      .document-main {
+        padding-bottom: 4rem;
+      }
+    }
+
+    .section-anchor {
+      scroll-margin-top: 90px;
+    }
+
+    .major-divider {
+      border: none;
+      border-top: 1pt solid var(--radiant-berry);
+      width: 60pt;
+      margin: 2rem auto;
+    }
+
+    h1.major-section-title {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 22pt;
+      color: var(--deep-slate);
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2.block-heading {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 14pt;
+      color: var(--deep-slate);
+      margin: 1.35rem 0 0.5rem;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h3.sub-heading {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 11.5pt;
+      color: var(--deep-slate);
+      margin: 1rem 0 0.35rem;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 0.65rem;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .lead-strong {
+      font-weight: 600;
+    }
+
+    ul.clean-list {
+      margin: 0 0 0.85rem 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.clean-list li {
+      position: relative;
+      padding-left: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    ul.clean-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: var(--slate);
+    }
+
+    /* Quick Reference */
+    .quick-ref {
+      background: var(--ice-linen);
+      padding: 1rem 1.15rem 1.15rem;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92rem;
+      line-height: 1.32;
+      color: var(--slate);
+      margin: 1rem 0 1.5rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .quick-ref h2 {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 12pt;
+      letter-spacing: 0.06em;
+      margin: 0 0 0.65rem;
+      color: var(--deep-slate);
+    }
+
+    .quick-ref .qr-label {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      margin: 0.85rem 0 0.35rem;
+      color: var(--deep-slate);
+    }
+
+    .quick-ref p {
+      margin: 0 0 0.45rem;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    /* Section 3 sitemap tree */
+    .sitemap-intro {
+      margin: 0 0 1rem;
+    }
+
+    .sitemap-intro p {
+      margin: 0 0 0.65rem;
+    }
+
+    .sitemap-tree {
+      margin: 1rem 0 1.35rem;
+      font-size: 10pt;
+      line-height: 1.45;
+    }
+
+    .sitemap-tree .sitemap-block {
+      margin: 0 0 0.85rem;
+    }
+
+    .sitemap-tree .sitemap-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .sitemap-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.35rem 0.55rem;
+      margin: 0 0 0.15rem;
+    }
+
+    .sitemap-connector {
+      margin: 0 0 0 0.5rem;
+      padding: 0 0 0 0.55rem;
+      border-left: 0.5pt solid var(--slate);
+    }
+
+    .sitemap-connector.loose {
+      margin-top: 0.2rem;
+    }
+
+    .sitemap-label-0 {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 9.5pt;
+      letter-spacing: 0.055em;
+      font-variant: all-small-caps;
+      color: var(--deep-slate);
+    }
+
+    .sitemap-label-1 {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--slate);
+    }
+
+    .sitemap-label-2 {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 9.75pt;
+      color: var(--slate);
+    }
+
+    .sitemap-label-3 {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 9.5pt;
+      color: var(--slate);
+    }
+
+    .sitemap-tag {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 7.5pt;
+      letter-spacing: 0.065em;
+      color: var(--electric-cyan);
+    }
+
+    .sitemap-budget {
+      margin: 1.35rem 0 1rem;
+      padding: 0.85rem 1rem 1rem;
+      border: 0.5pt solid rgba(26, 37, 53, 0.35);
+      background: var(--ice-linen);
+      font-size: 10pt;
+      line-height: 1.42;
+    }
+
+    .sitemap-budget h3 {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 11pt;
+      margin: 0 0 0.5rem;
+      color: var(--deep-slate);
+    }
+
+    .sitemap-budget ul {
+      margin: 0;
+      padding: 0 0 0 1.1rem;
+    }
+
+    .sitemap-budget li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Figures / exhibits */
+    figure.exhibit {
+      margin: 1rem 0 1rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    figure.exhibit figcaption {
+      margin-top: 0.35rem;
+      font-size: 10pt;
+      color: var(--slate);
+      page-break-before: avoid;
+      break-before: avoid;
+    }
+
+    figure.exhibit-timeline svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Tables */
+    table.velocity {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 0.75rem 0 1rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    table.velocity th,
+    table.velocity td {
+      border: 1pt solid #cfd8dc;
+      padding: 0.35rem 0.45rem;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    table.velocity thead {
+      background: var(--ice-linen);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 9pt;
+      color: var(--deep-slate);
+    }
+
+    /* Pricing placeholders */
+    .ph-fee {
+      color: var(--radiant-berry);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* Asset placeholders */
+    .asset-ph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1pt dashed var(--slate);
+      background: var(--ice-linen);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 8pt;
+      color: var(--deep-slate);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.25rem 0.35rem;
+      min-height: 48px;
+      min-width: 80px;
+    }
+
+    .logo-inline {
+      height: 72px;
+      width: auto;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .logo-inline.on-white-border {
+      border: 1pt solid rgba(26, 37, 53, 0.35);
+      padding: 4px;
+      border-radius: 2px;
+      box-sizing: content-box;
+    }
+
+    /* Engagement ladder */
+    .ladder {
+      margin: 1rem 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .ladder-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.65rem;
+      align-items: center;
+      padding: 0.65rem 0.75rem;
+      background: var(--ice-linen);
+      border-bottom: 1pt solid var(--radiant-berry);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .ladder-row:last-child {
+      border-bottom: none;
+    }
+
+    .ladder-num {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 22pt;
+      color: var(--deep-slate);
+      line-height: 1;
+    }
+
+    .ladder-label {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 10pt;
+      letter-spacing: 0.03em;
+      color: var(--deep-slate);
+      margin-bottom: 0.15rem;
+    }
+
+    .ladder-desc {
+      font-family: Poppins, system-ui, sans-serif;
+      font-size: 10pt;
+      margin: 0;
+      color: var(--slate);
+      line-height: 1.42;
+    }
+
+    .ladder-tier {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 8pt;
+      letter-spacing: 0.08em;
+      color: var(--electric-cyan);
+      white-space: nowrap;
+      align-self: start;
+      padding-top: 0.15rem;
+    }
+
+    /* Engagement cards */
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1rem 0;
+      align-items: stretch;
+    }
+
+    @media screen and (max-width: 900px) {
+      .engagement-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .eng-card {
+      border: 1pt solid var(--slate);
+      padding: 0.65rem 0.65rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      min-width: 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .eng-card p.eng-price-block {
+      margin: 0 0 0.45rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .eng-price-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      line-height: 1.35;
+    }
+
+    .eng-price-value {
+      display: block;
+      line-height: 1.4;
+    }
+
+    .eng-card .includes-note {
+      margin: 0.35rem 0 0;
+    }
+
+    .eng-card.foundation {
+      background: var(--white);
+    }
+
+    .eng-card.engine {
+      background: var(--ice-linen);
+    }
+
+    .eng-card.partnership {
+      border-width: 3pt;
+      border-color: var(--radiant-berry);
+      background: var(--white);
+    }
+
+    .eng-card h3 {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 12pt;
+      margin: 0 0 0.2rem;
+      color: var(--deep-slate);
+    }
+
+    .eng-card .tagline {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      letter-spacing: 0.04em;
+      color: var(--deep-slate);
+      margin: 0 0 0.45rem;
+    }
+
+    .eng-card .invest {
+      margin-top: auto;
+      padding-top: 0.5rem;
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--slate);
+    }
+
+    /* Team grid */
+    .team-block {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 0.75rem;
+      margin: 0 0 1.1rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .team-headshot {
+      width: 112px;
+      height: 112px;
+      flex-shrink: 0;
+      align-self: start;
+      border: 1pt solid rgba(26, 37, 53, 0.25);
+      overflow: hidden;
+      background: var(--ice-linen);
+    }
+
+    .team-headshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .team-name {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 14pt;
+      margin: 0 0 0.15rem;
+      color: var(--deep-slate);
+    }
+
+    .team-title {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 11pt;
+      margin: 0 0 0.35rem;
+      color: var(--slate);
+    }
+
+    /* Case study */
+    .case-block {
+      margin: 1rem 0 1.25rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1pt solid var(--radiant-berry);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .case-block:last-of-type {
+      border-bottom: none;
+    }
+
+    .case-heading {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 11pt;
+      margin: 0.35rem 0 0.15rem;
+      color: var(--deep-slate);
+    }
+
+    .case-tagline {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      font-style: italic;
+      margin: 0 0 0.45rem;
+      color: var(--slate);
+    }
+
+    /* Tech stack row */
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin: 0.75rem 0 1rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      min-height: 52px;
+    }
+
+    .tech-item img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    /* Timeline caption line */
+    .timeline-caption {
+      margin-top: 0.35rem;
+      font-size: 10pt;
+    }
+
+    /* Appendix table */
+    table.appendix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 0.5rem 0 1rem;
+    }
+
+    table.appendix th,
+    table.appendix td {
+      border: 1pt solid #cfd8dc;
+      padding: 0.3rem 0.35rem;
+      vertical-align: top;
+    }
+
+    table.appendix thead {
+      background: var(--ice-linen);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+    }
+
+    /* Work samples */
+    .work-sample-block {
+      margin: 0 0 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1pt solid var(--radiant-berry);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .work-sample-block:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .work-sample-shot {
+      border: 1pt solid var(--slate);
+      margin-bottom: 0.65rem;
+      max-height: 320px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .work-sample-shot img {
+      width: 100%;
+      height: auto;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .work-sample-ph {
+      min-height: 200px;
+      max-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ice-linen);
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .work-sample-ph-title {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 11pt;
+      color: var(--deep-slate);
+      margin-bottom: 0.35rem;
+    }
+
+    .work-sample-ph-note {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--deep-slate);
+    }
+
+    .work-sample-title {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 12pt;
+      color: var(--deep-slate);
+      margin: 0 0 0.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    .work-sample-line-strong {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      color: var(--slate);
+      margin: 0.15rem 0;
+    }
+
+    .work-sample-line {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 9.5pt;
+      color: var(--slate);
+      margin: 0.12rem 0;
+    }
+
+    .work-sample-block p {
+      font-size: 10.5pt;
+      margin-bottom: 0.45rem;
+    }
+
+    .work-sample-url a {
+      color: var(--radiant-berry);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* References */
+    .reference-block {
+      padding: 0.65rem 0;
+      border-bottom: 0.5pt solid rgba(26, 37, 53, 0.35);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .reference-block:last-of-type {
+      border-bottom: none;
+    }
+
+    .reference-name {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 11pt;
+      color: var(--deep-slate);
+      margin: 0 0 0.2rem;
+    }
+
+    .reference-title-org {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      color: var(--slate);
+      margin: 0 0 0.35rem;
+    }
+
+    .reference-contact {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 10pt;
+      color: var(--slate);
+      margin: 0.08rem 0;
+    }
+
+    .reference-contact a.mail,
+    .reference-contact a.ext {
+      color: var(--radiant-berry);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .reference-engagement {
+      margin: 0.45rem 0 0;
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 10pt;
+      color: var(--slate);
+      line-height: 1.45;
+    }
+
+    .faq-entry {
+      margin: 0 0 0.85rem;
+    }
+
+    .faq-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-entry p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Supplement 3: executive summary, TOC, engagement / tech tables, attention staircase, photography, hero lead block */
+    .exec-summary-page .exec-sum-head {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 32pt;
+      line-height: 1.1;
+      color: var(--deep-slate);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .exec-summary-page .exec-sum-sub {
+      font-weight: 600;
+      font-size: 20pt;
+      line-height: 1.25;
+      color: var(--deep-slate);
+      margin: 0 0 1rem;
+    }
+
+    .exec-summary-page .exec-sum-lead {
+      font-family: Poppins, system-ui, sans-serif;
+      font-size: 12pt;
+      margin: 0 0 0.65rem;
+      color: var(--slate);
+    }
+
+    .exec-modes-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin: 1rem 0 1.1rem;
+    }
+
+    .exec-mode-card {
+      flex: 1 1 28%;
+      min-width: 160px;
+      border-left: 3px solid var(--radiant-berry);
+      padding: 0.5rem 0.6rem 0.5rem 0.75rem;
+      background: rgba(238, 244, 246, 0.65);
+    }
+
+    .exec-mode-name {
+      font-weight: 800;
+      font-size: 9pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+      color: var(--deep-slate);
+    }
+
+    .exec-mode-line {
+      margin: 0;
+      font-size: 10pt;
+      line-height: 1.42;
+      color: var(--slate);
+    }
+
+    .exec-why-head {
+      font-weight: 800;
+      font-size: 11pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--deep-slate);
+      margin: 1rem 0 0.5rem;
+    }
+
+    .exec-callouts {
+      margin: 0 0 0.75rem;
+    }
+
+    .exec-callouts p {
+      margin: 0 0 0.45rem;
+      font-size: 10.5pt;
+      color: var(--slate);
+    }
+
+    .exec-lead-phrase {
+      font-weight: 700;
+      color: var(--deep-slate);
+    }
+
+    .exec-invest {
+      font-weight: 500;
+      font-size: 10.5pt;
+      margin: 0.5rem 0 0.35rem;
+      color: var(--deep-slate);
+    }
+
+    .exec-close {
+      margin: 0 0 0.35rem;
+    }
+
+    .exec-appendix-note {
+      font-size: 10pt;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    .toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-item {
+      margin: 0 0 0.55rem;
+      break-inside: avoid;
+    }
+
+    .toc-title {
+      font-weight: 600;
+      font-size: 10.5pt;
+      color: var(--deep-slate);
+      display: inline;
+    }
+
+    .toc-pnum {
+      float: right;
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      color: var(--slate);
+    }
+
+    .toc-abs {
+      margin: 0.15rem 0 0 0.5rem;
+      font-size: 10pt;
+      color: var(--slate);
+      line-height: 1.4;
+    }
+
+    .attention-staircase {
+      margin: 0.75rem 0 1rem;
+      border-top: 1px solid var(--radiant-berry);
+    }
+
+    .attention-step {
+      display: grid;
+      grid-template-columns: 42px 1fr 100px;
+      gap: 0.65rem;
+      align-items: start;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--radiant-berry);
+    }
+
+    .attention-step-3 {
+      background: rgba(238, 244, 246, 0.85);
+    }
+
+    .attention-step-2 {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .attention-step-1 {
+      background: rgba(238, 244, 246, 0.5);
+      border-bottom: none;
+    }
+
+    .attention-num {
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--deep-slate);
+    }
+
+    .attention-name {
+      font-weight: 800;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: var(--deep-slate);
+    }
+
+    .attention-desc {
+      margin: 0;
+      font-size: 10.5pt;
+      line-height: 1.42;
+      color: var(--slate);
+    }
+
+    .attention-tag {
+      font-weight: 700;
+      font-size: 8px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--electric-cyan);
+      text-align: right;
+      padding-top: 6px;
+    }
+
+    table.engagement-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 0.85rem 0 0.75rem;
+    }
+
+    table.engagement-compare-table th,
+    table.engagement-compare-table td {
+      border: 1px solid rgba(26, 37, 53, 0.25);
+      padding: 0.35rem 0.45rem;
+      vertical-align: top;
+    }
+
+    table.engagement-compare-table thead th {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 8.5pt;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+    }
+
+    table.engagement-compare-table th.ec-feature {
+      background: var(--deep-slate);
+      color: var(--white);
+      text-align: left;
+    }
+
+    table.engagement-compare-table th.ec-f {
+      background: var(--slate);
+    }
+
+    table.engagement-compare-table th.ec-e {
+      background: var(--slate);
+      border-top: 3px solid var(--radiant-berry);
+    }
+
+    table.engagement-compare-table th.ec-p {
+      background: var(--deep-slate);
+      border-top: 5px solid var(--radiant-berry);
+    }
+
+    table.engagement-compare-table tbody tr:nth-child(even) {
+      background: var(--ice-linen);
+    }
+
+    table.engagement-compare-table tbody tr:nth-child(odd) {
+      background: var(--white);
+    }
+
+    table.engagement-compare-table tbody td:first-child {
+      font-weight: 500;
+      color: var(--slate);
+    }
+
+    .ec-yes {
+      text-align: center;
+      color: var(--radiant-berry);
+      font-weight: 700;
+    }
+
+    .ec-dash {
+      text-align: center;
+      color: var(--slate);
+    }
+
+    .ec-dash-mark {
+      font-weight: 600;
+    }
+
+    tr.ec-price-row td {
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .mode-taglines {
+      margin: 0.5rem 0 0.35rem;
+    }
+
+    .mode-taglines-rest {
+      margin-top: 0.35rem;
+    }
+
+    .mode-tagline {
+      margin: 0 0 0.4rem;
+      font-size: 10pt;
+      line-height: 1.42;
+      color: var(--slate);
+    }
+
+    .mode-tagline-label {
+      font-weight: 800;
+      font-size: 9pt;
+      letter-spacing: 0.04em;
+    }
+
+    aside.photography-callout {
+      background: rgba(238, 244, 246, 0.95);
+      border-left: 4px solid var(--radiant-berry);
+      padding: 0.85rem 1rem 0.9rem 1.1rem;
+      margin: 0.85rem 0 1rem;
+    }
+
+    .photo-callout-head {
+      font-weight: 800;
+      font-size: 10pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 0.35rem;
+      color: var(--deep-slate);
+    }
+
+    .photo-callout-sub {
+      font-weight: 500;
+      font-size: 10.5pt;
+      margin: 0 0 0.5rem;
+      color: var(--deep-slate);
+    }
+
+    aside.photography-callout p {
+      margin: 0 0 0.45rem;
+      font-size: 10.5pt;
+      color: var(--slate);
+    }
+
+    .photo-callout-label {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    ul.photo-callout-list {
+      margin: 0.25rem 0 0.5rem 1.1rem;
+      padding: 0;
+    }
+
+    ul.photo-callout-list li {
+      margin-bottom: 0.28rem;
+    }
+
+    ul.photo-callout-list li::marker {
+      color: var(--radiant-berry);
+    }
+
+    .photo-invest {
+      font-weight: 500;
+      margin: 0.35rem 0 0.45rem !important;
+    }
+
+    table.tech-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.5pt;
+      margin: 0.65rem 0 0.85rem;
+    }
+
+    table.tech-compare-table th,
+    table.tech-compare-table td {
+      border: 1px solid rgba(26, 37, 53, 0.22);
+      padding: 0.4rem 0.5rem;
+      vertical-align: top;
+    }
+
+    table.tech-compare-table thead th {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 8.5pt;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--deep-slate);
+      color: var(--white);
+    }
+
+    th.tc-dim {
+      width: 18%;
+    }
+
+    table.tech-compare-table th.tc-rec {
+      border-left: 3px solid var(--radiant-berry);
+    }
+
+    table.tech-compare-table tbody tr:nth-child(odd) {
+      background: var(--white);
+    }
+
+    table.tech-compare-table tbody tr:nth-child(even) {
+      background: var(--ice-linen);
+    }
+
+    table.tech-compare-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--deep-slate);
+    }
+
+    table.tech-compare-table td:nth-child(2) {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--slate);
+    }
+
+    table.tech-compare-table td:nth-child(3) {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      color: var(--slate);
+    }
+
+    .lead-hero-block {
+      background: rgba(238, 244, 246, 0.55);
+      border: 1px solid rgba(26, 37, 53, 0.12);
+      padding: 0.85rem 1rem 1rem;
+      margin: 0.5rem 0 0.85rem;
+    }
+
+    .lead-hero-block p {
+      font-size: 10.5pt;
+    }
+
+    .sitemap-landscape-page {
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    ul.timeline-milestones li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Quick Reference compliance */
+    table.qr-compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 0.5rem 0 0.85rem;
+    }
+
+    table.qr-compliance-table td {
+      border: 1pt solid rgba(26, 37, 53, 0.22);
+      padding: 0.35rem 0.45rem;
+      vertical-align: top;
+    }
+
+    td.qr-compliance-group {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 9pt;
+      letter-spacing: 0.05em;
+      color: var(--deep-slate);
+      background: rgba(255, 255, 255, 0.55);
+      padding-top: 0.45rem;
+      padding-bottom: 0.35rem;
+    }
+
+    td.qr-compliance-req {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 9pt;
+      color: var(--deep-slate);
+      width: 42%;
+    }
+
+    td.qr-compliance-map {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 9pt;
+      color: var(--slate);
+      width: 58%;
+    }
+
+    span.qr-sec-num {
+      color: var(--radiant-berry);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Success metrics */
+    .success-metrics-head {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 11pt;
+      letter-spacing: 0.06em;
+      color: var(--deep-slate);
+      margin: 1rem 0 0.4rem;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    ul.success-metrics-list {
+      margin: 0 0 0.65rem 1.05rem;
+      padding: 0;
+      list-style: disc;
+    }
+
+    ul.success-metrics-list li {
+      margin-bottom: 0.28rem;
+      padding-left: 0.15rem;
+    }
+
+    ul.success-metrics-list li::marker {
+      color: var(--radiant-berry);
+      font-size: 0.95em;
+    }
+
+    .cover-header-mask-print,
+    .cover-footer-mask-print {
+      display: none;
+    }
+
+    /* ---------- Print ---------- */
+    @page {
+      size: letter portrait;
+      margin: 0.75in 0.85in;
+      counter-increment: page;
+      @top-left {
+        content: "CTW Website Proposal";
+        font-family: Poppins, system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 10pt;
+        color: #1a2535;
+      }
+
+      @top-right {
+        content: "MKTNG";
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        font-weight: 600;
+        font-size: 10pt;
+        color: #1a2535;
+      }
+
+      @bottom-right {
+        content: counter(page);
+        font-family: Poppins, system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 10pt;
+        color: #1a2535;
+      }
+
+      @bottom-left {
+        content: "MKTNG";
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        font-weight: 600;
+        font-size: 10pt;
+        color: #1a2535;
+      }
+    }
+
+    @page :first {
+      margin: 0;
+      counter-reset: page 0;
+      counter-increment: page 0;
+      @top-left {
+        content: "";
+      }
+
+      @top-right {
+        content: "";
+      }
+
+      @bottom-right {
+        content: "";
+      }
+
+      @bottom-left {
+        content: "";
+      }
+    }
+
+    @page landscape {
+      size: letter landscape;
+      margin: 0.5in;
+    }
+
+    @media print {
+      html {
+        font-size: 12px;
+      }
+
+      body {
+        font-size: 11pt;
+        line-height: 1.42;
+      }
+
+      .print-only {
+        display: flex !important;
+      }
+
+      .running-head.print-only {
+        display: flex !important;
+      }
+
+      .running-foot.print-only {
+        display: flex !important;
+      }
+
+      .running-foot-right,
+      .running-foot-right .page-num-print {
+        font-family: Poppins, system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 10pt;
+        color: var(--slate);
+      }
+
+      .running-foot-right .page-num-print::after {
+        content: counter(page);
+      }
+
+      .document-main {
+        padding: 0.85rem 0 1.75rem;
+        max-width: none;
+        margin: 0;
+      }
+
+      .cover-page {
+        page-break-after: always;
+        min-height: 0;
+        position: relative;
+      }
+
+      .cover-header-mask-print,
+      .cover-footer-mask-print {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        z-index: 200;
+        pointer-events: none;
+      }
+
+      .cover-header-mask-print {
+        top: 0;
+        height: 52px;
+      }
+
+      .cover-footer-mask-print {
+        bottom: 0;
+        height: 52px;
+      }
+
+      section.major-section:not(.no-break-before),
+      section#faq,
+      section#appendix-a,
+      section#appendix-b,
+      section#appendix-c {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      .major-section.no-break-before {
+        break-before: auto;
+        page-break-before: auto;
+      }
+
+      .exec-summary-page {
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .toc-page {
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .sitemap-landscape-page {
+        page: landscape;
+        break-before: page;
+        page-break-before: always;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .major-divider {
+        break-after: avoid-page;
+      }
+
+      h1,
+      h2,
+      h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      figure,
+      figure.exhibit,
+      .chart,
+      .timeline,
+      .attention-ladder,
+      .engagement-modes,
+      .ladder,
+      .engagement-grid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .lead-hero-block,
+      aside.photography-callout,
+      .attention-staircase,
+      table.tech-compare-table,
+      table.engagement-compare-table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      table,
+      table.velocity,
+      table.appendix {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .quick-ref {
+        background-color: #eef4f6 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .sitemap-budget {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .reference-block,
+      .work-sample-block,
+      .faq-entry,
+      .team-block,
+      .case-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      p,
+      li {
+        orphans: 3;
+        widows: 3;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none;
+      }
+
+      a[href^="http"]::after,
+      a[href^="https"]::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #1a2535;
+      }
+
+      a[href^="#"]::after,
+      a[href^="mailto:"]::after {
+        content: "";
+      }
+    }
+
+    /* Running headers/footers with fixed positioning target Chromium print preview; @page margin boxes above help Prince-class exporters. */
+
+    /* Screen preview of running chrome */
+    @media screen {
+      .preview-print-chrome .print-only {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body class="preview-print-chrome">
+  <!-- Running chrome (print); masked on cover -->
+  <div class="running-head print-only" aria-hidden="true">
+    <span class="running-head-left">CTW Website Proposal</span>
+    <span class="running-head-right">MKTNG</span>
+  </div>
+  <div class="running-foot print-only" aria-hidden="true">
+    <span class="running-foot-left display">
+      <img src="assets/logos/MKTNG%20Logo-Black-Pink-Slash.png" alt="MKTNG" loading="lazy" decoding="async" />
+      <span data-foot-text="1" class="display" style="font-weight:600;font-size:10pt;">MKTNG</span>
+    </span>
+    <span class="running-foot-right"><span class="page-num-print"></span></span>
+  </div>
+
+  <!-- Cover -->
+  <div class="cover-page">
+    <div class="cover-header-mask-print"></div>
+    <div class="cover-footer-mask-print"></div>
+    <div class="cover-brand-row">
+      <div class="cover-mktng-logo">
+        <img src="assets/logos/MKTNG%20Logo-Black-Pink-Slash.png" alt="MKTNG wordmark" loading="lazy" decoding="async" />
+      </div>
+      <div class="ctw-cover-logo">
+        <img src="assets/logos/CTW-logo.png" alt="CTW" loading="lazy" decoding="async" />
+      </div>
+    </div>
+    <div class="cover-center">
+      <h1 class="cover-headline display">PATH FORWARD, ONLINE.</h1>
+      <p class="cover-sub">A proposal for the redesign and rebuild of CTW's website.</p>
+      <hr class="cover-rule" />
+      <p class="cover-submit">Submitted by MKTNG</p>
+      <p class="cover-date">May 1, 2026</p>
+    </div>
+  </div>
+
+  <div class="document-main">
+    <section class="major-section no-break-before exec-summary-page section-anchor" id="executive-summary">
+      <h1 class="exec-sum-head display">EXECUTIVE SUMMARY</h1>
+      <p class="exec-sum-sub display">CTW has the right firm. The website should reflect it.</p>
+      <p class="exec-sum-lead">The current site reflects a generalist compliance shop with sixty service pages and twenty-eight industries. The firm has moved past that. Advisory-led work with middle-market owners and CFOs through capital events is now the core. The website should be the next thing to catch up.</p>
+      <p class="exec-sum-lead">We propose to close the gap in four weeks for the core build, twelve weeks for the full launch with original photography. Three engagement modes let CTW choose how deep the partnership goes.</p>
+      <div class="exec-modes-row">
+        <div class="exec-mode-card">
+          <div class="exec-mode-name display">PATH FORWARD FOUNDATION</div>
+          <p class="exec-mode-line">The website rebuild itself, ready in four weeks. Astro on Cloudflare with Keystatic, sub-one-second load times, AEO foundation built in, lead generation system operational at launch.</p>
+        </div>
+        <div class="exec-mode-card">
+          <div class="exec-mode-name display">PATH FORWARD ENGINE</div>
+          <p class="exec-mode-line">Foundation plus the content production system. Podcast launch, quarterly original research, monthly press releases, partner LinkedIn programs, AI Concierge.</p>
+        </div>
+        <div class="exec-mode-card">
+          <div class="exec-mode-name display">PATH FORWARD PARTNERSHIP</div>
+          <p class="exec-mode-line">Engine plus full ongoing program. Quarterly business reviews, AEO citation tracking, AI training for CTW staff, continuous content production.</p>
+        </div>
+      </div>
+      <h2 class="exec-why-head display">WHY MKTNG</h2>
+      <div class="exec-callouts">
+        <p><span class="exec-lead-phrase">Speed.</span> Most rebuilds run six to nine months. Ours runs four weeks for the core.</p>
+        <p><span class="exec-lead-phrase">AEO baseline already done.</span> We ran an analysis of how CTW currently appears across five major AI search engines as part of preparing this proposal. Findings inform the strategy. No other bidder will have done this work.</p>
+        <p><span class="exec-lead-phrase">A senior team that stays.</span> Most of our client relationships run two to three years or longer. We are not a developer who hands off. We are a communications partner.</p>
+      </div>
+      <p class="exec-invest display">Investment ranges from <span class="ph-fee">[FOUNDATION_BUILD_FLOOR]</span> for Foundation through <span class="ph-fee">[PARTNERSHIP_ANNUAL_FLOOR]</span> annualized for Partnership, with detailed pricing in Section 3.</p>
+      <p class="exec-close">We would welcome an interview the week of May 11.</p>
+      <p class="exec-appendix-note">A structured Quick Reference Summary and complete RFP compliance matrix appear in Appendices B and C.</p>
+    </section>
+
+    <section class="major-section toc-page section-anchor" id="table-of-contents">
+      <h1 class="major-section-title display">Table of Contents</h1>
+      <ul class="toc-list">
+        <li class="toc-item"><span class="toc-title display">EXECUTIVE SUMMARY</span></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 1: READING THE MOMENT</span><span class="toc-pnum"></span><p class="toc-abs">The current site reflects the firm CTW used to be. The opportunity is to make it reflect the firm CTW already is.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 2: ENGAGEMENT MODES</span><span class="toc-pnum"></span><p class="toc-abs">Three levels of partnership: Foundation, Engine, Partnership. Each is complete on its own.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 3: INVESTMENT</span><span class="toc-pnum"></span><p class="toc-abs">What each engagement mode costs and what is included.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 4: TIMELINE</span><span class="toc-pnum"></span><p class="toc-abs">Four weeks to core launch. Twelve weeks for the full launch with original photography.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 5: TEAM AND RELEVANT EXPERIENCE</span><span class="toc-pnum"></span><p class="toc-abs">Senior practitioners running the engagement, work samples, case studies, references.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 6: APPROACH AND METHODOLOGY</span><span class="toc-pnum"></span><p class="toc-abs">Five phases from brand sprint through stabilization. How we deliver in four weeks.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 7: RECOMMENDED SITE ARCHITECTURE</span><span class="toc-pnum"></span><p class="toc-abs">The proposed sitemap, with rationale for what stays, what consolidates, and what gets added.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 8: TECHNOLOGY RECOMMENDATIONS</span><span class="toc-pnum"></span><p class="toc-abs">Astro on Cloudflare with Keystatic. Why we are recommending against another WordPress build.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 9: LEAD GENERATION SYSTEM</span><span class="toc-pnum"></span><p class="toc-abs">Calendar booking, the Capital Event Readiness Assessment, calculators, AI Concierge, CRM-ready architecture.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 10: CONTENT ENGINE AND AEO STRATEGY</span><span class="toc-pnum"></span><p class="toc-abs">The system that fills the new site with work that compounds. Includes baseline AEO analysis already conducted.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 11: TRUST, COMPLIANCE, AND ACCESSIBILITY</span><span class="toc-pnum"></span><p class="toc-abs">WCAG 2.2 AA, security posture, privacy and data handling.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 12: SUCCESS METRICS</span><span class="toc-pnum"></span><p class="toc-abs">What we track, what we expect, how we report.</p></li>
+        <li class="toc-item"><span class="toc-title display">SECTION 13: APPROACH TO PARTNERSHIP</span><span class="toc-pnum"></span><p class="toc-abs">What "long-term partner, not just a developer" actually looks like in practice.</p></li>
+        <li class="toc-item"><span class="toc-title display">FREQUENTLY ASKED QUESTIONS</span><span class="toc-pnum"></span></li>
+        <li class="toc-item"><span class="toc-title display">APPENDIX A: AEO BASELINE FULL DATA</span><span class="toc-pnum"></span></li>
+        <li class="toc-item"><span class="toc-title display">APPENDIX B: QUICK REFERENCE SUMMARY (structured for AI review)</span><span class="toc-pnum"></span></li>
+        <li class="toc-item"><span class="toc-title display">APPENDIX C: RFP COMPLIANCE MATRIX</span><span class="toc-pnum"></span></li>
+      </ul>
+    </section>
+
+<section class="major-section section-anchor" id="section-1">
+      <h1 class="major-section-title display">Section 1: Reading the Moment</h1>
+      <p>CTW's recent work tells a clear story. Capital events for middle-market owners. Quality of earnings studies for buyers. Tax structuring for sellers. FAR compliance for government contractors. Multi-state audits for manufacturers and distributors. The firm is good at high-stakes, multi-year, advisory-led engagements.</p>
+      <p>You already know the current website doesn't reflect any of that. A few things we picked up in the initial review:</p>
+      <ul class="clean-list">
+        <li>The home hero rotates between four messages with no anchoring position</li>
+        <li>The services architecture lists roughly sixty offerings across four pillars</li>
+        <li>The industries page names twenty-eight verticals, which is the opposite of specialization</li>
+        <li>The newsroom's most recent post is from 2020</li>
+        <li>The firm is still labeled "Campbell Taylor Washburn" in page metadata and footers, despite the rebrand</li>
+      </ul>
+      <p>This is lag, not failure. Most professional services websites run two or three years behind the firms they represent. Running an accounting practice doesn't leave time to rebuild a digital surface every year. The opportunity right now is to close the gap. To take the firm CTW already is internally and make it visible externally.</p>
+      <p>The market is moving in CTW's favor. AICPA data shows advisory-led firms commanding higher pricing and more durable client relationships than compliance-led peers. The recent Moss Adams and Baker Tilly merger consolidated mid-tier national firms in a way that creates space for sharper regional players. Generative AI is reshaping how prospects find firms. ChatGPT alone now drives close to two percent of all search traffic, up from a quarter of a percent twelve months ago. Firms that get cited by AI answer engines today are building moat for tomorrow.</p>
+      <p>CTW has the substance. The website is what gets it cited.</p>
+    </section>
+
+    <section class="major-section section-anchor" id="section-2">
+      <h1 class="major-section-title display">Section 2: Engagement Modes</h1>
+      <p>Every engagement we run is built around one question: who is paying attention to your firm, and how do you turn that attention into business? There are three levels of attention worth building toward. Each engagement mode is designed to reach a different one.</p>
+      <div class="attention-staircase" role="img" aria-label="Three levels of attention">
+        <div class="attention-step attention-step-3">
+          <span class="attention-num display">3</span>
+          <div class="attention-body">
+            <div class="attention-name display">PEOPLE TALK ABOUT YOU</div>
+            <p class="attention-desc">The human attention that AI has not yet replaced and won't anytime soon.</p>
+          </div>
+          <span class="attention-tag display">PARTNERSHIP</span>
+        </div>
+        <div class="attention-step attention-step-2">
+          <span class="attention-num display">2</span>
+          <div class="attention-body">
+            <div class="attention-name display">AI RECOMMENDS YOU</div>
+            <p class="attention-desc">The sustained content production that moves CTW from "mentioned" to "recommended" on the answer engines that drive the largest share of prospect research.</p>
+          </div>
+          <span class="attention-tag display">ENGINE</span>
+        </div>
+        <div class="attention-step attention-step-1">
+          <span class="attention-num display">1</span>
+          <div class="attention-body">
+            <div class="attention-name display">AI MENTIONS YOU</div>
+            <p class="attention-desc">The technical foundation that gets CTW cited by AI search engines when prospects ask category questions.</p>
+          </div>
+          <span class="attention-tag display">FOUNDATION</span>
+        </div>
+      </div>
+      <p>CTW can stop at any of the three levels. Most firms in the category are not yet operating past the first.</p>
+      <table class="engagement-compare-table">
+        <thead>
+          <tr>
+            <th scope="col" class="ec-feature">Feature</th>
+            <th scope="col" class="ec-f">PATH FORWARD FOUNDATION</th>
+            <th scope="col" class="ec-e">PATH FORWARD ENGINE</th>
+            <th scope="col" class="ec-p">PATH FORWARD PARTNERSHIP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Brand and messaging sprint</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Full website rebuild on Astro / Cloudflare / Keystatic</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Content audit and rewrite</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>AEO foundation (schema, FAQ, plain-language structure)</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Calendar booking with intelligent routing</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Capital Event Readiness Assessment</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Two embedded calculators</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>WCAG 2.2 AA accessibility</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Training for four content stewards</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Ninety days of stabilization support</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Podcast launch and twelve episodes</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Quarterly original research piece</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Monthly press release program</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Partner LinkedIn personal brand playbooks</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>LinkedIn newsletter</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>AI Concierge</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Twelve-month content velocity contract</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Full ongoing content production</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Quarterly business reviews with AEO citation tracking</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td></tr>
+          <tr><td>AI content production training for CTW staff</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td></tr>
+          <tr><td>Priority response on new content needs</td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-dash"><span class="ec-dash-mark">&ndash;</span></td><td class="ec-yes">&check;</td></tr>
+          <tr class="ec-price-row"><td><strong>Build investment</strong></td><td><span class="ph-fee">[FOUNDATION_BUILD]</span></td><td><span class="ph-fee">[ENGINE_BUILD]</span></td><td><span class="ph-fee">[PARTNERSHIP_BUILD]</span></td></tr>
+          <tr class="ec-price-row"><td><strong>Monthly retainer</strong></td><td><span class="ph-fee">[FOUNDATION_RETAINER]</span></td><td><span class="ph-fee">[ENGINE_RETAINER]</span></td><td><span class="ph-fee">[PARTNERSHIP_RETAINER]</span></td></tr>
+        </tbody>
+      </table>
+      <div class="mode-taglines">
+        <p class="mode-tagline"><span class="display mode-tagline-label">PATH FORWARD FOUNDATION:</span> The website rebuild itself, ready in four weeks. Many firms launch here, run the new site for a year, and add the content engine in year two. CTW could absolutely do that.</p>
+      </div>
+      <aside class="photography-callout" aria-label="Optional original photography">
+        <h3 class="photo-callout-head display">OPTIONAL: ORIGINAL PHOTOGRAPHY</h3>
+        <p class="photo-callout-sub display">Stock photography is the most common signal that a website was rushed. We recommend, but do not require, original photography as part of CTW's rebuild.</p>
+        <p>The session captures professional headshots for all partners and staff plus a series of in-office b-roll images: the team collaborating, meeting with clients, working in the space. These images replace stock photography across the site and become reusable assets for press releases, LinkedIn content, podcast promotional material, and future marketing work.</p>
+        <p><span class="photo-callout-label display">What's included:</span></p>
+        <ul class="photo-callout-list clean-list">
+          <li>Professional headshots for up to 25 staff members, lit and styled consistently for a unified team presentation</li>
+          <li>In-office b-roll capturing the firm's culture and professionalism</li>
+          <li>Full editing, retouching, and web optimization for every selected image</li>
+          <li>Delivered as a curated library of 80 to 120 final images</li>
+        </ul>
+        <p class="photo-invest">Investment: <span class="ph-fee">[PHOTOGRAPHY]</span> one-time. Includes the photography day, post-production, and delivery. Custom quotes available for staff counts above 25.</p>
+        <p><span class="photo-callout-label display">Timeline impact:</span> Original photography extends the core launch from four weeks to twelve weeks. The photography day is scheduled in week 5. Editing and selection runs through week 8. Site integration through week 10. Public launch with original photography in weeks 11 to 12.</p>
+        <p><span class="photo-callout-label display">Without photography:</span> We launch the four-week core build with brand-treated existing partner headshots and licensed editorial imagery. Photography can be added as a Phase 4 swap-in after launch without rebuilding the site. The architecture supports image swaps as content updates rather than as design changes.</p>
+      </aside>
+      <div class="mode-taglines mode-taglines-rest">
+        <p class="mode-tagline"><span class="display mode-tagline-label">PATH FORWARD ENGINE:</span> For CTW if the firm wants to be cited, found, and remembered through a sustained content presence, not just rebuilt.</p>
+        <p class="mode-tagline"><span class="display mode-tagline-label">PATH FORWARD PARTNERSHIP:</span> For CTW if the firm wants the website and the surrounding communications work to keep getting smarter without leadership having to manage it.</p>
+      </div>
+
+    </section>
+
+
+<section class="major-section section-anchor" id="section-3">
+      <h1 class="major-section-title display">Section 3: Investment</h1>
+      <p>Pricing is structured to give CTW clear options at three commitment levels. Each engagement mode has a one-time build investment and, where applicable, a monthly ongoing retainer. We are happy to walk through the line items and discuss adjustments in a follow-up conversation.</p>
+
+      <div class="engagement-grid">
+        <div class="eng-card foundation">
+          <h3 class="display">PATH FORWARD FOUNDATION</h3>
+          <p class="eng-price-block"><span class="eng-price-label">Build investment:</span><span class="eng-price-value"><span class="ph-fee">$[FOUNDATION_BUILD]</span></span></p>
+          <p class="eng-price-block"><span class="eng-price-label">Ongoing maintenance retainer:</span><span class="eng-price-value"><span class="ph-fee">$[FOUNDATION_RETAINER]</span> / month</span></p>
+          <p class="includes-note">Includes: Everything listed in Section 2 under Path Forward Foundation.</p>
+        </div>
+        <div class="eng-card engine">
+          <h3 class="display">PATH FORWARD ENGINE</h3>
+          <p class="eng-price-block"><span class="eng-price-label">Build investment:</span><span class="eng-price-value"><span class="ph-fee">$[ENGINE_BUILD]</span></span></p>
+          <p class="eng-price-block"><span class="eng-price-label">Monthly retainer:</span><span class="eng-price-value"><span class="ph-fee">$[ENGINE_RETAINER]</span> / month</span></p>
+          <p class="includes-note">Includes: Everything in Foundation, plus everything listed in Section 2 under Path Forward Engine.</p>
+        </div>
+        <div class="eng-card partnership">
+          <h3 class="display">PATH FORWARD PARTNERSHIP</h3>
+          <p class="eng-price-block"><span class="eng-price-label">Build investment:</span><span class="eng-price-value"><span class="ph-fee">$[PARTNERSHIP_BUILD]</span></span></p>
+          <p class="eng-price-block"><span class="eng-price-label">Monthly retainer:</span><span class="eng-price-value"><span class="ph-fee">$[PARTNERSHIP_RETAINER]</span> / month</span></p>
+          <p class="includes-note">Includes: Everything in Engine, plus everything listed in Section 2 under Path Forward Partnership.</p>
+        </div>
+      </div>
+
+      <h2 class="block-heading display">OPTIONAL ADD-ONS</h2>
+      <ul class="clean-list">
+        <li>Original photography session (half-day in Roseville office): <span class="ph-fee">$[PHOTO]</span></li>
+        <li>Additional Capital Event Readiness Assessment variants (audit readiness, tax planning health check, succession readiness): <span class="ph-fee">$[ASSESSMENT_VARIANT]</span> each</li>
+        <li>AI content production training workshop (half-day, four staff): <span class="ph-fee">$[WORKSHOP]</span></li>
+        <li>Custom calculator build (beyond the two included): <span class="ph-fee">$[CALCULATOR]</span></li>
+        <li>Quarterly press release distribution (BusinessWire or PR Newswire): <span class="ph-fee">$[PR_DISTRIBUTION]</span> per release</li>
+        <li>AI Concierge addition to Foundation tier: <span class="ph-fee">$[CONCIERGE]</span></li>
+      </ul>
+
+      <p>All pricing assumes a target kickoff of May 20, 2026. Final scope, terms, and milestone payment schedule will be set in the engagement letter. Pricing is held for 60 days from proposal submission.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-4">
+      <h1 class="major-section-title display">Section 4: Timeline</h1>
+<figure class="exhibit exhibit-timeline timeline">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 208" role="img" aria-labelledby="timelineTitle">
+          <title id="timelineTitle">Twelve-week engagement timeline</title>
+          <defs>
+            <style type="text/css">
+              .tl-axis { fill: none; stroke: #1A2535; stroke-width: 2; }
+              .tl-tick { stroke: #1A2535; stroke-width: 1.5; }
+              .tl-shade { fill: #EEF4F6; }
+              .tl-berry-line { stroke: #D444A0; stroke-width: 3; }
+              .tl-dot { fill: #1A2535; }
+              .tl-dot-hi { fill: #D444A0; }
+              .tl-w { fill: #1A2535; font-family: Poppins, Arial, sans-serif; font-size: 9px; font-weight: 600; }
+              .tl-hi { fill: #D444A0; font-family: 'Plus Jakarta Sans', Arial, sans-serif; font-size: 9px; font-weight: 800; }
+              .tl-sub { fill: #1A2535; font-family: Poppins, Arial, sans-serif; font-size: 9px; font-weight: 500; }
+            </style>
+          </defs>
+          <rect width="900" height="208" fill="#ffffff" />
+          <rect class="tl-shade" x="284.73" y="54" width="567.27" height="78" />
+          <line class="tl-berry-line" x1="284.73" y1="42" x2="284.73" y2="138" />
+          <line class="tl-berry-line" x1="852" y1="42" x2="852" y2="138" />
+          <circle class="tl-dot" cx="72" cy="62" r="4.5" />
+          <circle class="tl-dot" cx="142.91" cy="62" r="4.5" />
+          <circle class="tl-dot" cx="213.82" cy="62" r="4.5" />
+          <circle class="tl-dot-hi" cx="284.73" cy="62" r="6" />
+          <circle class="tl-dot" cx="568.36" cy="62" r="4.5" />
+          <circle class="tl-dot-hi" cx="852" cy="62" r="6" />
+          <text class="tl-sub" x="72" y="16" text-anchor="middle">Week 1</text>
+          <text class="tl-w" x="72" y="28" text-anchor="middle">Discovery</text>
+          <text class="tl-w" x="72" y="40" text-anchor="middle">kickoff</text>
+          <text class="tl-sub" x="142.91" y="16" text-anchor="middle">Week 2</text>
+          <text class="tl-w" x="142.91" y="28" text-anchor="middle">Audit +</text>
+          <text class="tl-w" x="142.91" y="40" text-anchor="middle">baseline</text>
+          <text class="tl-sub" x="213.82" y="16" text-anchor="middle">Week 3</text>
+          <text class="tl-w" x="213.82" y="28" text-anchor="middle">Design</text>
+          <text class="tl-w" x="213.82" y="40" text-anchor="middle">directions</text>
+          <text class="tl-sub" x="284.73" y="16" text-anchor="middle">Week 4</text>
+          <text class="tl-hi" x="296" y="28" text-anchor="start">Foundation core</text>
+          <text class="tl-hi" x="296" y="40" text-anchor="start">complete</text>
+          <text class="tl-sub" x="568.36" y="16" text-anchor="middle">Week 8</text>
+          <text class="tl-w" x="568.36" y="28" text-anchor="middle">Photo / video</text>
+          <text class="tl-w" x="568.36" y="40" text-anchor="middle">(if elected)</text>
+          <text class="tl-sub" x="852" y="16" text-anchor="middle">Week 12</text>
+          <text class="tl-hi" x="852" y="28" text-anchor="middle">Public launch</text>
+          <line class="tl-axis" x1="72" y1="146" x2="852" y2="146" />
+          <text class="tl-sub" x="72" y="166" text-anchor="middle">1</text>
+          <text class="tl-sub" x="142.91" y="166" text-anchor="middle">2</text>
+          <text class="tl-sub" x="213.82" y="166" text-anchor="middle">3</text>
+          <text class="tl-sub" x="284.73" y="166" text-anchor="middle">4</text>
+          <text class="tl-sub" x="355.64" y="166" text-anchor="middle">5</text>
+          <text class="tl-sub" x="426.55" y="166" text-anchor="middle">6</text>
+          <text class="tl-sub" x="497.45" y="166" text-anchor="middle">7</text>
+          <text class="tl-sub" x="568.36" y="166" text-anchor="middle">8</text>
+          <text class="tl-sub" x="639.27" y="166" text-anchor="middle">9</text>
+          <text class="tl-sub" x="710.18" y="166" text-anchor="middle">10</text>
+          <text class="tl-sub" x="781.09" y="166" text-anchor="middle">11</text>
+          <text class="tl-sub" x="852" y="166" text-anchor="middle">12</text>
+          <line class="tl-tick" x1="142.91" y1="146" x2="142.91" y2="156" />
+          <line class="tl-tick" x1="213.82" y1="146" x2="213.82" y2="156" />
+          <line class="tl-tick" x1="284.73" y1="146" x2="284.73" y2="156" />
+          <line class="tl-tick" x1="355.64" y1="146" x2="355.64" y2="156" />
+          <line class="tl-tick" x1="426.55" y1="146" x2="426.55" y2="156" />
+          <line class="tl-tick" x1="497.45" y1="146" x2="497.45" y2="156" />
+          <line class="tl-tick" x1="568.36" y1="146" x2="568.36" y2="156" />
+          <line class="tl-tick" x1="639.27" y1="146" x2="639.27" y2="156" />
+          <line class="tl-tick" x1="710.18" y1="146" x2="710.18" y2="156" />
+          <line class="tl-tick" x1="781.09" y1="146" x2="781.09" y2="156" />
+          <line class="tl-tick" x1="852" y1="146" x2="852" y2="156" />
+          <line class="tl-tick" x1="72" y1="146" x2="72" y2="156" />
+        </svg>
+      </figure>
+      <h2 class="block-heading display">KEY MILESTONES</h2>
+      <ul class="clean-list timeline-milestones">
+        <li>Week 1 (May 20, 2026): Discovery, brand sprint kickoff</li>
+        <li>Week 2: Content audit complete, AEO baseline expanded to 25 priority queries</li>
+        <li>Week 3: Three design directions presented for selection</li>
+        <li>Week 4: Foundation core build complete, ready for soft launch</li>
+        <li>Weeks 5 to 8 (if photography elected): Photography, video, expanded content production</li>
+        <li>Weeks 9 to 12: Public launch, stabilization, content steward training</li>
+      </ul>
+      <p>Final dates and milestone confirmations are set in the engagement letter. CTW's leadership team confirms one design direction by end of week three to hold the four-week core delivery commitment.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-5">
+      <h1 class="major-section-title display">Section 5: Team and Relevant Experience</h1>
+
+      <h2 class="block-heading display">THE TEAM RUNNING THE ENGAGEMENT</h2>
+      <p>The senior team on this engagement leads the strategy, the writing, and the build directly. We don't push work down a chain. The people on the call are the people doing the work.</p>
+
+      <div class="team-block">
+        <div class="team-headshot">
+          <img src="assets/headshots/scott-eggert.png" alt="Portrait of Scott Eggert" width="112" height="112" loading="lazy" decoding="async" />
+        </div>
+        <div>
+          <div class="team-name display">SCOTT EGGERT</div>
+          <div class="team-title display">President, Engagement Lead</div>
+          <p>Scott is the President of MKTNG and has spent more than two decades working across financial institutions, professional services firms, construction and infrastructure clients, nonprofit and arts organizations, and the public sector. He co-founded GoldenDoodle AI, a vertical AI product for high-stakes communications, and writes code, builds pipelines, and ships systems himself. Scott is a Partner with Sacramento Venture Philanthropy (SVP) and serves as Program Director for the SVP Think Tank. On the CTW engagement Scott serves as the strategic lead, runs the brand and messaging sprint, and remains the senior point of contact for CTW's leadership.</p>
+        </div>
+      </div>
+
+      <div class="team-block">
+        <div class="team-headshot">
+          <img src="assets/headshots/laura-braden.png" alt="Portrait of Laura Braden" width="112" height="112" loading="lazy" decoding="async" />
+        </div>
+        <div>
+          <div class="team-name display">LAURA BRADEN</div>
+          <div class="team-title display">Vice President of Public Relations, Messaging Lead</div>
+          <p>Laura brings twenty years of communications and public affairs experience across professional associations, Fortune 10 companies, political campaigns, and nonprofits. She served as Senior Director of Communications for the Sacramento Kings. Earlier in her career she was Deputy Communications Director for Governor Arnold Schwarzenegger, running state, national, and international earned media campaigns on economic, infrastructure, energy, and agricultural policy. On the CTW engagement Laura leads the messaging architecture and supports press release, podcast, and partner-bylined content development.</p>
+        </div>
+      </div>
+
+      <div class="team-block">
+        <div class="team-headshot">
+          <img src="assets/headshots/joshua-mccowen.png" alt="Portrait of Joshua McCowen" width="112" height="112" loading="lazy" decoding="async" />
+        </div>
+        <div>
+          <div class="team-name display">JOSHUA MCCOWEN</div>
+          <div class="team-title display">Creative Director</div>
+          <p>Josh is Creative Director at MKTNG and Founder and Principal of Lofty Word. He brings more than twenty years leading creative teams across international markets, with expertise spanning brand strategy, visual identity, product user experience, and design systems for startups and established firms alike. On the CTW engagement Josh leads the visual identity work, presents three design directions for selection in week three of the engagement, and oversees design quality from concept through launch.</p>
+        </div>
+      </div>
+
+      <div class="team-block">
+        <div class="team-headshot">
+          <img src="assets/headshots/theresa-christian.png" alt="Portrait of Theresa Christian" width="112" height="112" loading="lazy" decoding="async" />
+        </div>
+        <div>
+          <div class="team-name display">THERESA CHRISTIAN</div>
+          <div class="team-title display">Project Manager, Client Services Lead</div>
+          <p>Theresa has more than a decade of digital marketing experience spanning content creation, digital advertising, branding, client services, and project management. She began her career writing blogs and has since managed the full lifecycle of complex multi-track engagements. On the CTW engagement Theresa serves as the day-to-day project manager, owns the production calendar, coordinates internal and client-side handoffs, and keeps the engagement on schedule.</p>
+        </div>
+      </div>
+
+      <h2 class="block-heading display">WORK SAMPLES</h2>
+      <p>Three live builds that demonstrate the capabilities being proposed for CTW.</p>
+
+      <div class="work-sample-block">
+        <div class="work-sample-shot">
+          <img src="assets/screenshots/moraga-screenshot.png" alt="Screenshot of moragacountryclubrealestate.com hero" loading="lazy" decoding="async" data-work-sample-img />
+          <div class="work-sample-ph" hidden data-work-sample-ph>
+            <div>
+              <div class="work-sample-ph-title display">MORAGACOUNTRYCLUBREALESTATE.COM</div>
+              <div class="work-sample-ph-note display">Screenshot pending</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-sample-title display">MORAGACOUNTRYCLUBREALESTATE.COM</div>
+        <div class="work-sample-line-strong">Live URL: <span class="work-sample-url"><a href="https://moragacountryclubrealestate.com">https://moragacountryclubrealestate.com</a></span></div>
+        <div class="work-sample-line">Built on: Astro + Cloudflare (the same stack proposed for CTW)</div>
+        <div class="work-sample-line">Built in: Under two weeks</div>
+        <p>A neighborhood-specific real estate site for Ben Olsen at BrightWork Realty Advocates. Three integrated lead generation tools built directly into the site, including the personalized property assessment tool that produces custom-written recommendations rather than generic Zillow-style estimates. The site is closing visitors who would have otherwise bounced from a generic agent page. It has become the de facto community reference for the Moraga Country Club neighborhood, surpassing even the country club's own primary site in usability and engagement.</p>
+        <p>Why this is relevant to CTW: same technology stack we are proposing, the same personalized assessment architecture we are proposing for the Capital Event Readiness Assessment, and a build timeline that proves the four-week core delivery commitment is achievable.</p>
+      </div>
+
+      <div class="work-sample-block">
+        <div class="work-sample-shot">
+          <img src="assets/screenshots/advocacy-chiefs-screenshot.png" alt="Screenshot of advocacychiefs.com hero" loading="lazy" decoding="async" data-work-sample-img />
+          <div class="work-sample-ph" hidden data-work-sample-ph>
+            <div>
+              <div class="work-sample-ph-title display">ADVOCACYCHIEFS.COM</div>
+              <div class="work-sample-ph-note display">Screenshot pending</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-sample-title display">ADVOCACYCHIEFS.COM</div>
+        <div class="work-sample-line-strong">Live URL: <span class="work-sample-url"><a href="https://www.advocacychiefs.com">https://www.advocacychiefs.com</a></span></div>
+        <div class="work-sample-line">Built on: Webflow</div>
+        <p>A consolidation rebuild for an integrated services firm. The previous site was eight to ten pages, disorganized, and gave visitors many places to click but few reasons to convert. We streamlined to a single focused page that closes visitors by leading with positioning, recent wins, case studies, testimonials, team credentials, and named differentiators. The before-and-after comparison demonstrates how strategic content consolidation outperforms exhaustive content sprawl, which is the exact thesis we are proposing for CTW's site.</p>
+        <p>Why this is relevant to CTW: this is the same content consolidation philosophy we are recommending for CTW's current sixty service pages and twenty-eight industry verticals. We have done this before. We know what gets cut and what stays.</p>
+      </div>
+
+      <div class="work-sample-block">
+        <div class="work-sample-shot">
+          <img src="assets/screenshots/mktng-screenshot.png" alt="Screenshot of mktng.co hero" loading="lazy" decoding="async" data-work-sample-img />
+          <div class="work-sample-ph" hidden data-work-sample-ph>
+            <div>
+              <div class="work-sample-ph-title display">MKTNG.CO</div>
+              <div class="work-sample-ph-note display">Screenshot pending</div>
+            </div>
+          </div>
+        </div>
+        <div class="work-sample-title display">MKTNG.CO</div>
+        <div class="work-sample-line-strong">Live URL: <span class="work-sample-url"><a href="https://mktng.co">https://mktng.co</a></span></div>
+        <div class="work-sample-line">Built on: Astro + Cloudflare + Keystatic (the exact stack proposed for CTW)</div>
+        <p>Our own firm's website rebuild. The previous site had eighty to one hundred pages of accumulated content, inconsistent voice, and an outdated design system. We streamlined to roughly five core pages plus a blog and case studies architecture. The new site is being built on the exact technology stack we are proposing for CTW, which means the build patterns, the CMS workflows, and the performance benchmarks transfer directly.</p>
+        <p>Why this is relevant to CTW: this is the closest possible analog to the engagement we are proposing. Same scope of consolidation, same technology stack, same goals around AEO foundation and content architecture. CTW will benefit from a build pattern we are simultaneously refining on our own site.</p>
+      </div>
+
+      <h2 class="block-heading display">CASE STUDIES</h2>
+
+      <article class="case-block">
+        <div style="margin-bottom:6px;">
+          <img class="logo-inline" src="assets/logos/west-biofuels.png" alt="West Biofuels logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="case-heading display">WEST BIOFUELS LLC</div>
+        <div class="case-tagline display">Communications under regulatory scrutiny.</div>
+        <p>West Biofuels built a three-megawatt biomass facility in Northern California where regulators, construction partners, and skeptical community stakeholders all required sustained communication at every milestone.</p>
+        <p>We built and ran the program through groundbreaking: coordination across regulators and trade press, earned media at milestones, and partnership development with industry associations through state and federal grant recognition.</p>
+        <p>CTW's clients live in the same environment: FAR compliance, government audits, multi-state manufacturing. The discipline that holds up under regulatory scrutiny is the discipline that earns trust with audiences who have memory.</p>
+      </article>
+
+      <h2 class="block-heading display">REFERENCES</h2>
+      <p>Three references familiar with our work, available to speak to the depth, durability, and quality of the engagements they have known us through.</p>
+
+      <div class="reference-block">
+        <div class="reference-name display">BENJAMIN M. CADRANEL, ESQ.</div>
+        <div class="reference-title-org">Chief Executive Officer, Advocacy Chiefs</div>
+        <div class="reference-contact"><a class="mail" href="mailto:Benjamin@advocacychiefs.com">Benjamin@advocacychiefs.com</a></div>
+        <div class="reference-contact">916-878-9438</div>
+        <div class="reference-contact">LinkedIn: <a class="ext" href="https://linkedin.com/in/bmcesq">linkedin.com/in/bmcesq</a></div>
+        <p class="reference-engagement">Engagement: Brand architecture, positioning, visual identity, and website rebuild for Advocacy Chiefs. See the live build at advocacychiefs.com.</p>
+      </div>
+
+      <div class="reference-block">
+        <div class="reference-name display">PERRY THOMPSON</div>
+        <div class="reference-title-org">Chief Executive Officer, Hat Creek Construction</div>
+        <div class="reference-contact"><a class="mail" href="mailto:perry@hatcreekconstruction.com">perry@hatcreekconstruction.com</a></div>
+        <div class="reference-contact">530-949-6145</div>
+        <p class="reference-engagement">Engagement: Three years of public relations, communications, and digital work for Hat Creek Construction, a Northern California construction firm operating in the same regulatory environment many of CTW's clients live in. Perry can speak to the durability of the partnership and the discipline of sustained communications work over multi-year engagements.</p>
+      </div>
+
+      <div class="reference-block">
+        <div class="reference-name display">BEN OLSEN</div>
+        <div class="reference-title-org">Founder and Chief Executive Officer, BrightWork Realty Advocates</div>
+        <div class="reference-contact"><a class="mail" href="mailto:ben@brightworkrealty.com">ben@brightworkrealty.com</a></div>
+        <div class="reference-contact">925-381-2151</div>
+        <p class="reference-engagement">Engagement: Two distinct builds for Ben Olsen, including MoragaCountryClubRealEstate.com and a personalized direct mail program. Ben can speak to the speed of build, the quality of the personalized AI assessment architecture, and the conversion performance of the lead generation tools.</p>
+      </div>
+    </section>
+
+<section class="major-section section-anchor" id="section-6">
+      <h1 class="major-section-title display">Section 6: Approach and Methodology</h1>
+      <p>The four-week core delivery is not a stunt. It is what happens when decisions have crisp owners, outputs have dates, and scope stays disciplined from kickoff through launch. The methodology below is how we hold those commitments without dragging the calendar into quarters.</p>
+      <p>Phase 0 (week 1), Brand and Messaging Sprint: We lock voice, value proposition, and audience-specific framings for owners, CFOs, PE sponsors, and capital markets prospects, plus message hierarchy that carries across services and industries. Output is a brand voice document delivered as both a printed artifact and an AI skill file CTW can keep using after launch.</p>
+      <p>Phase 1 (week 2), Architecture, Content Audit, and AEO Foundation: We finalize the sitemap, run the content audit with retain, rewrite, and retire recommendations, expand AEO coverage from eight baseline queries to twenty-five priority queries, define schema architecture, and stand up the Astro, Cloudflare, and Keystatic foundation.</p>
+      <p>Phase 2 (week 3), Design and Content Production: We present three design directions for CTW leadership to choose from, build the component library and visual system around the selected direction, and execute rewrites for priority pages identified in the audit. Where CTW drafts copy, we edit and AEO-optimize it. Where we draft copy, we deliver it in CTW's voice.</p>
+      <p>Phase 3 (week 4), Build, Integration, and QA: We complete development, integrate calendar booking with Microsoft 365, ship the Capital Event Readiness Assessment and calculators, integrate CPACharge for payments, and run accessibility testing against WCAG 2.2 AA. Soft launch follows for leadership review.</p>
+      <p>Phase 4 (post-launch, weeks 5 and beyond), Launch, Training, and Stabilization: We execute public launch, publish redirect mapping from legacy URLs, submit updated URLs for indexing, train CTW's four content stewards on Keystatic, monitor performance, and deliver ninety days of stabilization support.</p>
+      <p>Engine and Partnership tiers add Phase 5 (Ongoing Partnership): production follows the cadence described for each tier, quarterly business reviews run as outlined in Section 13, and proactive strategic input stays monthly.</p>
+      <p>Section 7 lays out the recommended site architecture this sequence is built to ship.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-7">
+      <h1 class="major-section-title display">Section 7: Recommended Site Architecture</h1>
+      <h2 class="block-heading display">RECOMMENDED SITE ARCHITECTURE</h2>
+
+      <div class="sitemap-intro">
+        <p>Three priorities shape the architecture: clarity for visitors who arrive with intent, depth for AI retrieval across services and industries, and structure that survives a future brand refresh without a manual rebuild of every page.</p>
+        <p>The recommended architecture is roughly 25 to 35 pages. That is meaningfully smaller than the existing 80-plus page site, but larger than a brochure. The reduction comes from consolidating the 28-vertical industries page into 3 to 5 named industries where CTW has real depth, retiring the 2019-vintage Newsroom posts that no longer reflect current law or positioning, and tightening the 60-plus service pages into a service hub with detailed pages for the practices that drive the most search volume and the highest-value engagements.</p>
+        <p>What grows: the team. Individual partner and senior staff pages are not a luxury for a mid-market firm. They are how prospects evaluate whether the people behind the firm match the work the firm describes. Every named partner gets a real page with biography, areas of practice, representative engagements, and contact path.</p>
+      </div>
+
+      <div class="sitemap-landscape-page">
+      <div class="sitemap-tree" role="navigation" aria-label="Recommended site architecture tree">
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">HOME</span>
+            <span class="sitemap-tag">HUB</span>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">ABOUT</span>
+            <span class="sitemap-tag">UTILITY</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Our Approach (firm philosophy, advisory-led positioning, &ldquo;Path Forward&rdquo; narrative)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Our History (firm origin, milestones, the rebrand context)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Community Involvement (SVP sponsorship, board roles, regional involvement)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Careers (talent value prop, current openings list, internship pipeline)</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">TEAM</span>
+            <span class="sitemap-tag">INDIVIDUAL</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">[Partner 1 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Partner 2 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Partner 3 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Partner 4 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Partner 5 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Senior Manager 1 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Senior Manager 2 individual page]</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">[Additional senior staff individual pages as relevant]</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">SERVICES (hub page)</span>
+            <span class="sitemap-tag">HUB</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Audit and Assurance</span><span class="sitemap-tag">PILLAR</span></div>
+            <div class="sitemap-connector loose">
+              <div class="sitemap-row"><span class="sitemap-label-2">Financial Statement Audits</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Reviews and Compilations</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Employee Benefit Plan Audits</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">FAR Compliance and Government Contractor Audits</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Single Audits (Uniform Guidance)</span></div>
+            </div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Tax Services</span><span class="sitemap-tag">PILLAR</span></div>
+            <div class="sitemap-connector loose">
+              <div class="sitemap-row"><span class="sitemap-label-2">Business Tax Planning and Compliance</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Individual Tax Planning and High Net Worth</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">State and Local Tax (SALT)</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">R&amp;D Tax Credits</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Estate and Gift Tax</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Cost Segregation</span></div>
+            </div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Transaction Services / Capital Markets (peer-level prominence)</span><span class="sitemap-tag">PILLAR</span></div>
+            <div class="sitemap-connector loose">
+              <div class="sitemap-row"><span class="sitemap-label-2">Quality of Earnings Studies</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Buy-Side Transaction Support</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Sell-Side Transaction Support</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">ESOP Services</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Business Valuations</span></div>
+            </div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Consulting and Advisory</span><span class="sitemap-tag">PILLAR</span></div>
+            <div class="sitemap-connector loose">
+              <div class="sitemap-row"><span class="sitemap-label-2">Outsourced Accounting and Finance</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Succession Planning</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Internal Controls and Risk</span></div>
+              <div class="sitemap-row"><span class="sitemap-label-2">Strategic Advisory</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">INDUSTRIES (hub page)</span>
+            <span class="sitemap-tag">HUB</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Construction</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Manufacturing and Distribution</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Real Estate</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Government Contractors</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Professional Services and Business Services</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">INSIGHTS (hub page; replaces &ldquo;Newsroom&rdquo;)</span>
+            <span class="sitemap-tag">INSIGHTS</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Articles (filterable by service line, industry, partner author)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Podcast (episode archive with transcripts)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Original Research (quarterly State of the Middle Market reports)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Press Releases (monthly comparative AEO releases)</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">TOOLS</span>
+            <span class="sitemap-tag">TOOLS</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Capital Event Readiness Assessment</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">R&amp;D Tax Credit Estimator</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Cost Segregation Benefit Estimator</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">CONTACT</span>
+            <span class="sitemap-tag">UTILITY</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Schedule a Conversation (calendar booking with intelligent routing)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">General Inquiries</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Office Locations and Directions</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">CLIENT TOOLS (footer)</span>
+            <span class="sitemap-tag">UTILITY</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Pay Invoice (branded CPACharge integration)</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Client Portal (ShareFile redirect)</span></div>
+          </div>
+        </div>
+
+        <div class="sitemap-block">
+          <div class="sitemap-row">
+            <span class="sitemap-label-0">LEGAL (footer)</span>
+            <span class="sitemap-tag">UTILITY</span>
+          </div>
+          <div class="sitemap-connector">
+            <div class="sitemap-row"><span class="sitemap-label-1">Privacy Policy</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Terms of Service</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Accessibility Statement</span></div>
+            <div class="sitemap-row"><span class="sitemap-label-1">Security Posture</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sitemap-budget">
+        <h3 class="display">Page count budget for the sitemap (target ranges)</h3>
+        <ul>
+          <li>Home: 1</li>
+          <li>About section: 4 (Our Approach, Our History, Community Involvement, Careers)</li>
+          <li>Team section: 5 to 8 individual partner and senior staff pages, plus a team hub page</li>
+          <li>Services section: 4 service pillar pages plus 18 to 22 service detail pages = 22 to 26</li>
+          <li>Industries section: 1 hub plus 3 to 5 industry detail pages = 4 to 6</li>
+          <li>Insights section: 1 hub page (articles, podcast, research, press releases all live as feeds within or on dedicated subpage)</li>
+          <li>Tools section: 1 hub plus 3 tool pages = 4</li>
+          <li>Contact section: 1 to 3 pages</li>
+          <li>Client Tools: 0 dedicated pages (footer links)</li>
+          <li>Legal: 4 pages</li>
+        </ul>
+        <p class="lead-strong display" style="margin: 0.65rem 0 0;">Total target: 27 to 36 pages</p>
+        <p style="margin: 0.35rem 0 0;">This is what we mean when we say &ldquo;lean compared to the existing 80-plus, but built for serious work.&rdquo;</p>
+      </div>
+      </div>
+
+      <h2 class="block-heading display">NOTES ON THE ARCHITECTURE</h2>
+      <p>The team grows. The current site lists sixteen staff members on what amounts to a single roster page with no individual depth. The new architecture treats each named partner and senior manager as a discoverable surface in their own right, with biography, areas of practice, representative engagements, publications and speaking, and a direct contact path. This is how prospects research firms before they reach out, and it is what AI search engines surface when prospects ask &ldquo;who at CTW handles capital markets work&rdquo; or &ldquo;which CTW partner specializes in FAR compliance audits.&rdquo; Without individual pages, the firm is invisible to that pattern of search.</p>
+      <p>Capital Markets becomes a peer practice. The current site treats Transaction Services as a sub-section of broader services. We are recommending it be elevated to peer prominence with the other three pillars, with its own surface area for quality of earnings, buy-side and sell-side support, ESOP services, and valuations. This is the practice line where CTW differentiates most clearly from compliance-led peers, and the architecture should reflect that.</p>
+      <p>Industries consolidate to depth. The existing twenty-eight-vertical page communicates that CTW does everything for everyone, which is the opposite of the positioning the firm actually has. We are recommending three to five named industries where CTW has documented depth, with a substantial page for each. The selected industries will be confirmed during the brand sprint with CTW leadership. Construction, manufacturing and distribution, real estate, and government contractors are likely candidates based on the existing client base and named specializations.</p>
+      <p>Insights replaces Newsroom. The current Newsroom carries posts from 2019 and 2020 that reference expired regulations and outdated guidance. We retire those posts, redirect them to the most relevant evergreen surface where appropriate, and rebuild the section as Insights with four content streams: articles, podcast, original research, and press releases. The Insights architecture is designed to compound rather than expire.</p>
+      <p>Tools become first-class navigation. The Capital Event Readiness Assessment and the calculators are not buried as features inside service pages. They live in their own top-level Tools section so prospects can find them directly and so AI search engines surface them as standalone resources.</p>
+      <p>The Legal section gets attention. The existing privacy policy is dated 2020, the disclaimer is generic, and there is no accessibility statement. The new site rebuilds these as proper trust pages, including an explicit security posture page that acknowledges the firm&rsquo;s role handling sensitive client data.</p>
+      <p>What is not in this architecture: a &ldquo;client portal&rdquo; page beyond a footer redirect, since the existing ShareFile system handles that. A blog page separate from articles, since articles serve the same function. A &ldquo;resources&rdquo; page separate from Insights, since the structure is duplicative. A pricing page, since middle-market accounting engagements are scoped individually.</p>
+      <p>The final retain, rewrite, and retire decisions for existing pages will be made jointly during the content audit phase in week two of the engagement. CTW preserves authority over what stays, what gets rewritten, and what gets retired. We bring recommendations and rationale. CTW makes the calls.</p>
+    </section>
+
+    <section class="major-section section-anchor" id="section-8">
+      <h1 class="major-section-title display">Section 8: Technology Recommendations</h1>
+
+      <h2 class="block-heading display">THE STACK</h2>
+      <p>We recommend Astro for the website framework, Cloudflare for hosting and delivery, and Keystatic for content management. The combined stack gives CTW a site that loads in under one second on every page, costs a fraction of typical WordPress hosting to operate, and gives non-technical content stewards a clean interface for managing day-to-day content.</p>
+      <p>The technology underneath matters less than what it produces. Here is what the difference looks like in practice.</p>
+      <table class="tech-compare-table">
+        <thead>
+          <tr>
+            <th scope="col" class="tc-dim">Dimension</th>
+            <th scope="col" class="tc-wp">WordPress (Most Bidders Will Recommend)</th>
+            <th scope="col" class="tc-rec">Astro on Cloudflare with Keystatic (Our Recommendation)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Performance</td><td>5 to 10 seconds load time on mobile</td><td>Under 1 second on every page, every device</td></tr>
+          <tr><td>Security surface area</td><td>Plugin ecosystem, PHP runtime, frequent vulnerabilities</td><td>Static HTML, no server runtime, Cloudflare WAF and DDoS built in</td></tr>
+          <tr><td>Hosting cost</td><td>$1,500 to $6,000 per year</td><td>$0 to $300 per year</td></tr>
+          <tr><td>Update workflow for non-developers</td><td>WordPress dashboard with plugin variation</td><td>Web-based editor that reads like Google Docs</td></tr>
+          <tr><td>AEO readiness</td><td>Possible with significant configuration</td><td>Built into the architecture from day one</td></tr>
+          <tr><td>Rebrand flexibility</td><td>Page-by-page edits required</td><td>Configuration change, propagates in under an hour</td></tr>
+          <tr><td>Maintenance burden</td><td>Constant plugin updates, security patches</td><td>Effectively zero ongoing maintenance</td></tr>
+          <tr><td>Time to launch</td><td>6 to 9 months typical for a rebuild</td><td>4 weeks for the core build</td></tr>
+        </tbody>
+      </table>
+      <h2 class="block-heading display">ARCHITECTURAL NOTES</h2>
+      <p>Performance comes from architecture, not optimization. Astro ships static HTML with near-zero JavaScript by default. Cloudflare delivers pages from edge servers physically close to every visitor. Speed is not a target we hit after months of tuning. It is the launch baseline.</p>
+      <p>Security comes from absence. Static HTML pages cannot be SQL-injected. There is no PHP runtime to exploit. The plugin ecosystem that creates most WordPress security incidents simply does not exist in this stack.</p>
+      <p>The CMS is built for non-developers. Keystatic looks and works like a modern document editor. Four content stewards at CTW will be trained in a single session, with a recorded video and a one-page reference guide for follow-up. Routine updates take minutes.</p>
+      <p>The architecture is built rebrand-ready. Brand tokens (name, logo, color, typography) live as configuration. A future rebrand updates the token file and propagates across the site in under an hour. No page-by-page work required.</p>
+      <p>The data layer is CRM-ready. Forms, calculators, the Capital Event Readiness Assessment, and calendar bookings all write to a unified event schema designed to map cleanly to HubSpot or Salesforce on day one.</p>
+      <h2 class="block-heading display">WHY YOU WILL NOT BE STRANDED</h2>
+      <p>CTW does not maintain an internal development team, and the proposal recommends moving off WordPress, which is the most common open-source platform on the market. The reasonable concern is platform lock-in: what happens if MKTNG goes away?</p>
+      <p>The codebase is structured so any competent developer can pick it up and ship changes quickly. Astro is open source, fully documented, and has an active developer community. Keystatic is open source. Cloudflare hosting is portable to any other platform with minimal effort. The brand tokens, content schema, and component architecture are all standard patterns that any modern web developer will recognize.</p>
+      <p>We do not build black boxes. We build systems CTW can hand to anyone, including us, and have them ship change quickly.</p>
+      <h2 class="block-heading display">A NOTE ON WORDPRESS</h2>
+      <p>WordPress has been the backbone of half the internet for two decades, and for many use cases it remains a solid choice. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), it isn't the right tool. The plugin ecosystem creates ongoing fragility. The hosting overhead is unnecessary. The performance ceiling is lower. Most agencies will recommend WordPress because it's what they know how to build. We're recommending what we believe will serve CTW better.</p>
+    </section>
+
+    <section class="major-section section-anchor" id="section-9">
+      <h1 class="major-section-title display">Section 9: Lead Generation System</h1>
+      <p>Most accounting firm websites are passive. Visitors arrive, browse, leave, and someone hopes they remember to follow up. CTW's site is built to work harder than that.</p>
+      <p>The lead generation architecture has five components. One is the hero. The others are the supporting infrastructure that ensures every prospect interaction captures intent and routes correctly.</p>
+      <h2 class="block-heading display">THE HERO: CAPITAL EVENT READINESS ASSESSMENT</h2>
+      <div class="lead-hero-block">
+      <p>This is the highest-leverage lead generation tool in the package. It replaces what most professional services firms still do (gated PDFs that anyone can download) with something materially better: a custom-written report generated for the prospect's actual business.</p>
+      <p>Here's how it works. A business owner on the site, somewhere in the two-to-five-year window before a sale or recapitalization, clicks "Get your readiness assessment." They answer eight to ten structured questions about their business: industry, revenue range, ownership structure, anticipated transaction type, timeline, current advisory situation, financial reporting maturity. Two open-ended fields capture context.</p>
+      <p>The submission triggers a workflow that calls Claude (or GPT-4) against a structured rubric we'll develop in the brand sprint with CTW's Capital Markets practice. The rubric defines what a good readiness story looks like, what the common gaps are at each business size and stage, and what the recommended next steps are based on the inputs. The AI generates a custom-written assessment in CTW's brand voice. Two to three pages. Specific to that prospect's situation.</p>
+      <p>The assessment lands in the prospect's inbox as a branded HTML email within minutes of submission. They get something written for them, not for a category. The submission and output are stored for sales follow-up, a Slack notification fires to the practice team, and a conversion event is logged for attribution.</p>
+      <p>Three things make this work that competitors won't replicate quickly. The output is delivered as a branded HTML email, not a downloadable file, so the perceived value sits with the firm that produced it. The custom-written content is materially more valuable than a generic guide, which raises the brand value of the firm behind it. And the architecture supports rapid expansion: once the first assessment is proven, we can spin up additional versions (audit readiness, tax planning health check, succession readiness) using the same plumbing.</p>
+      </div>
+      <h2 class="block-heading display">THE SUPPORTING INFRASTRUCTURE</h2>
+      <h3 class="sub-heading display">CALENDAR BOOKING WITH INTELLIGENT ROUTING</h3>
+      <p>Calendly Teams integrated across the site. A short qualifying form (three questions: nature of inquiry, timeline, current client status) routes the prospect to the right partner or senior manager. Capital event inquiries reach the Capital Markets practice. Audit and tax inquiries route by service line. Existing clients route to a different path so current relationships do not enter the prospect funnel. Calendly integrates natively with Microsoft 365 and Outlook, which CTW's team is already using.</p>
+      <h3 class="sub-heading display">LIVE CALCULATORS</h3>
+      <p>Two embedded calculators ship with Foundation. The R&amp;D Tax Credit Estimator and the Cost Segregation Benefit Estimator. Both produce defensible estimates and capture email at the "send detailed report" step. Both rank well in AEO retrieval and convert at materially higher rates than average site traffic. Additional calculators (Section 199A, QoE preparation checklist, business valuation rough cut) are available as Phase 2 builds.</p>
+      <h3 class="sub-heading display">AI CONCIERGE (Engine and Partnership tiers)</h3>
+      <p>A conversational assistant trained on CTW's content. Answers prospect questions in CTW's voice, twenty-four hours a day. When intent is clear, hands off to calendar booking. Operating cost runs $50 to $200 per month. Most CPA firms in the region will not have this for at least two more years.</p>
+      <h3 class="sub-heading display">CRM-READY ARCHITECTURE</h3>
+      <p>Every form, calculator, assessment, and calendar booking writes to a unified event schema mapped for HubSpot or Salesforce. The day CTW signs the CRM engagement letter, migration takes days, not weeks. The lead generation system does not pause during CRM rollout. We recommend HubSpot for CTW's stage. Salesforce becomes the right call when the firm is ready to scale beyond fifty staff.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-10">
+      <h1 class="major-section-title display">Section 10: Content Engine and AEO Strategy</h1>
+      <p>Most CPA firm websites treat content as a launch deliverable. Write the pages, ship the site, move on. The result is what the rest of the industry now looks like. Pages from 2019 about regulations that have since changed. A newsroom that goes silent six months after launch. A LinkedIn presence run by someone other than the people who actually do the work.</p>
+      <p>CTW's website should be the opposite. Built to be filled, not just built to be launched. The content engine that follows is the system that does the filling. Some pieces we produce. Some pieces CTW produces. The discipline is shared.</p>
+      <p>The technical work matters. Schema markup, structured FAQ blocks, site speed under one second on every page, semantic HTML for AI retrieval, every service page architected to be cited by an answer engine. AEO compliance is becoming the price of admission.</p>
+      <p>What's harder, and what most firms get wrong, is the sustained human work behind the technical foundation. A partner's voice in writing across a year. A podcast that builds genuine relationships, not download counts. Press releases that say something rather than fill space. Original research that the firm actually conducts, with its actual clients, producing actual findings. The discipline to ship this work weekly, quarterly, annually, without losing the thread.</p>
+      <p>This is what we've spent more than a decade learning how to do.</p>
+
+      <figure class="exhibit chart aeo-chart" id="aeo-baseline-exhibit">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 278" role="img" aria-labelledby="aeoChartTitle">
+          <title id="aeoChartTitle">CTW in AI Search April 2026 baseline chart</title>
+          <rect width="760" height="278" fill="#ffffff" />
+          <text x="380" y="34" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="18" font-weight="800" fill="#121A25">CTW IN AI SEARCH: APRIL 2026 BASELINE</text>
+          <text x="380" y="54" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">Appearances across 8 representative middle-market queries, by engine</text>
+
+          <!-- Claude 75% -->
+          <text x="16" y="97" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">Claude</text>
+          <rect x="170" y="78" width="420" height="26" rx="3" fill="#1A2535" />
+          <text x="380" y="96" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11" font-weight="600" fill="#ffffff">6 of 8</text>
+          <text x="598" y="96" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#1A2535">75%</text>
+
+          <!-- Perplexity 75% -->
+          <text x="16" y="131" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">Perplexity</text>
+          <rect x="170" y="112" width="420" height="26" rx="3" fill="#1A2535" />
+          <text x="380" y="130" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11" font-weight="600" fill="#ffffff">6 of 8</text>
+          <text x="598" y="130" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#1A2535">75%</text>
+
+          <!-- Gemini 62% -->
+          <text x="16" y="165" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">Gemini</text>
+          <rect x="170" y="146" width="347.2" height="26" rx="3" fill="#1A2535" />
+          <text x="343.6" y="164" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11" font-weight="600" fill="#ffffff">5 of 8</text>
+          <text x="524" y="164" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#1A2535">62%</text>
+
+          <!-- ChatGPT 25% -->
+          <text x="16" y="199" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">ChatGPT</text>
+          <rect x="170" y="180" width="140" height="26" rx="3" fill="#D444A0" />
+          <text x="210" y="198" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">2 of 8</text>
+          <text x="318" y="198" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#1A2535">25%</text>
+
+          <!-- Grok 12% -->
+          <text x="16" y="233" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1A2535">Grok</text>
+          <rect x="170" y="214" width="67.2" height="26" rx="3" fill="#D444A0" />
+          <text x="203.6" y="232" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff">1 of 8</text>
+          <text x="246" y="232" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#1A2535">12%</text>
+
+          <text x="24" y="262" font-family="Poppins, Arial, sans-serif" font-size="10.5" fill="#1A2535">Sacramento middle-market query: 0 of 5 engines cited CTW. ChatGPT holds roughly 70% of AI search market share.</text>
+        </svg>
+      </figure>
+
+      <p>The chart above shows where CTW currently stands. The engine that follows is built to close that gap.</p>
+
+      <h2 class="block-heading display">Content Velocity</h2>
+      <table class="velocity">
+        <thead>
+          <tr>
+            <th scope="col">Asset</th>
+            <th scope="col">Cadence</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Purpose</th>
+            <th scope="col">First 90 Days</th>
+            <th scope="col">Steady State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Podcast episode</td><td>Biweekly</td><td>Named partner host</td><td>AEO + thought leadership</td><td>First 4 episodes</td><td>Biweekly</td></tr>
+          <tr><td>Long-form article (partner-bylined)</td><td>Weekly</td><td>Rotating partners</td><td>AEO citation magnet</td><td>One per partner</td><td>Weekly</td></tr>
+          <tr><td>LinkedIn partner post</td><td>3x per week per partner</td><td>Each partner</td><td>Personal brand + reach</td><td>2x per week per partner</td><td>3x per week per partner</td></tr>
+          <tr><td>YouTube Short / LinkedIn video</td><td>Weekly</td><td>Marketing + partner</td><td>Top-of-funnel awareness</td><td>Biweekly</td><td>Weekly</td></tr>
+          <tr><td>Newsletter</td><td>Monthly</td><td>Marketing</td><td>Owned audience</td><td>First issue in week 6</td><td>Monthly</td></tr>
+          <tr><td>Press release (comparative AEO)</td><td>Monthly</td><td>Marketing</td><td>Citation graph + AEO</td><td>First release in week 8</td><td>Monthly</td></tr>
+          <tr><td>Quarterly market outlook PDF</td><td>4x per year</td><td>Senior partner</td><td>Lead magnet refresh</td><td>First piece by end of Q1</td><td>Quarterly</td></tr>
+          <tr><td>Annual Tax Outlook</td><td>Once + Q3 update</td><td>Tax practice lead</td><td>Annual lead magnet hero</td><td>Year 1 launch in Q4</td><td>Annual + Q3</td></tr>
+          <tr><td>Webinar</td><td>Quarterly</td><td>Practice leads</td><td>Direct lead capture</td><td>First webinar by end of Q1</td><td>Quarterly</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-heading display">Original research</h3>
+      <p>The quarterly State of the Middle Market piece is survey-led work we conduct, write, and design with CTW named on the methodology line. Each wave reaches seventy-five to one hundred clients and friends-of-firm contacts so the findings reflect actual operators in CTW's orbit, not borrowed third-party charts. Results ship as a PDF lead magnet plus derivative articles, podcast commentary, and LinkedIn excerpts sized for retrieval-friendly headings.</p>
+
+      <h3 class="sub-heading display">The podcast</h3>
+      <p>A named partner hosts. Guests span PE deal partners, M&amp;A attorneys, business brokers, banking leads, CFOs inside recent exits, and founders who closed transactions. The goal is relationships that convert to referrals and repeat conversations, not vanity downloads. Each episode yields a transcript tuned for retrieval, a long-form YouTube cut, two or three short clips for LinkedIn, a summary article with quotable lines, and explicit named-attribution cues that strengthen trust signals when engines summarize sources.</p>
+
+      <h3 class="sub-heading display">Press release program</h3>
+      <p>Monthly comparative AEO releases route through national distribution with disciplined framing about where CTW stands relative to generic alternatives in its segments. The releases earn indexing across engines that aggregate news corpora and supply citations when prospects ask broad category questions tied to geography and specialization.</p>
+
+      <h3 class="sub-heading display">Partner LinkedIn presence</h3>
+      <p>Personal brand playbooks land for up to four partners: signature topics, weekly rhythm, podcast guest targets, and priority trade outlets worth pitching. The point is repeatable execution someone busy can actually hold week to week.</p>
+
+      <h3 class="sub-heading display">LinkedIn newsletter</h3>
+      <p>A monthly newsletter ships through LinkedIn so subscribers receive issues in email inboxes tied to professional identities. Owned reach stays steadier than feed-only posting when algorithms compress organic visibility.</p>
+
+      <h3 class="sub-heading display">AEO foundation across the site</h3>
+      <p>Every service and industry route carries schema markup, FAQ surfaces written for plain-language retrieval, headings structured for excerpting, and semantic HTML so parsers ingest cleanly under speed constraints already committed elsewhere in this proposal.</p>
+
+      <p>When this cadence runs, CTW advances across the three attention levels outlined in Section 2: citations first, sustained engine preference second, human reputation third.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-11">
+      <h1 class="major-section-title display">Section 11: Trust, Compliance, and Accessibility</h1>
+      <p>The site ships with the technical and procedural foundations that signal a firm worth trusting. Three areas: accessibility, privacy and data handling, security posture.</p>
+      <h2 class="block-heading display">ACCESSIBILITY</h2>
+      <p>WCAG 2.2 AA conformance built into the build, not bolted on. Semantic HTML, contrast ratios, keyboard navigation, focus management, screen reader compatibility. A published accessibility statement on the site names the standard and provides a contact path for accessibility issues. We do not use accessibility widget overlays, which are performative and do not satisfy WCAG conformance requirements.</p>
+      <h2 class="block-heading display">PRIVACY AND DATA HANDLING</h2>
+      <p>CCPA-aware data handling baseline. Modernized privacy policy and disclaimer pages drafted to current standards. Form data and PII handled with industry-standard encryption in transit and at rest. Cookie consent surface for visitors in regulatory environments that require it.</p>
+      <h2 class="block-heading display">SECURITY POSTURE</h2>
+      <p>Cloudflare-level infrastructure security baseline (DDoS protection, web application firewall, bot mitigation, automatic SSL). The static site architecture eliminates the most common vectors of attack on professional services firms (SQL injection, plugin exploits). The site's security posture is published on the site as a trust signal alongside the privacy and accessibility statements.</p>
+      <p>These three pages are not compliance checkboxes hidden in a footer. They are trust signals positioned with the same visual weight as the firm's value propositions.</p>
+
+
+<section class="major-section section-anchor" id="section-12">
+      <h1 class="major-section-title display">Section 12: Success Metrics</h1>
+      <p>CTW's RFP asks how website success will be measured. Here is what we track, what we expect, and how we report it back.</p>
+
+      <h2 class="success-metrics-head display">WHAT WE TRACK</h2>
+      <p class="work-sample-line-strong" style="margin-top:0;">Lead generation:</p>
+      <ul class="success-metrics-list">
+        <li>Form submissions by source and content surface</li>
+        <li>Calendar bookings (volume, conversion to held meetings, downstream pipeline value)</li>
+        <li>Capital Event Readiness Assessment completions and follow-up engagement</li>
+        <li>Calculator completions and email capture rates</li>
+        <li>Newsletter subscribers (monthly net growth)</li>
+        <li>Inbound contact attribution (organic search, AEO citation, direct, referral, paid)</li>
+      </ul>
+      <p class="work-sample-line-strong">User engagement:</p>
+      <ul class="success-metrics-list">
+        <li>Sessions, unique visitors, returning visitors, session duration</li>
+        <li>Pages per session and depth-of-engagement signals</li>
+        <li>Scroll depth on long-form content</li>
+        <li>Conversion path analysis (which pages most often appear before a form submit)</li>
+        <li>Mobile versus desktop behavior splits</li>
+      </ul>
+      <p class="work-sample-line-strong">SEO and AEO performance:</p>
+      <ul class="success-metrics-list">
+        <li>Organic search rankings for priority queries (tracked monthly)</li>
+        <li>Organic traffic by landing page (with attribution to specific content investments)</li>
+        <li>Core Web Vitals scores across every page (sustained green at launch and ongoing)</li>
+        <li>AEO citation tracking against named competitors across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews (tracked quarterly, with the baseline already established in Section 10)</li>
+        <li>Referring domains and backlink profile growth</li>
+        <li>Press release pickup and citation in AI search results</li>
+      </ul>
+      <p class="work-sample-line-strong">Site effectiveness:</p>
+      <ul class="success-metrics-list">
+        <li>Page-by-page conversion rates</li>
+        <li>Bounce rates by page type</li>
+        <li>Calendar booking completion versus abandonment</li>
+        <li>Assessment completion versus abandonment</li>
+        <li>Calculator completion versus abandonment</li>
+      </ul>
+
+      <h2 class="success-metrics-head display">WHAT WE EXPECT</h2>
+      <p>A performance baseline will be established in the first thirty days post-launch. Specific targets will be set jointly with CTW leadership against that baseline. Realistic ranges based on similar engagements:</p>
+      <ul class="success-metrics-list">
+        <li>Organic search traffic: 200 to 400 percent growth over the existing baseline within twelve months, driven by AEO foundation, content velocity, and improved Core Web Vitals</li>
+        <li>AEO citation rate (currently 50 percent across the eight queries we baselined): targeted to 75 percent or better within twelve months, with a particular focus on closing the gap on ChatGPT and Grok where CTW currently underperforms</li>
+        <li>Calendar booking conversion: industry benchmark for professional services is 1 to 3 percent of qualified site visitors; we target the higher end of that range with the routing system in place</li>
+        <li>Capital Event Readiness Assessment completion: target completion rate of 35 to 50 percent of users who initiate the assessment; target email capture of 90 percent or better at completion</li>
+        <li>Newsletter list growth: target of 50 to 100 net new subscribers per month after the first quarter</li>
+      </ul>
+      <p>These are forecasts, not guarantees. We will refine them quarterly based on observed performance.</p>
+
+      <h2 class="success-metrics-head display">HOW WE REPORT</h2>
+      <p><strong>Monthly:</strong> A short written brief summarizing top-line metrics, notable shifts, and any operational items requiring CTW's attention. Delivered to a named CTW contact.</p>
+      <p><strong>Quarterly:</strong> A live business review with CTW leadership covering site performance, AEO citation tracking against competitors, lead funnel analysis, content production review, and a prioritized recommendation list for the next quarter. Two named MKTNG leaders attend.</p>
+      <p><strong>Annually:</strong> An end-of-year strategic review with cumulative results, ROI analysis, and recommendations for the following year's engagement.</p>
+
+      <h2 class="success-metrics-head display">INSTRUMENTATION</h2>
+      <p>The website ships with PostHog for product analytics and event tracking. Cloudflare Analytics for traffic and edge performance. Server-side event tracking for conversion attribution. Custom AEO citation tracking against a named competitor set, run quarterly using a structured query protocol developed during this engagement.</p>
+      <p>When CTW selects a CRM, the data layer is already mapped to receive events and the reporting consolidates into the CRM's native dashboards plus our quarterly review.</p>
+    </section>
+
+<section class="major-section section-anchor" id="section-13">
+      <h1 class="major-section-title display">Section 13: Approach to Partnership</h1>
+      <p>CTW's RFP says it directly: the firm is looking for a long-term partner, not just a developer. Most agency proposals respond to that line with a sentence about ongoing support and move on. We want to be more specific.</p>
+      <h2 class="block-heading display">QUARTERLY BUSINESS REVIEWS</h2>
+      <p>Every ninety days, MKTNG's senior leadership presents to CTW's leadership team. Site performance. AEO citation tracking against named competitors. Lead funnel analysis. Content production review. A prioritized recommendation list for the following quarter. Two named MKTNG leaders attend every review.</p>
+      <h2 class="block-heading display">NAMED ACCOUNTS</h2>
+      <p>Two MKTNG contacts for the duration of the engagement. The day-to-day account lead handles production and client services. The senior strategic contact handles partner-level communication. CTW's partners can call either of us directly.</p>
+      <h2 class="block-heading display">PROACTIVE STRATEGIC INPUT</h2>
+      <p>The website, the content engine, and the surrounding communications work will need to evolve. Regulatory developments shift. AI search platforms change. Competitor firms move. Our job is to surface signals before they become problems and to bring CTW recommendations rather than wait to be asked. Specifically: a monthly written brief covering relevant changes in the competitive environment, regulatory context, and AI search behavior, with flagged items requiring CTW's attention.</p>
+      <h2 class="block-heading display">ONGOING ECONOMICS</h2>
+      <p>The engagement modes are designed for sustainability. We do not bill in surprises. We do not churn through hours. CTW knows what the relationship costs and what it produces every month.</p>
+      <h2 class="block-heading display">WHAT WE ARE</h2>
+      <p>We are senior practitioners who run strategy, write copy, design visuals, and ship the build, then stay around to keep building. Most of our client relationships run two, three, or more years. The work compounds when the team stays.</p>
+      <p>This is the firm CTW will still be working with in 2030.</p>
+
+
+<section class="major-section section-anchor" id="faq">
+      <h1 class="major-section-title display">Frequently Asked Questions</h1>
+      <p>This section addresses questions that typically come up during proposal evaluation. If your question isn't here, please contact us directly.</p>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: Can you really deliver the core website in four weeks?</h3>
+        <p>Yes. The four-week timeline assumes the engagement letter is signed by May 18, 2026 and CTW selects one of three design directions by end of week three. Original photography, if elected, extends the timeline to twelve weeks. The compressed schedule is achievable because of three things: an AI-assisted content extraction and rewriting process we've developed and used on prior projects, a technology stack that doesn't require the configuration overhead of WordPress, and a senior team that runs the work directly without handoffs.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: What happens if CTW's leadership wants to change the design direction mid-build?</h3>
+        <p>The Astro and Keystatic architecture isolates content from presentation. Design changes in the early build phase are quick. Major design changes post-launch are scoped as separate work. We will surface design decision points clearly during the engagement so changes happen at the right time, not after launch.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: How does this work with our future CRM?</h3>
+        <p>The website's data layer is structured to map cleanly to HubSpot or Salesforce on day one of CRM rollout. Forms, calculators, calendar bookings, and assessment completions all write to a unified event schema. Migration to a CRM takes days, not weeks. We recommend HubSpot for CTW's stage.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: Will our team be able to update the site without calling MKTNG?</h3>
+        <p>Yes. Keystatic is designed for non-developers. The four trained content stewards at CTW will manage routine updates (newsroom posts, team changes, service description revisions, event listings) without developer involvement. Larger changes (new sections, new lead generation tools) are scoped as supplemental work.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: What does the relationship look like after launch?</h3>
+        <p>Determined by the engagement mode. Foundation includes ninety days of stabilization support and a light maintenance retainer. Engine adds twelve months of structured content production. Partnership runs as an ongoing strategic communications partnership with quarterly business reviews, AEO citation tracking, and continuous content production. CTW can move between modes as needs evolve.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: What if CTW pursues a full rebrand in the future?</h3>
+        <p>The site is built rebrand-ready. Name references, logo files, color palettes, and typography are isolated as configuration. A future rebrand propagates across the entire site in under an hour once the design tokens are updated. No page-by-page rework required.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: How do we know your AEO claims are real?</h3>
+        <p>We ran a baseline AEO analysis as part of preparing this proposal. CTW currently appears in fifty percent of the test queries we ran across five major AI search engines, with significant gaps on the engines holding the largest market share (ChatGPT and Grok). Full results are included in Section 10 and Appendix A. We track quarterly improvement against this baseline as part of the Engine and Partnership tiers.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: What's the typical client tenure with MKTNG?</h3>
+        <p>Most of our client relationships run two to three years or longer. Some have been with us since the firm's founding. Long-tenured client relationships are how the work compounds and how the firm operates sustainably.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: How is pricing structured across the three engagement modes?</h3>
+        <p>Each mode has a one-time build investment and (in the Engine and Partnership tiers) an ongoing monthly retainer. Detailed pricing is in Section 3. We are happy to walk through the line items in any follow-up conversation.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: How will success be measured?</h3>
+        <p>We track lead generation metrics (form submissions, calendar bookings, assessment completions, calculator engagement), user engagement metrics (traffic, depth of engagement, conversion path analysis), SEO and AEO performance (organic rankings, traffic, AEO citation tracking against named competitors), and site effectiveness (page-level conversion rates). Reporting is monthly in writing and quarterly in live business reviews. Full framework is detailed in Section 12.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: Why are you recommending against WordPress?</h3>
+        <p>For most use cases, WordPress is fine. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), the plugin-ecosystem fragility, hosting overhead, and performance ceiling make it the wrong tool. We address this in detail in Section 8.</p>
+      </div>
+
+      <div class="faq-entry">
+        <h3 class="sub-heading display">Q: What's different about MKTNG compared to other agencies CTW will hear from?</h3>
+        <p>Three things. We deliver in four weeks, not six to nine months. We run strategy, design, build, and ongoing content as one senior team rather than handing off between specialists. And we treat the engagement as a multi-year communications partnership rather than a one-time website project. Most of our clients stay for years.</p>
+      </div>
+    </section>
+
+<section class="major-section section-anchor" id="appendix-a">
+      <h1 class="major-section-title display">Appendix A: AEO Baseline Full Data</h1>
+
+      <h2 class="block-heading display">Eight baseline queries tested</h2>
+      <table class="appendix">
+        <thead>
+          <tr><th scope="col">#</th><th scope="col">Query</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1</td><td>What are the best CPA firms in Sacramento for middle-market business owners?</td></tr>
+          <tr><td>Q2</td><td>Who are the top accounting and advisory firms in Roseville, California?</td></tr>
+          <tr><td>Q3</td><td>I'm selling my $20 million manufacturing business in California. Which CPA firms are best for quality of earnings studies and sell-side transaction support?</td></tr>
+          <tr><td>Q4</td><td>Which CPA firms in California specialize in FAR audits for government contractors?</td></tr>
+          <tr><td>Q5</td><td>I run a middle-market construction company in Northern California and I'm planning succession. What accounting firm should I work with?</td></tr>
+          <tr><td>Q6</td><td>How do I prepare my middle-market business for a sale, and which advisors should I be talking to first?</td></tr>
+          <tr><td>Q7</td><td>Which CPA firms in Northern California are known for cost segregation studies and tax planning for real estate investors?</td></tr>
+          <tr><td>Q8</td><td>Who are the leading accounting firms serving private equity portfolio companies in California?</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="block-heading display">CTW appearance by query and engine</h2>
+      <p style="font-size:10pt;margin-top:0;">Cells show whether CTW was cited for that query/engine pairing in the baseline pass.</p>
+      <table class="appendix" style="font-size:8.5pt;">
+        <thead>
+          <tr>
+            <th scope="col">Query</th>
+            <th scope="col">Claude</th>
+            <th scope="col">Perplexity</th>
+            <th scope="col">Gemini</th>
+            <th scope="col">ChatGPT</th>
+            <th scope="col">Grok</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr>
+          <tr><td>Q2</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Q3</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+          <tr><td>Q4</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td></tr>
+          <tr><td>Q5</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+          <tr><td>Q6</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+          <tr><td>Q7</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+          <tr><td>Q8</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-heading display">Notes from the baseline pass</h3>
+      <p style="font-size:10pt;">Grok cited CTW on Q2 under the legacy listing name &quot;Campbell Taylor &amp; Co.&quot;</p>
+
+      <h2 class="block-heading display">Top competitor citations across all 40 query/engine combinations</h2>
+      <ol style="margin-left:1.1rem;">
+        <li>Moss Adams / Baker Tilly (cited in nearly every answer across all engines)</li>
+        <li>CLA / CliftonLarsonAllen</li>
+        <li>Eide Bailly</li>
+        <li>RSM US</li>
+        <li>Armanino</li>
+      </ol>
+
+      <p><span class="lead-strong display">Notable competitive observation:</span> Cook CPA Group, a Roseville-based competitor, appeared more frequently than expected on the consumer-facing engines (4 of 8 ChatGPT queries, 5 of 8 Grok queries). Worth flagging as a regional competitive signal.</p>
+    </section>
+
+    <section class="major-section section-anchor" id="appendix-b">
+      <h1 class="major-section-title display">Appendix B: Quick Reference Summary</h1>
+      <div class="quick-ref">
+        <h2 class="display">APPENDIX B: QUICK REFERENCE SUMMARY</h2>
+        <p>This appendix is structured for fast review by readers and AI assistants. It restates the key elements of the proposal in a structured format suitable for parsing, comparison, and rapid review.</p>
+<div class="qr-label">PROPOSING AGENCY</div>
+        <p>MKTNG, a Sacramento-based communications and marketing firm operating since 2015.</p>
+
+        <div class="qr-label">CORE DELIVERY COMMITMENT</div>
+        <p>A complete website rebuild on a modern, performance-first stack, ready for launch in four weeks (core build without original photography) or twelve weeks (full launch with original photography). Most professional services website rebuilds run six to nine months. Ours doesn't.</p>
+
+        <div class="qr-label">TECHNOLOGY STACK</div>
+        <p>Astro framework, Cloudflare hosting and edge delivery, Keystatic CMS. Performance commitment: Largest Contentful Paint under one second on every page at launch, measured on standard 4G mobile. Hosting cost approximately ninety percent lower than typical WordPress managed hosting. Security and DDoS protection built into the infrastructure.</p>
+
+        <div class="qr-label">AEO POSITIONING</div>
+        <p>Site architecture built for AI search discoverability from day one. Includes structured schema, FAQ blocks across service and industry pages, plain-language content optimized for citation by ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. Quarterly AEO citation tracking included in Engine and Partnership tiers. We have already run a baseline AEO analysis for CTW (eight queries across five engines, results in Section 10).</p>
+
+        <div class="qr-label">LEAD GENERATION SYSTEM</div>
+        <p>Calendar booking with intelligent partner routing (Calendly Teams plus Microsoft 365). Capital Event Readiness Assessment, an AI-powered personalized lead-generation tool that delivers custom-written assessments to qualified prospects. Two embedded calculators (R&D Tax Credit, Cost Segregation). CRM-ready data architecture mapped for HubSpot or Salesforce. AI Concierge available in higher tiers.</p>
+
+        <div class="qr-label">ENGAGEMENT MODES</div>
+        <p>Three options structured for different commitment levels.</p>
+        <p>&nbsp;&nbsp;PATH FORWARD FOUNDATION: The website rebuild itself. Four-week core delivery.</p>
+        <p>&nbsp;&nbsp;PATH FORWARD ENGINE: Foundation plus podcast launch, quarterly original research, monthly press releases, partner LinkedIn programs, AI Concierge, twelve-month content production.</p>
+        <p>&nbsp;&nbsp;PATH FORWARD PARTNERSHIP: Engine plus full ongoing content production, quarterly business reviews with AEO citation tracking, AI training for CTW staff.</p>
+
+        <div class="qr-label">DIFFERENTIATION FROM TYPICAL BIDDERS</div>
+        <p>&nbsp;&nbsp;Most bidders will recommend WordPress; we are recommending against it for performance, security, and maintenance reasons.</p>
+        <p>&nbsp;&nbsp;Most bidders will quote a six-to-nine-month build; we deliver core in four weeks.</p>
+        <p>&nbsp;&nbsp;Most bidders separate website builders from content production agencies; we operate as a senior team running both.</p>
+        <p>&nbsp;&nbsp;Most bidders won't conduct a baseline AEO analysis as part of the proposal; we already have.</p>
+        <p>&nbsp;&nbsp;Most bidders position themselves as developers; we position as long-term communications partners. Most of our client relationships run two to three years or more.</p>
+
+        <div class="qr-label">TEAM RUNNING THE ENGAGEMENT</div>
+        <p>Scott Eggert, President. Engagement and brand strategy lead. Partner with Sacramento Venture Philanthropy and Program Director of the SVP Think Tank.</p>
+        <p>Laura Braden, VP of Public Relations. Messaging lead. Former Senior Director of Communications for the Sacramento Kings; former Deputy Communications Director for Governor Schwarzenegger.</p>
+        <p>Joshua McCowen, Creative Director. Visual identity and design lead. Twenty years across international markets in brand strategy, visual identity, and product UX.</p>
+        <p>Theresa Christian, Project Manager. Day-to-day production coordination and client services.</p>
+
+        <div class="qr-label">RELEVANT EXPERIENCE</div>
+        <p>Communications and brand work for clients in high-trust, high-scrutiny categories: utilities (PG&E, SoCalGas, California Energy Commission), energy infrastructure (West Biofuels), construction and aggregate (Hat Creek Construction), professional services (Advocacy Chiefs), high-end real estate (Ben Olsen at BrightWork Realty Advocates), trauma-informed nonprofit communications (GoldenDoodle AI, CTIPP).</p>
+
+        <div class="qr-label">ALIGNMENT WITH CTW'S RFP OBJECTIVES</div>
+        <p>&nbsp;&nbsp;"Clearly communicate value proposition" — addressed via Phase 0 brand and messaging sprint.</p>
+        <p>&nbsp;&nbsp;"Position CTW as a sophisticated advisory partner" — addressed through architecture, copy, and content engine design.</p>
+        <p>&nbsp;&nbsp;"Support lead generation" — addressed through the calendar routing system, Capital Event Readiness Assessment, and calculators.</p>
+        <p>&nbsp;&nbsp;"Ensure ease of updates and maintenance" — addressed through Keystatic CMS designed for non-developers.</p>
+        <p>&nbsp;&nbsp;"Deliver a modern, professional aesthetic" — addressed through the design phase led by Creative Director Joshua McCowen.</p>
+        <p>Full detail on each item appears in the body of the proposal.</p>
+      </div>
+    </section>
+
+    <section class="major-section section-anchor" id="appendix-c">
+      <h1 class="major-section-title display">Appendix C: RFP Compliance Matrix</h1>
+      <div class="quick-ref">
+        <h2 class="display">APPENDIX C: RFP COMPLIANCE MATRIX</h2>
+        <p>This appendix maps each requirement specified in CTW's Request for Proposal dated April 13, 2026 to the section in this proposal that addresses it.</p>
+<table class="qr-compliance-table">
+          <tbody>
+            <tr><td colspan="2" class="qr-compliance-group">PROPOSAL OBJECTIVES (RFP Section 2)</td></tr>
+            <tr><td class="qr-compliance-req">Clearly communicate CTW's value proposition</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 1</span>, <span class="qr-sec-num">Section 6</span> (brand sprint), Quick Reference Summary</td></tr>
+            <tr><td class="qr-compliance-req">Position CTW as a sophisticated advisory partner</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 1</span>, <span class="qr-sec-num">Section 10</span> (content engine), <span class="qr-sec-num">Section 2</span> (engagement modes)</td></tr>
+            <tr><td class="qr-compliance-req">Support lead generation</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 9</span> (full lead generation system), <span class="qr-sec-num">Section 12</span> (success metrics)</td></tr>
+            <tr><td class="qr-compliance-req">Ensure ease of updates and maintenance</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (Keystatic CMS rationale), <span class="qr-sec-num">Section 12</span> (CMS training)</td></tr>
+            <tr><td class="qr-compliance-req">Deliver a modern, professional aesthetic</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (technology and performance), <span class="qr-sec-num">Section 5</span> (creative team)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">SCOPE OF WORK (RFP Section 3)</td></tr>
+            <tr><td class="qr-compliance-req">Strategy and Planning (messaging and sitemap development)</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 0 brand sprint, Phase 1 architecture), <span class="qr-sec-num">Section 7</span> (sitemap)</td></tr>
+            <tr><td class="qr-compliance-req">Design</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 2), <span class="qr-sec-num">Section 5</span> (creative team and visual identity work)</td></tr>
+            <tr><td class="qr-compliance-req">Development</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 3), <span class="qr-sec-num">Section 8</span> (technology stack)</td></tr>
+            <tr><td class="qr-compliance-req">Content Strategy and Support</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 2 content production), <span class="qr-sec-num">Section 10</span> (content engine)</td></tr>
+            <tr><td class="qr-compliance-req">Testing and Launch</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 3 QA, Phase 4 launch), <span class="qr-sec-num">Section 8</span> (Core Web Vitals and accessibility testing)</td></tr>
+            <tr><td class="qr-compliance-req">Post-Launch Support</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span> (Phase 4 stabilization), <span class="qr-sec-num">Section 13</span> (ongoing partnership)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">KEY REQUIREMENTS (RFP Section 4)</td></tr>
+            <tr><td class="qr-compliance-req">Ease of use and intuitive navigation</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 7</span> (sitemap), <span class="qr-sec-num">Section 8</span> (CMS rationale)</td></tr>
+            <tr><td class="qr-compliance-req">Attractive, modern design</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (technology stack), <span class="qr-sec-num">Section 5</span> (creative direction)</td></tr>
+            <tr><td class="qr-compliance-req">Easy-to-update CMS</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (Keystatic), <span class="qr-sec-num">Section 2</span> (training included)</td></tr>
+            <tr><td class="qr-compliance-req">Mobile-first performance</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (sub-one-second LCP commitment, mobile-first measurement)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">ADDITIONAL CONSIDERATIONS (RFP Section 5)</td></tr>
+            <tr><td class="qr-compliance-req">SEO / AEO strategy and implementation</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 10</span> (full content engine and AEO strategy), <span class="qr-sec-num">Section 12</span> (success metrics)</td></tr>
+            <tr><td class="qr-compliance-req">Lead generation and conversion optimization</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 9</span> (full lead generation system)</td></tr>
+            <tr><td class="qr-compliance-req">Analytics and performance tracking tied to business outcomes</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 12</span> (instrumentation and reporting)</td></tr>
+            <tr><td class="qr-compliance-req">Security and accessibility</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 11</span> (WCAG 2.2 AA, security posture), <span class="qr-sec-num">Section 8</span> (Cloudflare-level security)</td></tr>
+            <tr><td class="qr-compliance-req">Integration with CRM and other business systems</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span> (CRM-ready data layer), <span class="qr-sec-num">Section 9</span> (form schema and event tracking)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">DELIVERABLES (RFP Section 6)</td></tr>
+            <tr><td class="qr-compliance-req">Fully functional website</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 2</span> (Foundation tier deliverables)</td></tr>
+            <tr><td class="qr-compliance-req">CMS setup</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 2</span> (Keystatic configuration), <span class="qr-sec-num">Section 8</span></td></tr>
+            <tr><td class="qr-compliance-req">Training</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 2</span> (training session for four content stewards)</td></tr>
+            <tr><td class="qr-compliance-req">Support plan</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 2</span> (stabilization), <span class="qr-sec-num">Section 13</span> (ongoing partnership)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">VENDOR QUALIFICATIONS (RFP Section 7)</td></tr>
+            <tr><td class="qr-compliance-req">Relevant experience</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 1</span>, <span class="qr-sec-num">Section 5</span> (case studies and work samples)</td></tr>
+            <tr><td class="qr-compliance-req">Portfolio and case studies</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 5</span> (work samples and case studies)</td></tr>
+            <tr><td class="qr-compliance-req">Team overview</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 5</span> (team bios)</td></tr>
+            <tr><td class="qr-compliance-req">References</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 5</span> (three named references with contact information)</td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">PROPOSAL REQUIREMENTS (RFP Section 9)</td></tr>
+            <tr><td class="qr-compliance-req">Overall approach and methodology</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span></td></tr>
+            <tr><td class="qr-compliance-req">Proposed sitemap and site architecture</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 7</span></td></tr>
+            <tr><td class="qr-compliance-req">Examples of relevant work</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 5</span> (work samples with live URLs)</td></tr>
+            <tr><td class="qr-compliance-req">Technology recommendations and CMS rationale</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span></td></tr>
+            <tr><td class="qr-compliance-req">Project timeline and key milestones</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 4</span></td></tr>
+            <tr><td class="qr-compliance-req">Pricing and ongoing support model</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 3</span></td></tr>
+            <tr><td class="qr-compliance-req">Ongoing support, maintenance, and optimization approach</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 13</span></td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">EVALUATION CRITERIA (RFP Section 10)</td></tr>
+            <tr><td class="qr-compliance-req">Understanding of CTW's business and target audience</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 1</span>, Quick Reference Summary</td></tr>
+            <tr><td class="qr-compliance-req">Strength of proposed strategy and site architecture</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 6</span>, <span class="qr-sec-num">Section 7</span>, <span class="qr-sec-num">Section 8</span>, <span class="qr-sec-num">Section 9</span>, <span class="qr-sec-num">Section 10</span></td></tr>
+            <tr><td class="qr-compliance-req">Relevant experience with professional services firms</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 5</span></td></tr>
+            <tr><td class="qr-compliance-req">Design quality and user experience</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 8</span>, <span class="qr-sec-num">Section 5</span></td></tr>
+            <tr><td class="qr-compliance-req">Value and long-term partnership potential</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 2</span>, <span class="qr-sec-num">Section 13</span></td></tr>
+
+            <tr><td colspan="2" class="qr-compliance-group">SUCCESS METRICS (RFP Section 11)</td></tr>
+            <tr><td class="qr-compliance-req">Vendor outline of how success will be measured</td><td class="qr-compliance-map"><span class="qr-sec-num">Section 12</span> (full metrics framework)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll("[data-work-sample-img]").forEach(function (img) {
+    img.addEventListener("error", function () {
+      img.style.display = "none";
+      var ph = img.parentElement && img.parentElement.querySelector("[data-work-sample-ph]");
+      if (ph) ph.hidden = false;
+    });
+  });
+  document.querySelectorAll(".running-foot-left img").forEach(function (img) {
+    img.addEventListener("load", function () {
+      var sib = img.nextElementSibling;
+      if (sib && sib.getAttribute("data-foot-text") === "1") sib.style.display = "none";
+    });
+    img.addEventListener("error", function () {
+      img.style.display = "none";
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

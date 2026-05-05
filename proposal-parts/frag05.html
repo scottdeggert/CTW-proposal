@@ -1,0 +1,33 @@
+    <!-- Section 5 -->
+    <section class="major-section section-anchor" id="section-5">
+      <h1 class="major-section-title display">Section 5: Lead Generation System</h1>
+      <p>Most accounting firm websites are passive. Visitors arrive, browse, leave, and someone hopes they remember to follow up. CTW's site is built to work harder than that.</p>
+      <p>The lead generation architecture has five components. Each one captures a different kind of intent at a different stage of the buyer journey.</p>
+
+      <h2 class="block-heading display">1. CALENDAR BOOKING WITH INTELLIGENT ROUTING</h2>
+      <p>Static contact forms turn high-intent moments into low-conversion experiences. A prospect who's ready to talk shouldn't have to wait for someone to read an email.</p>
+      <p>We'll integrate Calendly Teams across the site with intelligent routing. A short qualifying form (three questions: nature of inquiry, timeline, current client status) routes the prospect to the right partner or senior manager. Capital event inquiries reach the Capital Markets practice. Audit inquiries route round-robin among audit partners. Tax inquiries route to the right tax practice lead. Existing clients route to a different path entirely so we're not putting current relationships into the prospect funnel.</p>
+      <p>Calendly integrates natively with Microsoft 365 and Outlook, which is what CTW's team is already using. We'll configure availability windows, buffer rules, and fallback logic so a fully booked partner doesn't create a dead end. The setup is real work, not heroic.</p>
+
+      <h2 class="block-heading display">2. CAPITAL EVENT READINESS ASSESSMENT</h2>
+      <p>This is the highest-leverage lead generation tool in the package. It replaces what most professional services firms still do (gated PDFs that anyone can download) with something materially better: a custom-written report generated for the prospect's actual business.</p>
+      <p>Here's how it works. A business owner on the site, somewhere in the two-to-five-year window before a sale or recapitalization, clicks "Get your readiness assessment." They answer eight to ten structured questions about their business: industry, revenue range, ownership structure, anticipated transaction type, timeline, current advisory situation, financial reporting maturity. Two open-ended fields capture context.</p>
+      <p>The submission triggers a workflow that calls Claude (or GPT-4) against a structured rubric we'll develop in the brand sprint with CTW's Capital Markets practice. The rubric defines what a good readiness story looks like, what the common gaps are at each business size and stage, and what the recommended next steps are based on the inputs. The AI generates a custom-written assessment in CTW's brand voice. Two to three pages. Specific to that prospect's situation.</p>
+      <p>The assessment lands in the prospect's inbox as a branded HTML email within minutes of submission. They get something written for them, not for a category. The submission and output are stored for sales follow-up, a Slack notification fires to the practice team, and a conversion event is logged for attribution.</p>
+      <p>Three things make this work that competitors won't replicate quickly. The output is delivered as a branded HTML email, not a downloadable file, so the perceived value sits with the firm that produced it. The custom-written content is materially more valuable than a generic guide, which raises the brand value of the firm behind it. And the architecture supports rapid expansion: once the first assessment is proven, we can spin up additional versions (audit readiness, tax planning health check, succession readiness) using the same plumbing.</p>
+
+      <h2 class="block-heading display">3. LIVE CALCULATORS</h2>
+      <p>Two embedded calculators ship with the Foundation tier. Both are designed for AEO retrieval and lead capture.</p>
+      <p>The R&amp;D Tax Credit Estimator takes industry, R&amp;D wage base, supplies, and contract research inputs and produces a defensible estimate of the federal credit. Output captures the prospect's email at the "send me the detailed report" step.</p>
+      <p>The Cost Segregation Benefit Estimator takes property type, purchase price, building basis, and year placed in service. Output produces a benefit projection and recommended next steps.</p>
+      <p>Both calculators are SEO and AEO targets in their own right. The search volume on these keywords is real, and the conversion rate from calculator users is materially higher than average site traffic. Additional calculators (Section 199A QBI, Quality of Earnings preparation checklist, business valuation rough cut) are available as Phase 2 builds in the Engine and Partnership tiers.</p>
+
+      <h2 class="block-heading display">4. AI CONCIERGE (Engine and Partnership tiers)</h2>
+      <p>A conversational AI assistant trained on CTW's published content, service descriptions, and partner bios. Site visitors ask questions in natural language and get answers in CTW's voice within seconds. When intent is clear, the assistant offers calendar booking and routes to the appropriate practice.</p>
+      <p>The concierge runs on the same Cloudflare infrastructure as the Capital Event Readiness Assessment, with a vector store holding embeddings of CTW's content. Operating cost runs between fifty and two hundred dollars per month at expected traffic. The upside is a 24/7 prospect engagement layer that most CPA firms in the region won't have for at least two more years.</p>
+
+      <h2 class="block-heading display">5. CRM-READY ARCHITECTURE</h2>
+      <p>CTW doesn't have a CRM yet. The website is going to operate as if it does.</p>
+      <p>Every form, calculator, assessment, and calendar booking writes to a unified event schema. Server-side tracking captures form submissions, page views, and engagement signals. UTM parameter discipline is enforced on every external campaign link. Visitor profile data sits in a structured database, ready to be replayed into HubSpot, Salesforce, or whichever CRM CTW selects when the firm makes that decision.</p>
+      <p>In practical terms: the day CTW signs the engagement letter for a CRM, the data layer is already mapped to the contact properties spec. Migration is days, not weeks. The lead generation system doesn't pause while a CRM gets set up.</p>
+    </section>

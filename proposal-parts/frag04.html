@@ -1,0 +1,56 @@
+    <!-- Section 4 -->
+    <section class="major-section section-anchor" id="section-4">
+      <h1 class="major-section-title display">Section 4: Technology Recommendations</h1>
+
+      <h2 class="block-heading display">THE STACK</h2>
+      <p>We recommend Astro for the website framework, Cloudflare for hosting and delivery, and Keystatic for content management. The combined stack gives CTW a site that loads in under one second on every page, costs a fraction of typical WordPress hosting to operate, and gives non-technical content stewards a clean, web-based interface for managing the site's day-to-day content.</p>
+      <p>The technology underneath matters less than what it produces. Here's what the benefits look like in practice.</p>
+
+      <div class="tech-row" aria-label="Technology logos">
+        <div class="tech-item">
+          <img src="../assets/logos/astro-logo-dark.svg" alt="Astro" loading="lazy" decoding="async" />
+          <span class="display" style="font-size: 9pt; font-weight: 600; color: var(--deep-slate);">Astro</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://www.cloudflare.com/img/logo-cloudflare.svg" alt="Cloudflare" loading="lazy" decoding="async" />
+          <span class="display" style="font-size: 9pt; font-weight: 600; color: var(--deep-slate);">Cloudflare</span>
+        </div>
+        <div class="tech-item">
+          <img src="../assets/logos/keystatic-wordmark.svg" alt="Keystatic" loading="lazy" decoding="async" />
+          <span class="display" style="font-size: 9pt; font-weight: 600; color: var(--deep-slate);">Keystatic</span>
+        </div>
+      </div>
+
+      <h2 class="block-heading display">PERFORMANCE THAT COMPOUNDS</h2>
+      <p>Most professional services websites built on WordPress today load in five to ten seconds on a mobile connection. CTW's current site sits squarely in that range. The cost of that lag isn't theoretical. Google's own research shows mobile visitors abandon a page at fifty-three percent likelihood when load time exceeds three seconds. The slower a site loads, the more prospects leave before they ever see the content the site was built to deliver.</p>
+      <p>CTW's new site will load in roughly one tenth of that time. We commit to a Largest Contentful Paint score under one second on every page at launch, measured on a standard 4G mobile connection. That's not a target we hit after months of tuning. That's the launch baseline.</p>
+      <p>The improvement comes from the architecture. Astro ships static HTML with near-zero JavaScript by default. Cloudflare delivers the static pages from edge servers physically close to every visitor. The entire stack favors performance over flexibility for its own sake.</p>
+      <p>Speed isn't only a user experience win. It's an SEO and AEO advantage. Google's ranking algorithms penalize slow pages. AI search engines increasingly favor sources that load and parse quickly. Faster sites get cited more often.</p>
+
+      <h2 class="block-heading display">A CMS BUILT FOR NON-DEVELOPERS</h2>
+      <p>CTW's RFP makes ease of content updates a top requirement, with the expectation that four internal stewards will manage routine updates without needing developer involvement. Keystatic is built for exactly this case.</p>
+      <p>The interface is web-based and reads like a modern document editor: rich text, image uploads, drag-and-drop reordering, version history, simple preview before publish. Editing a page feels closer to editing a Google Doc than configuring a WordPress dashboard. The four CTW content stewards will be trained in a single live session, with a recorded video and a one-page reference guide for follow-up.</p>
+      <p>Routine updates (a new team member, a newsroom post, a service description revision, an upcoming event) take minutes. We expect CTW's team will handle the vast majority of content updates internally without calling us. When larger development support is needed (a new section, a major design change, a new lead generation tool), the codebase is structured so any competent developer can ship the change quickly. We are not building a black box. We are building a maintainable system.</p>
+
+      <h2 class="block-heading display">SECURITY AND RELIABILITY THAT DON'T REQUIRE MAINTENANCE</h2>
+      <p>Most WordPress security incidents trace back to plugin vulnerabilities. The plugin ecosystem is enormous, the update cadence is constant, and the surface area for attack grows with every plugin a site adds. Professional services firms have been hit hard by this in recent years.</p>
+      <p>The stack we're proposing has dramatically less surface area. Static HTML pages can't be SQL-injected. There's no PHP runtime to exploit. Cloudflare provides DDoS protection, a web application firewall, and bot mitigation as part of the infrastructure. The site is protected by default. CTW isn't responsible for maintaining a security posture beyond keeping content current.</p>
+      <p>Uptime expectations: 99.99 percent or better, backed by Cloudflare's infrastructure SLA. In practical terms, the site doesn't go down.</p>
+
+      <h2 class="block-heading display">HOSTING ECONOMICS</h2>
+      <p>WordPress managed hosting for a site of CTW's expected complexity typically runs fifteen hundred to six thousand dollars per year, depending on the hosting tier and traffic. The stack we're proposing runs between zero and three hundred dollars per year for hosting at expected traffic. The difference compounds across a five-year horizon.</p>
+      <p>We mention this not because hosting cost is a deciding factor, but because the savings are real and they free budget for content production and ongoing strategic work, which is where the real value is.</p>
+
+      <h2 class="block-heading display">FORWARD-REBRAND ARCHITECTURE</h2>
+      <p>CTW's leadership flagged in the Q&amp;A that a future full rebrand may happen and the site should be designed to accommodate it. We build for that by default.</p>
+      <p>Name references, logo files, color palettes, typography, and brand tokens live as configuration variables, not as values hardcoded into pages or components. When the rebrand happens, a designer updates the token file, the system rebuilds, and the new identity propagates across the entire site in under an hour. No page-by-page edits. No content rewrites required.</p>
+      <p>This isn't a feature we'll scope later. It's how the build is structured on day one.</p>
+
+      <h2 class="block-heading display">CRM-READY DATA LAYER</h2>
+      <p>CTW will eventually select a CRM. The website will operate as if one is already in place. Forms, calculators, the Capital Event Readiness Assessment, and calendar bookings all write to a unified event schema designed to map cleanly to HubSpot or Salesforce.</p>
+      <p>When CTW signs the CRM engagement letter, the data layer is already structured to receive it. Migration takes days, not weeks. The lead generation work doesn't pause during the CRM rollout.</p>
+      <p>For most CPA firms of CTW's stage, we recommend HubSpot as the right entry point. The free CRM tier is genuinely useful, the paid tiers are an order of magnitude less expensive than Salesforce, the marketing automation is serviceable out of the box, and HubSpot's recently launched native AEO tracking tools integrate cleanly with the AEO foundation we'll build. Salesforce becomes the right call when the firm is ready to integrate deeply with audit workflow software or scale beyond fifty staff. Until then, HubSpot is the better tool for the job.</p>
+
+      <h2 class="block-heading display">A NOTE ON WORDPRESS</h2>
+      <p>WordPress has been the backbone of half the internet for two decades, and for many use cases it remains a solid choice. For CTW's specific requirements (performance, AEO discoverability, ease of content updates, security with minimal maintenance, forward-rebrand flexibility), it isn't the right tool. The plugin ecosystem creates ongoing fragility. The hosting overhead is unnecessary. The performance ceiling is lower. Most agencies will recommend WordPress because it's what they know how to build. We're recommending what we believe will serve CTW better.</p>
+    </section>
